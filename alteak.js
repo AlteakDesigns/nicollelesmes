@@ -37,77 +37,48 @@ function deslizarAbajo(event) {
     }
 }
 
-// --- LÓGICA DEL VISOR DE GALERÍA (IMÁGENES Y VIDEOS) ---
-let mediaActuales = [];
+// --- LÓGICA DEL VISOR DE GALERÍA ---
+let imagenesActuales = [];
 let indiceActual = 0;
 
-function abrirFoto(elemento) {
-    procesarMedia(elemento);
-}
-
-function abrirVideo(elemento) {
-    procesarMedia(elemento);
-}
-
-function procesarMedia(elemento) {
-    const proyectoActivo = elemento.closest('.seccion');
+function abrirFoto(elementoImg) {
+    const proyectoActivo = elementoImg.closest('.seccion');
     
-    // Busca tanto imágenes como videos dentro del proyecto actual
-    mediaActuales = Array.from(proyectoActivo.querySelectorAll('.img-zoom, .video-zoom'));
-    indiceActual = mediaActuales.indexOf(elemento);
+    // Buscar todas las imágenes de este proyecto para la galería
+    imagenesActuales = Array.from(proyectoActivo.querySelectorAll('.img-zoom'));
+    indiceActual = imagenesActuales.indexOf(elementoImg);
 
-    mostrarEnVisor(elemento);
-}
-
-function mostrarEnVisor(elemento) {
     const visor = document.getElementById('visor');
     const imgVisor = document.getElementById('img-visor');
-    const videoVisor = document.getElementById('video-visor');
     
-    // Pausar video anterior si lo hubiera
-    videoVisor.pause();
-
-    if (elemento.tagName.toLowerCase() === 'img') {
-        imgVisor.src = elemento.src;
-        imgVisor.style.display = 'block';
-        videoVisor.style.display = 'none';
-    } else if (elemento.tagName.toLowerCase() === 'video') {
-        videoVisor.src = elemento.src;
-        videoVisor.style.display = 'block';
-        imgVisor.style.display = 'none';
-        videoVisor.play(); // Auto-reproduce al abrir
-    }
-    
+    imgVisor.src = elementoImg.src;
     visor.style.display = 'flex';
 }
 
-function cambiarMedia(direccion) {
-    if (mediaActuales.length === 0) return;
+function cambiarFoto(direccion) {
+    if (imagenesActuales.length === 0) return;
     
     indiceActual += direccion;
     
     // Si llegas al final, vuelve al principio y viceversa
-    if (indiceActual >= mediaActuales.length) {
+    if (indiceActual >= imagenesActuales.length) {
         indiceActual = 0;
     } else if (indiceActual < 0) {
-        indiceActual = mediaActuales.length - 1;
+        indiceActual = imagenesActuales.length - 1;
     }
     
-    mostrarEnVisor(mediaActuales[indiceActual]);
+    document.getElementById("img-visor").src = imagenesActuales[indiceActual].src;
 }
 
 function cerrarFoto(evento) {
-    // Si hace click en las flechas, la imagen central o el video, NO cerramos el visor
+    // Si hace click en las flechas o en la imagen central, NO cerramos el visor
     if (evento && (
         evento.target.id === 'img-visor' || 
-        evento.target.id === 'video-visor' || 
         evento.target.classList.contains('prev-visor') || 
         evento.target.classList.contains('next-visor')
     )) {
         return;
     }
-    
-    document.getElementById('video-visor').pause(); // Silencia el video al cerrar
     document.getElementById('visor').style.display = 'none';
 }
 
@@ -115,11 +86,34 @@ function cerrarFoto(evento) {
 document.addEventListener('keydown', (e) => {
     const visor = document.getElementById('visor');
     if (visor.style.display === 'flex') {
-        if (e.key === 'ArrowRight') cambiarMedia(1);
-        if (e.key === 'ArrowLeft') cambiarMedia(-1);
+        if (e.key === 'ArrowRight') cambiarFoto(1);
+        if (e.key === 'ArrowLeft') cambiarFoto(-1);
         if (e.key === 'Escape') cerrarFoto();
     }
 });
+
+// --- ANIMACIONES Y MULTIMEDIA ---
+const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach(entrada => {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add('mostrar');
+        } else {
+            entrada.target.classList.remove('mostrar');
+        }
+    });
+});
+
+const elementosAnimados = document.querySelectorAll('.animado');
+elementosAnimados.forEach(elemento => observador.observe(elemento));
+
+function reproducirVideo(elementoDiv) {
+    const video = elementoDiv.querySelector('video');
+    const icono = elementoDiv.querySelector('.play-icon');
+
+    video.play();
+    video.controls = true;
+    if (icono) icono.style.display = 'none';
+}
 
 // --- FORMULARIO DE CONTACTO ---
 const form = document.getElementById('contactForm');
