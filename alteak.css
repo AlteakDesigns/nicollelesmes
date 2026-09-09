@@ -118,7 +118,6 @@ main {
     margin-right: auto;
 }
 
-
 @media (max-width: 768px) {
     .logo-orbita-container {
         height: 80px;
@@ -149,12 +148,8 @@ main {
 }
 
 @keyframes orbitY {
-    0% {
-        transform: rotateY(0deg);
-    }
-    100% {
-        transform: rotateY(360deg);
-    }
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
 }
 
 .contenedor-bienvenida h1 {
@@ -229,7 +224,7 @@ main {
     max-width: 90%;
     max-height: 90%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    object-fit: contain; /* Clave para no deformar */
+    object-fit: contain; 
     cursor: auto;
 }
 
@@ -244,7 +239,6 @@ main {
     z-index: 10001;
 }
 
-/* FLECHAS DEL VISOR DE IMÁGENES */
 .prev-visor, .next-visor {
     position: absolute;
     top: 50%;
@@ -263,21 +257,14 @@ main {
     color: #888;
 }
 
-.prev-visor {
-    left: 10px;
-}
+.prev-visor { left: 10px; }
+.next-visor { right: 10px; }
 
-.next-visor {
-    right: 10px;
-}
-
-/* Ajustes Responsive Móvil Visor */
 @media (max-width: 600px) {
     .prev-visor, .next-visor {
         font-size: 30px;
         padding: 10px;
     }
-    
     .cerrar-visor {
         top: 10px;
         right: 15px;
@@ -299,7 +286,6 @@ main {
     gap: 40px;
 }
 
-/* div sup*/
 .acerca-sup {
     text-align: center;
     width: 100%;
@@ -316,7 +302,6 @@ main {
     font-weight: normal;
 }
 
-/* div medio con text y la pp */
 .acerca-medio {
     display: flex;
     align-items: center;
@@ -352,7 +337,6 @@ main {
     object-fit: cover;
 }
 
-/* div inferior btones redes sociales*/
 .acerca-abajo {
     width: 100%;
     display: flex;
@@ -389,7 +373,7 @@ main {
     background-color: #ddd;
 }
 
-/* la animacion de seccion mia */
+/* LA ANIMACIÓN DE INTERSECTION OBSERVER */
 .animado {
     opacity: 0;
     transform: translateY(50px);
@@ -401,13 +385,11 @@ main {
     transform: translateY(0);
 }
 
-/* para el celular responsivo acerca de */
 @media (max-width: 900px) {
     .acerca-medio {
         flex-direction: column-reverse;
         gap: 30px;
     }
-
     .imagen-yo img {
         width: 250px;
         height: 250px;
@@ -468,7 +450,6 @@ main {
     color: #fff;
 }
 
-/* info (experiencia/estudios) con efectito */
 .cv {
     margin-bottom: 25px;
     padding-left: 15px;
@@ -482,7 +463,6 @@ main {
     padding-left: 20px;
 }
 
-/* responsive CV */
 @media (max-width: 900px) {
     .contenedor-cv {
         flex-direction: column;
@@ -502,7 +482,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* portada */
 .portada-proyectos {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -523,7 +502,6 @@ html {
     color: #888;
 }
 
-/* flechita */
 .flecha-bajar {
     display: block;
     width: 25px;
@@ -536,15 +514,10 @@ html {
 }
 
 @keyframes flotar {
-    0%, 100% {
-        transform: rotate(45deg) translate(0, 0);
-    }
-    50% {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
+    0%, 100% { transform: rotate(45deg) translate(0, 0); }
+    50% { transform: rotate(45deg) translate(5px, 5px); }
 }
 
-/* galeria cuadricula */
 .contenedor-galeria {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -553,7 +526,6 @@ html {
     min-height: 100%;
 }
 
-/* cuadro de c/proyecto */
 .proyecto {
     position: relative;
     display: block;
@@ -569,7 +541,6 @@ html {
     transition: transform 0.5s ease;
 }
 
-/* texto de foto que hace un overlay */
 .info-overlay {
     position: absolute;
     top: 0;
@@ -588,7 +559,6 @@ html {
     padding: 20px;
 }
 
-/* al pasar mouse */
 .proyecto:hover .info-overlay {
     opacity: 1;
 }
@@ -597,12 +567,8 @@ html {
     transform: scale(1.1);
 }
 
-/* responsive general en del celu */
 @media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
+    .hamburger { display: block; }
     .menu {
         display: none;
         flex-direction: column;
@@ -615,22 +581,12 @@ html {
         align-items: center;
         z-index: 100;
     }
-
-    .menu.activo {
-        display: flex;
-    }
-
-    .logo img {
-        height: 30px;
-    }
-
-    .contenedor-galeria {
-        grid-template-columns: 1fr;
-    }
+    .menu.activo { display: flex; }
+    .logo img { height: 30px; }
+    .contenedor-galeria { grid-template-columns: 1fr; }
 }
 
 
-/* boton volver */
 .btn-volver {
     color: #fff;
     text-decoration: none;
@@ -649,9 +605,8 @@ html {
     content: "←";
 }
 
-
 /* -----------------------------------
-  0.0 PROYECTO NEMYX
+   NEMYX
 ----------------------------------- */
 #nemyx {
     padding-bottom: 30px;
@@ -687,7 +642,6 @@ html {
     text-align: center;
 }
 
-/* Bloque 1 */
 .nemyx-sup {
     display: flex !important;
     flex-direction: row !important; 
@@ -721,7 +675,6 @@ html {
     padding: 0 20px;
 }
 
-/* Bloque 2: Texto centrado */
 .nemyx-medio {
     display: flex;
     justify-content: center;
@@ -733,10 +686,9 @@ html {
     width: 100%;
 }
 
-/* Bloque 3: Galería */
 .nemyx-galeria-inferior {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     margin-bottom: 40px;
 }
@@ -744,7 +696,7 @@ html {
 .nemyx-galeria-inferior img,
 .nemyx-galeria-inferior video {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     display: block;
 }
@@ -758,7 +710,6 @@ html {
     transform: scale(1.02);
 }
 
-/* RESPONSIVE MÓVIL NEMYX */
 @media (max-width: 768px) {
     .nemyx-sup {
         flex-direction: column !important;
@@ -771,7 +722,7 @@ html {
     .nemyx-descripcion {
         width: 100% !important;
         padding: 0;
-        order: -1; /* Manda el texto arriba del todo */
+        order: -1; 
     }
     .nemyx-galeria-inferior {
         grid-template-columns: repeat(2, 1fr);
@@ -788,12 +739,8 @@ html {
     }
 }
 
-
-
-
-
 /* -----------------------------------
-   0 PROYECTO AMMA
+   AMMA
 ----------------------------------- */
 #amma {
     padding-bottom: 30px;
@@ -924,7 +871,6 @@ html {
     transform: scale(1.02);
 }
 
-/* RESPONSIVE MÓVIL AMMA */
 @media (max-width: 768px) {
     .amma-sup {
         flex-direction: column !important;
@@ -961,14 +907,9 @@ html {
 }
 
 @media (max-width: 480px) {
-    .amma-sup-imgs {
-        grid-template-columns: 1fr !important;
-    }
-    .amma-galeria-inferior {
-        grid-template-columns: 1fr;
-    }
+    .amma-sup-imgs { grid-template-columns: 1fr !important; }
+    .amma-galeria-inferior { grid-template-columns: 1fr; }
 }
-
 
 /* 1eer proyecto estilos ondara */
 .ondara-titulo {
@@ -1069,21 +1010,15 @@ html {
     display: block;
 }
 
-/* responsive ondara celu */
 @media (max-width: 900px) {
     .ondara-sup {
         flex-direction: column;
         text-align: center;
         gap: 20px;
     }
-    .ondara-descripcion {
-        text-align: center;
-    }
-    .ondara-galeria {
-        grid-template-columns: 1fr;
-    }
+    .ondara-descripcion { text-align: center; }
+    .ondara-galeria { grid-template-columns: 1fr; }
 }
-
 
 /* 2do proyecto estilos naya */
 .titulo-naya {
@@ -1154,20 +1089,11 @@ html {
     align-items: center;
 }
 
-/* responsive naya celu */
 @media (max-width: 768px) {
-    .bloque-sup-naya {
-        grid-template-columns: 1fr;
-    }
-    .texto-descripcion {
-        text-align: center;
-        order: -1;
-    }
-    .bloque-medio {
-        grid-template-columns: 1fr 1fr;
-    }
+    .bloque-sup-naya { grid-template-columns: 1fr; }
+    .texto-descripcion { text-align: center; order: -1; }
+    .bloque-medio { grid-template-columns: 1fr 1fr; }
 }
-
 
 /* 3er proyecto estilos dior */
 .dior-titulo {
@@ -1256,22 +1182,11 @@ html {
     display: block;
 }
 
-/* responsive dior celu */
 @media (max-width: 900px) {
-    .dior-sup {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-    .dior-descripcion {
-        text-align: center;
-        padding-left: 0;
-    }
-    .dior-galeria {
-        grid-template-columns: 1fr;
-    }
+    .dior-sup { flex-direction: column; text-align: center; gap: 20px; }
+    .dior-descripcion { text-align: center; padding-left: 0; }
+    .dior-galeria { grid-template-columns: 1fr; }
 }
-
 
 /* proyeecot 4 oj Napoli pa/ old jeffrey */
 .titulo-napoli {
@@ -1350,25 +1265,12 @@ html {
     object-fit: cover;
 }
 
-/* diseño responsive celu oj napoli */
 @media (max-width: 900px) {
-    .napoli-sup {
-        flex-direction: column;
-        text-align: center;
-    }
-    .napoli-sup-imgs {
-        width: 100%;
-    }
-    .napoli-galeria {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
-    }
-    .napoli-galeria-abajo img {
-        width: 48%;
-    }
+    .napoli-sup { flex-direction: column; text-align: center; }
+    .napoli-sup-imgs { width: 100%; }
+    .napoli-galeria { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .napoli-galeria-abajo img { width: 48%; }
 }
-
 
 /* 5to proyecto estilos soleris*/
 .titulo-soleris {
@@ -1431,20 +1333,11 @@ html {
     object-fit: cover;
 }
 
-/* responsive de soleris */
 @media (max-width: 768px) {
-    .bloque-sup-soleris {
-        grid-template-columns: 1fr;
-    }
-    .texto-soleris {
-        text-align: center;
-        order: -1;
-    }
-    .soleris-galeria {
-        grid-template-columns: 1fr;
-    }
+    .bloque-sup-soleris { grid-template-columns: 1fr; }
+    .texto-soleris { text-align: center; order: -1; }
+    .soleris-galeria { grid-template-columns: 1fr; }
 }
-
 
 /* 6to pryecto estilos giralia */
 .titulo-giralia {
@@ -1526,24 +1419,11 @@ html {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* responsive giralia celular */
 @media (max-width: 768px) {
-    .bloque-sup-giralia {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .texto-giralia {
-        text-align: center;
-        order: -1; 
-        padding: 0; 
-    }
-
-    .giralia-galeria {
-        grid-template-columns: 1fr;
-    }
+    .bloque-sup-giralia { flex-direction: column; }
+    .texto-giralia { text-align: center; order: -1; padding: 0; }
+    .giralia-galeria { grid-template-columns: 1fr; }
 }
-
 
 /* 7mo proyecto singular essence*/
 .titulo-singular {
@@ -1606,20 +1486,11 @@ html {
     object-fit: cover;
 }
 
-/* responsive celular de singular */
 @media (max-width: 768px) {
-    .bloque-sup-singular {
-        grid-template-columns: 1fr;
-    }
-    .texto-singular {
-        text-align: center;
-        order: -1;
-    }
-    .perfume-galeria {
-        grid-template-columns: 1fr 1fr;
-    }
+    .bloque-sup-singular { grid-template-columns: 1fr; }
+    .texto-singular { text-align: center; order: -1; }
+    .perfume-galeria { grid-template-columns: 1fr 1fr; }
 }
-
 
 /* 8mo proyecto zentide*/
 .titulo-zentide {
@@ -1680,20 +1551,11 @@ html {
     object-fit: cover;
 }
 
-/* responsive celular zentide */
 @media (max-width: 768px) {
-    .bloque-sup-zentide {
-        grid-template-columns: 1fr;
-    }
-    .texto-zentide {
-        text-align: center;
-        order: -1;
-    }
-    .zentide-galeria {
-        grid-template-columns: 1fr;
-    }
+    .bloque-sup-zentide { grid-template-columns: 1fr; }
+    .texto-zentide { text-align: center; order: -1; }
+    .zentide-galeria { grid-template-columns: 1fr; }
 }
-
 
 /* seccion contacto */
 .titulo-contacto {
@@ -1716,8 +1578,7 @@ label {
     margin-bottom: 10px;
 }
 
-input,
-textarea {
+input, textarea {
     width: 100%;
     padding: 12px;
     background-color: transparent;
@@ -1736,20 +1597,9 @@ button {
     border-radius: 4px;
 }
 
-#texto-enviar {
-    color: #000;
-}
-
+#texto-enviar { color: #000; }
 
 /* Padding extra al final de los proyectos */
-#ondara,
-#amma,
-#naya,
-#dior,
-#napoli,
-#soleris,
-#giralia,
-#singular,
-#zentide {
+#nemyx, #ondara, #amma, #naya, #dior, #napoli, #soleris, #giralia, #singular, #zentide {
     padding-bottom: 30px;
 }
