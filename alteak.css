@@ -701,6 +701,11 @@ html {
     display: block;
 }
 
+.nemyx-galeria-inferior .video-full {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 9;
+}
+
 .video-zoom {
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -709,12 +714,6 @@ html {
 .video-zoom:hover {
     transform: scale(1.02);
 }
-
-.nemyx-galeria-inferior .video-full {
-    grid-column: 1 / -1;
-    aspect-ratio: 16 / 9;
-}
-
 
 @media (max-width: 768px) {
     .nemyx-sup {
@@ -981,32 +980,7 @@ html {
     grid-column: 1 / -1;
     position: relative;
     overflow: hidden;
-    cursor: pointer;
     width: 100%;
-}
-
-.play-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3rem;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid white;
-    transition: background-color 0.3s ease;
-    padding-left: 7px;
-    padding-bottom: 7px;
-}
-
-.ondara-video:hover .play-icon {
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .ondara-video video {
@@ -1152,14 +1126,6 @@ html {
     line-height: 1.8;
 }
 
-.dior-video-full {
-    width: 100%;
-    margin-top: 20px;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-}
-
 .dior-galeria {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1176,7 +1142,6 @@ html {
 .dior-video {
     position: relative;
     overflow: hidden;
-    cursor: pointer;
     width: 100%;
     aspect-ratio: 1/1;
 }
@@ -1194,7 +1159,7 @@ html {
     .dior-galeria { grid-template-columns: 1fr; }
 }
 
-/* proyeecot 4 oj Napoli pa/ old jeffrey */
+/* proyecto 4 oj Napoli */
 .titulo-napoli {
     text-align: center;
     margin-bottom: 40px;
@@ -1345,7 +1310,7 @@ html {
     .soleris-galeria { grid-template-columns: 1fr; }
 }
 
-/* 6to pryecto estilos giralia */
+/* 6to proyecto estilos giralia */
 .titulo-giralia {
     text-align: center;
     margin-bottom: 40px;
@@ -1410,7 +1375,6 @@ html {
     width: 100%;
     aspect-ratio: 1/1;
     position: relative;
-    cursor: pointer;
     overflow: hidden;
 }
 
@@ -1421,17 +1385,13 @@ html {
     display: block;
 }
 
-.giralia-video:hover .play-icon {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
 @media (max-width: 768px) {
     .bloque-sup-giralia { flex-direction: column; }
     .texto-giralia { text-align: center; order: -1; padding: 0; }
     .giralia-galeria { grid-template-columns: 1fr; }
 }
 
-/* 7mo proyecto singular essence*/
+/* 7mo proyecto singular essence */
 .titulo-singular {
     text-align: center;
     margin-bottom: 40px;
@@ -1498,7 +1458,7 @@ html {
     .perfume-galeria { grid-template-columns: 1fr 1fr; }
 }
 
-/* 8mo proyecto zentide*/
+/* 8mo proyecto zentide */
 .titulo-zentide {
     text-align: center;
     margin-bottom: 40px;
