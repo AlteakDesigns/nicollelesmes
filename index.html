@@ -295,7 +295,7 @@
 
     <!-- DETALLES DE CADA PROYECTO -->
 
- <!-- NEMYX -->
+<!-- NEMYX -->
     <div id="nemyx" class="seccion">
         <div class="detalle-nav">
             <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
@@ -307,6 +307,7 @@
         </div>
 
         <div class="nemyx-contenido">
+            <!-- Bloque 1: Cuadrícula y texto -->
             <div class="nemyx-sup">
                 <div class="nemyx-sup-imgs">
                     <img src="img/NEMYX.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
@@ -332,6 +333,7 @@
                 </div>
             </div>
 
+            <!-- Bloque 2: Texto explicativo -->
             <div class="nemyx-medio">
                 <div class="nemyx-medio-texto">
                     <p>
@@ -352,41 +354,31 @@
                         Finally, I assembled the hardware and the 3D model onto reused Ray-Ban frames, integrating technical rigor and sustainability through upcycling.
                     </p>
                 </div>
-               
             </div>
 
+            <!-- Bloque 3: Galería con fotos y videos -->
             <div class="nemyx-galeria-inferior">
                 <img src="img/n1.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
                 <img src="img/n2.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
                 <img src="img/n3.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                
+                <!-- Video 1 -->
+                <video src="video/n4.mp4" onclick="abrirVideo(this)" class="video-zoom" autoplay muted loop playsinline></video>
+                
                 <img src="img/n5.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
                 <img src="img/n6.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
                 <img src="img/n7.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
                 <img src="img/n8.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                
+                <!-- Video 2 -->
+                <video src="video/NEMYX.mp4" onclick="abrirVideo(this)" class="video-zoom" autoplay muted loop playsinline></video>
             </div>
-
-           
         </div>
 
         <div class="detalle-nav">
             <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -896,12 +888,15 @@
         </form>
     </div>
 
-    <!-- VISOR GLOBAL DE IMÁGENES -->
+<!-- VISOR GLOBAL DE IMÁGENES Y VIDEOS -->
     <div id="visor" class="visor-imagen" onclick="cerrarFoto(event)">
         <span class="cerrar-visor">×</span>
-        <span class="prev-visor" onclick="cambiarFoto(-1)">&#10094;</span>
-        <img id="img-visor" src="" alt="Imagen Completa">
-        <span class="next-visor" onclick="cambiarFoto(1)">&#10095;</span>
+        <span class="prev-visor" onclick="cambiarMedia(-1)">&#10094;</span>
+        
+        <img id="img-visor" src="" alt="Imagen Completa" style="display: none;">
+        <video id="video-visor" src="" controls style="display: none; max-width: 90%; max-height: 90%; outline: none; box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);"></video>
+        
+        <span class="next-visor" onclick="cambiarMedia(1)">&#10095;</span>
     </div>
 
     <script src="alteak.js"></script>
