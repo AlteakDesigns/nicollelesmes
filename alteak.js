@@ -16,6 +16,9 @@ function mostrarSeccion(id) {
     }
 
     document.getElementById('menu').classList.remove('activo');
+    
+    // Fuerza a subir siempre que cambie de pantalla
+    window.scrollTo(0, 0);
 }
 
 // Abrir y cerrar proyectos
