@@ -164,3 +164,16 @@ if (form) {
         window.location.href = mailtoLink;
     });
 }
+
+function entrarConIdioma(idioma) {
+    const body = document.body;
+    if (idioma === 'en') {
+        body.classList.replace('lang-es', 'lang-en');
+        localStorage.setItem('idioma', 'en');
+    } else {
+        body.classList.replace('lang-en', 'lang-es');
+        localStorage.setItem('idioma', 'es');
+    }
+    // Manda directo al sub-inicio (menú flotante)
+    mostrarSeccion('sub-inicio');
+}
