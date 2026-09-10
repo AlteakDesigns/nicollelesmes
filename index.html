@@ -10,21 +10,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="lang-es">
 
     <header class="navbar">
         <nav class="navbar-container">
             <ul class="menu" id="menu">
-                <li><a href="#" onclick="mostrarSeccion('acerca')">Acerca de mí</a></li>
-                <li><a href="#" onclick="mostrarSeccion('cv')">Perfil profesional</a></li>
-                <li><a href="#" onclick="mostrarSeccion('proyectos')">Mis proyectos</a></li>
-                <li><a href="#" onclick="mostrarSeccion('contacto')">Contacto</a></li>
+                <li><a href="#" onclick="mostrarSeccion('acerca')"><span class="es">Acerca de mí</span><span class="en">About me</span></a></li>
+                <li><a href="#" onclick="mostrarSeccion('cv')"><span class="es">Perfil profesional</span><span class="en">Professional Profile</span></a></li>
+                <li><a href="#" onclick="mostrarSeccion('proyectos')"><span class="es">Mis proyectos</span><span class="en">My projects</span></a></li>
+                <li><a href="#" onclick="mostrarSeccion('contacto')"><span class="es">Contacto</span><span class="en">Contact</span></a></li>
             </ul>
 
             <div class="logo" onclick="mostrarSeccion('bienvenida')" style="cursor: pointer;">
                 <img src="img/logo_2.svg" alt="Alteak Designs">
             </div>
-
+            
+            <div class="lang-toggle" onclick="cambiarIdioma()" style="cursor: pointer; font-family: 'Space Grotesk', sans-serif; font-weight: bold; color: #888;">
+                <span id="btn-es" class="activo" style="color: #fff;">ES</span> | <span id="btn-en">EN</span>
+            </div>
+            
             <div class="hamburger" onclick="desplegarMenu()">
                 ☰ 
             </div>
@@ -45,8 +49,14 @@
                     <img src="img/logo_2.svg" class="logo-layer" style="--z: -6px; filter: brightness(0.6);">
                 </div>
             </div>
-            <h1>Dónde se crea con sentido...</h1>
-            <button class="btn-entrar" onclick="mostrarSeccion('sub-inicio')">Entrar</button>
+            <h1>
+                <span class="es">Dónde se crea con sentido...</span>
+                <span class="en">Where creation makes sense...</span>
+            </h1>
+            <button class="btn-entrar" onclick="mostrarSeccion('sub-inicio')">
+                <span class="es">Entrar</span>
+                <span class="en">Enter</span>
+            </button>
         </div>
     </div>
 
@@ -54,10 +64,10 @@
     <div id="sub-inicio" class="seccion">
         <div class="hub-container animado">
             <nav class="hub-menu">
-                <a href="#" onclick="mostrarSeccion('acerca')">Acerca de mí</a>
-                <a href="#" onclick="mostrarSeccion('cv')">Perfil Profesional</a>
-                <a href="#" onclick="mostrarSeccion('proyectos')">Proyectos</a>
-                <a href="#" onclick="mostrarSeccion('contacto')">Contacto</a>
+                <a href="#" onclick="mostrarSeccion('acerca')"><span class="es">Acerca de mí</span><span class="en">About me</span></a>
+                <a href="#" onclick="mostrarSeccion('cv')"><span class="es">Perfil Profesional</span><span class="en">Professional Profile</span></a>
+                <a href="#" onclick="mostrarSeccion('proyectos')"><span class="es">Proyectos</span><span class="en">Projects</span></a>
+                <a href="#" onclick="mostrarSeccion('contacto')"><span class="es">Contacto</span><span class="en">Contact</span></a>
             </nav>
         </div>
     </div>
@@ -66,13 +76,19 @@
     <div id="acerca" class="seccion">
         <div class="contenedor-acerca">
             <div class="acerca-sup animado">
-                <h1>¡Hola! Soy Nicolle Lesmes</h1>
-                <h2 class="subtitulo-acerca">Diseñadora de Producto</h2>
+                <h1>
+                    <span class="es">¡Hola! Soy Nicolle Lesmes</span>
+                    <span class="en">Hello! I'm Nicolle Lesmes</span>
+                </h1>
+                <h2 class="subtitulo-acerca">
+                    <span class="es">Diseñadora de Producto</span>
+                    <span class="en">Product Designer</span>
+                </h2>
             </div>
 
             <div class="acerca-medio animado">
                 <div class="texto-acerca">
-                    <p>
+                    <p class="es">
                         Me apasiona transformar ideas en objetos posibles y funcionales, explorando el equilibrio entre
                         estética y uso. Creo en un diseño con intención, capaz de ir más allá de lo evidente para
                         aportar significado, sensibilidad y coherencia a cada proyecto. Disfruto cada etapa del proceso
@@ -81,7 +97,8 @@
                         resolutiva, en constante aprendizaje. Busco detectar tendencias, experimentar con nuevas formas
                         de crear y adaptarme a los retos del diseño contemporáneo, aportando siempre una mirada fresca,
                         creativa y consistente.
-                        <br><br>.<br><br>
+                    </p>
+                    <p class="en">
                         Passionate about transforming ideas into feasible and functional objects, my work explores the
                         balance between aesthetics and use. I believe in design with intention, one that goes beyond the
                         obvious to bring meaning, sensitivity, and coherence to each project. The creative process is
@@ -115,97 +132,134 @@
 
     <!-- seccion cv -->
     <div id="cv" class="seccion animado">
-        <h1 class="titulo-perfil">Perfil Profesional</h1>
+        <h1 class="titulo-perfil">
+            <span class="es">Perfil Profesional</span>
+            <span class="en">Professional Profile</span>
+        </h1>
         <div class="contenedor-cv">
             <div class="columna-izq">
                 <div class="bloque-cv">
-                    <h3>Información Personal</h3>
+                    <h3>
+                        <span class="es">Información Personal</span>
+                        <span class="en">Personal Information</span>
+                    </h3>
                     <ul>
-                        <li>25 años</li>
-                        <li>Madrid, España, 28012</li>
-                        <li>Colombiana</li>
+                        <li><span class="es">Madrid, España, 28012</span><span class="en">Madrid, Spain, 28012</span></li>
                     </ul>
                 </div>
                 <br>
                 <div class="bloque-cv">
-                    <h3>Habilidades Técnicas</h3>
+                    <h3>
+                        <span class="es">Habilidades Técnicas</span>
+                        <span class="en">Technical Skills</span>
+                    </h3>
                     <ul>
+                        <li><span class="es">BOM y Manufactura Aditiva</span><span class="en">BOM & Additive Manufacturing</span></li>
                         <li>Rhinoceros</li>
-                        <li>Adobe (Illustrator, Photoshop, Dimension, InDesign)</li>
-                        <li>SketchBook</li>
-                        <li>Microsoft Programas</li>
+                        <li>Adobe Creative Suite </li>
                         <li>Fusion 360</li>
                         <li>KeyShot</li>
                         <li>AutoCad</li>
                         <li>SolidEdge</li>
+                        <li>SketchBook</li>
+                        <li>Microsoft 360</li>
+                        
                     </ul>
                 </div>
                 <br>
                 <div class="bloque-cv">
-                    <h3>Habilidades Personales</h3>
+                    <h3>
+                        <span class="es">Habilidades Personales</span>
+                        <span class="en">Soft Skills</span>
+                    </h3>
                     <ul>
-                        <li>Resolución de problemas</li>
-                        <li>Manejo de conflictos</li>
-                        <li>Trabajo en equipo</li>
-                        <li>Adaptabilidad</li>
-                        <li>Creatividad</li>
-                        <li>Comunicación</li>
-                        <li>Gestión eficaz del tiempo</li>
+                        <li><span class="es">Resolución de problemas</span><span class="en">Problem-solving</span></li>
+                        <li><span class="es">Manejo de conflictos</span><span class="en">Conflict resolution</span></li>
+                        <li><span class="es">Trabajo en equipo</span><span class="en">Teamwork</span></li>
+                        <li><span class="es">Adaptabilidad</span><span class="en">Adaptability</span></li>
+                        <li><span class="es">Creatividad</span><span class="en">Creativity</span></li>
+                        <li><span class="es">Comunicación</span><span class="en">Communication</span></li>
+                        <li><span class="es">Gestión eficaz del tiempo</span><span class="en">Effective time management</span></li>
                     </ul>
                 </div>
                 <br>
                 <div class="bloque-cv">
-                    <h3>Idiomas</h3>
+                    <h3>
+                        <span class="es">Idiomas</span>
+                        <span class="en">Languages</span>
+                    </h3>
                     <div class="cv">
-                        <p>Inglés (B2 - IELTS)</p>
-                        <p>Español - Nativo</p>
+                        <p><span class="es">Inglés (B2 - IELTS)</span><span class="en">English (B2 - IELTS)</span></p>
+                        <p><span class="es">Español - Nativo</span><span class="en">Spanish - Native</span></p>
                     </div>
                 </div>
             </div>
 
             <div class="columna-der">
                 <div class="bloque-cv">
-                    <h3>Experiencia</h3>
+                    <h3>
+                        <span class="es">Experiencia</span>
+                        <span class="en">Experience</span>
+                    </h3>
                     <div class="cv">
-                        <h4>María Torné Cerámica & Joyería | Práctica (Octubre 2025 - Marzo 2026)</h4>
-                        <p>Experiencia en la fabricación de joyas en porcelana, abarcando todo el proceso desde la
-                            preparación del material hasta el acabado, control de calidad y embalaje. Manejo de
-                            componentes metálicos, montaje final de piezas y desarrollo de plantillas y prototipos
-                            mediante modelado e impresión 3D.</p>
+                        <h4>
+                            <span class="es">María Torné Cerámica & Joyería | Práctica (Octubre 2025 - Marzo 2026)</span>
+                            <span class="en">María Torné Ceramics & Jewelry | Internship (October 2025 - March 2026)</span>
+                        </h4>
+                        <p class="es">Experiencia en la fabricación de joyas en porcelana, abarcando todo el proceso desde la preparación del material hasta el acabado, control de calidad y embalaje. Manejo de componentes metálicos, montaje final de piezas y desarrollo de plantillas y prototipos mediante modelado e impresión 3D.</p>
+                        <p class="en">Experience in porcelain jewelry manufacturing, covering the entire process from material preparation to finishing, quality control, and packaging. Handling of metallic components, final assembly of pieces, and development of templates and prototypes through 3D modeling and printing.</p>
                         <br>
-                        <h4>Parfums Christian Dior Iberia | Colaboradora (Septiembre 2024 - Mayo 2025)</h4>
-                        <p>Proyecto Colaborativo UDIT | Diseño integral de Dior's Embrace, una experiencia corporativa inmersiva 
-                            concebida para fortalecer el employer branding de la marca. El proyecto incluyó el desarrollo de un regalo 
-                            corporativo «Dior’s Embrace» de lujo sostenible y circular, equilibrando estética de alta gama de Dior
-                            con la responsabilidad medioambiental.</p>
+                        <h4>
+                            <span class="es">Parfums Christian Dior Iberia | Colaboradora (Septiembre 2024 - Mayo 2025)</span>
+                            <span class="en">Parfums Christian Dior Iberia | Collaborator (September 2024 - May 2025)</span>
+                        </h4>
+                        <p class="es">Proyecto Colaborativo UDIT | Diseño integral de Dior's Embrace, una experiencia corporativa inmersiva concebida para fortalecer el employer branding de la marca. El proyecto incluyó el desarrollo de un regalo corporativo «Dior’s Embrace» de lujo sostenible y circular, equilibrando estética de alta gama de Dior con la responsabilidad medioambiental.</p>
+                        <p class="en">UDIT Collaborative Project | Comprehensive design of Dior's Embrace, an immersive corporate experience conceived to strengthen the brand's employer branding. The project included the development of a 'Dior’s Embrace' corporate gift of sustainable and circular luxury, balancing Dior's high-end aesthetics with environmental responsibility.</p>
                         <br>
-                        <h4>Old Jeffrey | Diseñadora de Producto (Octubre 2023 - Junio 2024)</h4>
-                        <p>Lideré el desarrollo integral del diseño 3D y estructural de una nueva linea de perfumería masculina. 
-                            Tambien gestioné el proceso integral de diseño de estampados textiles exclusivos para la colección de baño 2025 OJ Napoli.</p>
+                        <h4>
+                            <span class="es">Old Jeffrey | Diseñadora de Producto (Octubre 2023 - Junio 2024)</span>
+                            <span class="en">Old Jeffrey | Product Designer (October 2023 - June 2024)</span>
+                        </h4>
+                        <p class="es">Lideré el desarrollo integral del diseño 3D y estructural de una nueva linea de perfumería masculina. Tambien gestioné el proceso integral de diseño de estampados textiles exclusivos para la colección de baño 2025 OJ Napoli.</p>
+                        <p class="en">Led the comprehensive 3D and structural design development for a new men's fragrance line. Also managed the end-to-end design process of exclusive textile prints for the OJ Napoli 2025 swimwear collection.</p>
                         <br>
-                        <h4>Quimbaya by Edwin Rodriguez | Colaboradora (Septiembre 2023 - Mayo 2024)</h4>
-                        <p>Colaborativo UDIT | Conceptualización y desarrollo de Girallia, botellero colgante giratorio para barras de coctelería 
-                            profesional, optimizando capacidad de almacenaje y ergonomía operativa mediante la fusión de
-                            viabilidad técnica y estética premium adaptada a las exigencias de la alta restauración.</p>
+                        <h4>
+                            <span class="es">Quimbaya by Edwin Rodriguez | Colaboradora (Septiembre 2023 - Mayo 2024)</span>
+                            <span class="en">Quimbaya by Edwin Rodriguez | Collaborator (September 2023 - May 2024)</span>
+                        </h4>
+                        <p class="es">Colaborativo UDIT | Conceptualización y desarrollo de Girallia, botellero colgante giratorio para barras de coctelería profesional, optimizando capacidad de almacenaje y ergonomía operativa mediante la fusión de viabilidad técnica y estética premium adaptada a las exigencias de la alta restauración.</p>
+                        <p class="en">UDIT Collaborative | Conceptualization and development of Giralia, a rotating hanging bottle rack for professional cocktail bars, optimizing storage capacity and operational ergonomics through the fusion of technical feasibility and premium aesthetics adapted to the demands of high-end dining.</p>
                         <br>
                     </div>
                 </div>
 
                 <div class="bloque-cv">
-                    <h3>Estudios</h3>
+                    <h3>
+                        <span class="es">Estudios</span>
+                        <span class="en">Education</span>
+                    </h3>
                     <div class="cv">
-                        <h4>Grado Oficial Diseño de Producto (2022 - 2026)</h4>
-                        <p>UDIT, Universidad de Diseño, Innovación y Tecnología.<br>Madrid, España.</p>
+                        <h4>
+                            <span class="es">Grado Oficial Diseño de Producto (2022 - 2026)</span>
+                            <span class="en">Official Degree in Product Design (2022 - 2026)</span>
+                        </h4>
+                       <p>
+                           <span class="es">UDIT, Universidad de Diseño, Innovación y Tecnología.<br>Madrid, España.</span>
+                           <span class="en">UDIT, University of Design, Innovation and Technology.<br>Madrid, Spain.</span>
+                       </p>
                     </div>
                 </div>
 
                 <div class="bloque-cv">
-                    <h3>Certificaciones Cursos</h3>
+                    <h3>
+                        <span class="es">Certificaciones Cursos</span>
+                        <span class="en">Certifications & Courses</span>
+                    </h3>
                     <div class="cv">
-                        <h4>Business Management Institute of Berlin - Enero 2021, Online</h4>
+                        <h4>Business Management Institute of Berlin - 2021, Online</h4>
                         <p class="detalle-curso">Basics of Innovation Management<br>Certificate ID: 322944-161-127-5324</p>
                         <br>
-                        <h4>Business Management Institute of Berlin - Enero 2021, Online</h4>
+                        <h4>Business Management Institute of Berlin - 2021, Online</h4>
                         <p class="detalle-curso">Leadership and Team Development<br>Certificate ID: 322944-161-222-7803</p>
                     </div>
                 </div>
@@ -216,8 +270,14 @@
     <!-- seccion mis proyectos -->
     <div id="proyectos" class="seccion animado">
         <div class="portada-proyectos">
-            <h1>Mis proyectos</h1>
-            <p>Desliza para ver más</p>
+            <h1>
+                <span class="es">Mis proyectos</span>
+                <span class="en">My projects</span>
+            </h1>
+            <p>
+                <span class="es">Desliza para ver más</span>
+                <span class="en">Scroll to see more</span>
+            </p>
             <a href="#galeria" class="flecha-bajar" onclick="deslizarAbajo(event)"></a>
         </div>
 
@@ -226,7 +286,10 @@
                 <img src="img/NEMYXP.jpg" alt="NEMYX">
                 <div class="info-overlay">
                     <h3>NEMYX</h3>
-                    <p>Accesorios, Gafas, Darkwear - Scanner, Modelado e Impresión 3D & Programación, 2026</p>
+                    <p>
+                        <span class="es">Accesorios, Gafas, Darkwear - Scanner, Modelado e Impresión 3D & Programación, 2026</span>
+                        <span class="en">Accessories, Eyewear, Darkwear - Scanner, 3D Modeling & Printing & Programming, 2026</span>
+                    </p>
                 </div>
             </a>
             
@@ -234,7 +297,10 @@
                 <img src="img/amma.jpg" alt="AMMA">
                 <div class="info-overlay">
                     <h3>AMMA</h3>
-                    <p>Lifestyle Goods, Diseño Circular & Modular - Ideation & Workflows, 2026</p>
+                    <p>
+                        <span class="es">Lifestyle Goods, Diseño Circular & Modular - Ideation & Workflows, 2026</span>
+                        <span class="en">Lifestyle Goods, Circular & Modular Design - Ideation & Workflows, 2026</span>
+                    </p>
                 </div>
             </a>
             
@@ -242,7 +308,10 @@
                 <img src="img/ondara.jpg" alt="ONDARA">
                 <div class="info-overlay">
                     <h3>ONDARA</h3>
-                    <p>Luminaria Conceptual - Impresión 3D PETG, 2025</p>
+                    <p>
+                        <span class="es">Luminaria Conceptual - Impresión 3D PETG, 2025</span>
+                        <span class="en">Conceptual Luminaire - 3D Printing PETG, 2025</span>
+                    </p>
                 </div>
             </a>
 
@@ -250,7 +319,10 @@
                 <img src="img/naya.jpeg" alt="NAYA">
                 <div class="info-overlay">
                     <h3>NAYA</h3>
-                    <p>Joyería Conceptual - Impresión Resina 3D, 2025</p>
+                    <p>
+                        <span class="es">Joyería Conceptual - Impresión Resina 3D, 2025</span>
+                        <span class="en">Conceptual Jewelry - 3D Resin Printing, 2025</span>
+                    </p>
                 </div>
             </a>
 
@@ -258,7 +330,10 @@
                 <img src="img/diorlogo.png" alt="DIOR`S EMBRACE">
                 <div class="info-overlay">
                     <h3>DIOR`S EMBRACE</h3>
-                    <p>Regalo Corporativo - Moda e Identidad de empresa, 2025</p>
+                    <p>
+                        <span class="es">Regalo Corporativo - Moda e Identidad de empresa, 2025</span>
+                        <span class="en">Corporate Gift - Fashion & Corporate Identity, 2025</span>
+                    </p>
                 </div>
             </a>
 
@@ -266,7 +341,10 @@
                 <img src="img/oldjeffrey.png" alt="OJ NAPOLI">
                 <div class="info-overlay">
                     <h3>OJ NAPOLI</h3>
-                    <p>Bermudas para Old Jeffrey - Moda, 2024</p>
+                    <p>
+                        <span class="es">Bermudas para Old Jeffrey - Moda, 2024</span>
+                        <span class="en">Bermuda Shorts for Old Jeffrey - Fashion, 2024</span>
+                    </p>
                 </div>
             </a>
 
@@ -274,7 +352,10 @@
                 <img src="img/solerisportada.jpg" alt="SOLERIS">
                 <div class="info-overlay">
                     <h3>SOLERIS</h3>
-                    <p>Luminaria Conceptual - CNC & Rhinoceros, 2025</p>
+                    <p>
+                        <span class="es">Luminaria Conceptual - CNC & Rhinoceros, 2025</span>
+                        <span class="en">Conceptual Luminaire - CNC & Rhinoceros, 2025</span>
+                    </p>
                 </div>
             </a>
 
@@ -282,7 +363,10 @@
                 <img src="img/giralia logo.png" alt="GIRALIA">
                 <div class="info-overlay">
                     <h3>GIRALIA</h3>
-                    <p>Hostelería para Quimbaya - Mobiliario Hostelería, 2024</p>
+                    <p>
+                        <span class="es">Hostelería para Quimbaya - Mobiliario Hostelería, 2024</span>
+                        <span class="en">Hospitality for Quimbaya - Hospitality Furniture, 2024</span>
+                    </p>
                 </div>
             </a>
 
@@ -290,7 +374,10 @@
                 <img src="img/perfumelogo.png" alt="SINGULAR ESSENCE">
                 <div class="info-overlay">
                     <h3>SINGULAR ESSENCE</h3>
-                    <p>Perfume Conceptual - Packaging & Branding, 2024</p>
+                    <p>
+                        <span class="es">Perfume Conceptual - Packaging & Branding, 2024</span>
+                        <span class="en">Conceptual Perfume - Packaging & Branding, 2024</span>
+                    </p>
                 </div>
             </a>
 
@@ -298,7 +385,10 @@
                 <img src="img/zenportada.png" alt="ZENTIDE">
                 <div class="info-overlay">
                     <h3>ZENTIDE</h3>
-                    <p>Proyecto Verallia - Branding & Packaging, 2023</p>
+                    <p>
+                        <span class="es">Proyecto Verallia - Branding & Packaging, 2023</span>
+                        <span class="en">Verallia Project - Branding & Packaging, 2023</span>
+                    </p>
                 </div>
             </a>
         </div>
@@ -309,12 +399,18 @@
     <!-- NEMYX -->
     <div id="nemyx" class="seccion">
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
 
         <div class="titulo-nemyx">
             <h1>NEMYX</h1>
-            <h2 class="subtitulo">Escuchando la Luz</h2>
+            <h2 class="subtitulo">
+                <span class="es">Escuchando la Luz</span>
+                <span class="en">Listening to the Light</span>
+            </h2>
         </div>
 
         <div class="nemyx-contenido">
@@ -327,14 +423,13 @@
                 </div>
                 
                 <div class="nemyx-descripcion">
-                    <p>
+                    <p class="es">
                         Nemyx es una vía de escape donde la escultura gótica y la tecnología colisionan. 
                         Esta pieza actúa como un lienzo vivo, su sensor captura el ritmo acústico y lo traduce en 
                         pulsos de luz, como pinceladas en la oscuridad. Creada para observadores imaginativos que 
                         buscan perpetuar la sensibilidad y el arte frente a la indiferencia moderna.
                     </p>
-                    <br> . <br><br>
-                    <p>
+                    <p class="en">
                         Nemyx is an escape where Gothic sculpture and technology collide. This piece acts as a living 
                         canvas; its sensor captures the acoustic rhythm and translates it into pulses of light, like 
                         brushstrokes in the dark. Created for imaginative observers who seek to perpetuate sensitivity 
@@ -345,7 +440,7 @@
 
             <div class="nemyx-medio">
                 <div class="nemyx-medio-texto">
-                    <p>
+                    <p class="es">
                         El desarrollo de NEMYX partió de una investigación que fusiona armaduras neogóticas y bioluminiscencia. Al 
                         requerir una morfología orgánica, descarté el diseño digital inicial: modelé el prototipo a mano en plastilina
                         para capturar la fluidez anatómica y lo digitalicé con un escáner 3D. En Rhino, procesé la malla y apliqué
@@ -354,8 +449,7 @@
                         ensamblé el hardware y el modelo 3D sobre unas monturas Ray-Ban reutilizadas, integrando rigor técnico y
                         sostenibilidad mediante upcycling.
                     </p>
-                    <br><br>
-                    <p>
+                    <p class="en">
                         The development of NEMYX began with research fusing neo-Gothic armor and bioluminescence. Requiring an organic morphology, 
                         I discarded the initial digital design by prototyping by hand in clay to capture the anatomical fluidity and digitized it 
                         with a 3D scanner. In Rhino, I processed the mesh and applied symmetry. Later, I printed the exoskeleton in TPU to ensure 
@@ -381,25 +475,32 @@
                 <!-- Video 2 -->
                <video src="videos/nemyx_web.mp4" onclick="abrirVideo(this)" class="video-zoom video-full" autoplay muted loop playsinline></video>
             </div>
-        </div> <!-- Cierra nemyx-contenido -->
+        </div>
 
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
     </div>
 
 
-    
-    
     <!-- AMMA -->
     <div id="amma" class="seccion">
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
 
         <div class="titulo-amma">
             <h1>AMMA</h1>
-            <h2 class="subtitulo">Familia en Movimiento</h2>
+            <h2 class="subtitulo">
+                <span class="es">Familia en Movimiento</span>
+                <span class="en">Family in Motion</span>
+            </h2>
         </div>
 
         <div class="amma-contenido">
@@ -412,15 +513,14 @@
                 </div>
                 
                 <div class="amma-descripcion">
-                    <p>
+                    <p class="es">
                         Opera como una startup de puericultura que nace para acabar con la obsolescencia biológica 
                         de los productos infantiles. La industria actual obliga a los compradores a adquirir artículos
                         que quedan inservibles en pocos meses debido al crecimiento del bebé. La propuesta de valor de
                         AMMA resuelve esto con un sistema de 3 fases evolutivas (porteo, mochila infantil y bolso de 
                         adulto con crossbody desplegable).
                     </p>
-                    <br> . <br><br>
-                    <p>
+                    <p class="en">
                         Is a childcare startup designed to eliminate the biological obsolescence of baby gear. 
                         While the current market forces parents to buy products that are outgrown in months, 
                         AMMA solves this with a 3-phase evolutionary system, seamlessly transforming from a baby 
@@ -431,17 +531,25 @@
 
             <div class="amma-medio">
                 <div class="amma-medio-texto">
-                    <p>
+                    <p class="es">
                         AMMA da respuesta a la ineficiente movilidad en la crianza, causante de estrés crónico, sobrecostes familiares 
                         y residuos medioambientales. Respaldado por una sólida investigación que evidenció la pérdida de autonomía y 
                         agotamiento en la mayoría de los cuidadores, el proyecto recorrió todo el ciclo de diseño: de la conceptualización 
                         y estrategia al desarrollo de un producto final sostenible, funcional y 100% viable en el mercado.
-                    </p>
-                    <br><br>
-                    <p>
+                        <br><br>
                         Construido en algodón 100% EtaProof de alta durabilidad y libre de toxinas, garantiza un rendimiento óptimo y seguro 
                         en todas sus configuraciones. Esta fusión de funcionalidad técnica y diseño consciente convierte a AMMA en una herramienta 
                         versátil y duradera.
+                    </p>
+                    <p class="en">
+                        AMMA responds to the inefficient mobility in parenting, which causes chronic stress, family extra costs 
+                        and environmental waste. Backed by solid research that showed a loss of autonomy and exhaustion 
+                        in most caregivers, the project covered the entire design cycle: from conceptualization 
+                        and strategy to the development of a sustainable, functional, and 100% market-viable final product.
+                        <br><br>
+                        Constructed in highly durable, toxin-free 100% EtaProof cotton, it guarantees optimal and safe performance 
+                        in all its configurations. This fusion of technical functionality and conscious design turns AMMA into a versatile 
+                        and long-lasting tool.
                     </p>
                 </div>
                 <div class="amma-medio-img">
@@ -459,24 +567,36 @@
             </div>
 
             <div class="amma-footer">
-                <h4 class="texto-h4-pequeno">Reinterpretación del boceto original mediante IA (Workflows y herramientas: Gemini - Manus - Vizcom)</h4>
+                <h4 class="texto-h4-pequeno">
+                    <span class="es">Reinterpretación del boceto original mediante IA (Workflows y herramientas: Gemini - Manus - Vizcom)</span>
+                    <span class="en">Reinterpretation of the original sketch using AI (Workflows and tools: Gemini - Manus - Vizcom)</span>
+                </h4>
             </div>
         </div>
 
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
     </div>
 
     <!-- ONDARA -->
     <div id="ondara" class="seccion">
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
 
         <div class="ondara-titulo">
             <h1>Ondara</h1>
-            <h2 class="subtitulo">Ondas de luz</h2>
+            <h2 class="subtitulo">
+                <span class="es">Ondas de luz</span>
+                <span class="en">Waves of light</span>
+            </h2>
         </div>
 
         <div class="ondara-contenido">
@@ -485,14 +605,13 @@
                     <img src="img/ondara00.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
                 </div>
                 <div class="ondara-descripcion">
-                    <p>
+                    <p class="es">
                         Nace de la experimentación con el diseño paramétrico, dejando atrás la espiral tradicional para
                         explorar un lenguaje más fluido y controlado. Las ondas construyen la forma y dirigen la luz,
                         generando un movimiento suave que cambia según el punto de vista y el espacio. El resultado es
                         una pieza donde la geometría y la luz se entienden como un mismo gesto.
                     </p>
-                    <br> . <br><br>
-                    <p>
+                    <p class="en">
                         It emerges from experimentation with parametric design, moving beyond the traditional spiral to
                         explore a more fluid and controlled language. The waves shape the form and guide the light,
                         creating a soft movement that changes with the viewpoint and the surrounding space. The result
@@ -514,19 +633,28 @@
         </div>
         
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
     </div>
 
     <!-- NAYA -->
     <div id="naya" class="seccion">
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
 
         <div class="titulo-naya">
             <h1>Naya</h1>
-            <h2 class="subtitulo">Una nueva visión</h2>
+            <h2 class="subtitulo">
+                <span class="es">Una nueva visión</span>
+                <span class="en">A new vision</span>
+            </h2>
         </div>
 
         <div class="cuadricula-proyecto">
@@ -538,11 +666,12 @@
                     <img src="img/naya4.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
                 </div>
                 <div class="texto-descripcion">
-                    <p>
+                    <p class="es">
                         Colección de pendientes que re-imagina la colonización colombiana desde un futuro
                         alternativo, donde las culturas indígenas triunfan. Fusiona estética indígena Colombiana y
                         medieval con diseño 3D, simbolizando resistencia, tradición e innovación.
-                        <br><br>.<br><br>
+                    </p>
+                    <p class="en">
                         A collection of earrings reinterpret the Colombian colonization from an alternative
                         future where the Indigenous cultures triumph. Merges indigenous Colombian aesthetics and
                         medieval with 3D design, symbolizing resistance, tradition and innovation.
@@ -563,19 +692,28 @@
         </div>
 
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
     </div>
 
     <!-- DIOR'S EMBRACE -->
     <div id="dior" class="seccion">
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
 
         <div class="dior-titulo">
             <h1>Dior's Embrace</h1>
-            <h2 class="subtitulo">Un gesto, un legado...</h2>
+            <h2 class="subtitulo">
+                <span class="es">Un gesto, un legado...</span>
+                <span class="en">A gesture, a legacy...</span>
+            </h2>
         </div>
 
         <div class="dior-contenido">
@@ -584,15 +722,14 @@
                     <img src="img/dior1.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
                 </div>
                 <div class="dior-descripcion">
-                    <p>
+                    <p class="es">
                         Creada en colaboración con Dior, ofrece una experiencia inmersiva que equilibra lujo y
                         sostenibilidad. La caja combina cartón con textil reciclado que aportan color y simbolizan
                         compromiso ambiental. Su diseño versátil incluye espacio para obsequios, hecho con rafia
                         reciclada, y una carta personalizada, reforzando la exclusividad y conexión emocional con el
                         personal de Dior.
                     </p>
-                    <br> . <br><br>
-                    <p>
+                    <p class="en">
                         Created in collaboration with Dior, it provides an immersive experience that balances luxury and
                         sustainability. The box combines cardboard with recycled textiles, adding color while
                         symbolizing environmental commitment. Its versatile design includes space for gifts made with
@@ -614,36 +751,44 @@
         </div>
 
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
     </div>
 
     <!-- OJ NAPOLI -->
     <div id="napoli" class="seccion">
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
 
         <div class="titulo-napoli">
             <h1>OJ Napoli</h1>
-            <h2 class="subtitulo">Flujo geométrico, esencia costera</h2>
+            <h2 class="subtitulo">
+                <span class="es">Flujo geométrico, esencia costera</span>
+                <span class="en">Geometric flow, coastal essence</span>
+            </h2>
         </div>
 
         <div class="napoli-contenido">
             <div class="napoli-sup">
                 <div class="napoli-descripcion">
-                    <p>
+                    <p class="es">
                         Colección de bermudas masculinas para Old Jeffrey, que emplea diversas gamas de colores y
                         figuras geométricas con un efecto desgastado, creando un equilibrio entre un estilo moderno y un
                         toque vintage, ideal para destacar con originalidad.
-                        <br><br>Destacada en Top 5 de la revista Fuera de Serie<br>
+                        <br><br>Destacada en Top 5 de la revista Fuera de Serie
                     </p>
-                    <br> . <br><br>
-                    <p>
+                    <p class="en">
                         A men's bermuda shorts collection for Old Jeffrey, featuring a diverse color palette and
                         geometric patterns with a distressed finish, striking a refined balance between contemporary
                         design and vintage appeal, ideal for making a distinctive statement.
-                        <br><br>Featured in the Top 5 of Fuera de Serie magazine<br>
+                        <br><br>Featured in the Top 5 of Fuera de Serie magazine
                     </p>
                 </div>
 
@@ -670,32 +815,42 @@
         </div>
 
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
     </div>
 
     <!-- SOLERIS -->
     <div id="soleris" class="seccion">
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
 
         <div class="titulo-soleris">
             <h1>Soleris</h1>
-            <p class="subtitulo">Un fragmento de luz...</p>
+            <p class="subtitulo">
+                <span class="es">Un fragmento de luz...</span>
+                <span class="en">A fragment of light...</span>
+            </p>
         </div>
 
         <div class="cuadricula-soleris">
             <div class="bloque-sup-soleris">
                 <div class="texto-soleris">
-                    <p>
+                    <p class="es">
                         Conexión entre la luz y el universo, simbolizando el equilibrio orbital y el dinamismo cósmico.
                         Sus órbitas evocan el movimiento planetario mientras la base rocosa refleja solidez y
                         estabilidad, ofreciendo un contraste entre lo etéreo y lo terrenal. Sus laterales están
                         diseñados para servir como prácticos sujetalibros, integrando versatilidad y elegancia en un
                         solo objeto. Soleris, una obra que transforma cualquier ambiente con su presencia escultórica y
                         simbólica.
-                        <br>.<br><br>
+                    </p>
+                    <p class="en">
                         Connection between light and the universe, symbolizing orbital balance and cosmic dynamism.
                         Their orbits evoke planetary motion while the rocky base reflects solidity and stability,
                         offering a contrast between the ethereal and the earthly. Its sides are designed to serve as
@@ -716,31 +871,41 @@
         </div>
 
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
     </div>
 
     <!-- GIRALIA -->
     <div id="giralia" class="seccion">
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
 
         <div class="titulo-giralia">
             <h1>Giralia</h1>
-            <p class="subtitulo">Transforma mezclas, eleva tu coctelería</p>
+            <p class="subtitulo">
+                <span class="es">Transforma mezclas, eleva tu coctelería</span>
+                <span class="en">Transform mixes, elevate your mixology</span>
+            </p>
         </div>
 
         <div class="cuadricula-giralia">
             <div class="bloque-sup-giralia">
                 <div class="texto-giralia">
-                    <p>
+                    <p class="es">
                         Giralia, un botellero colgante giratorio desarrollado en colaboración con el Restaurante
                         Quimbaya by Edwin Rodriguez ubicado en Madrid, España. Diseñado para optimizar el espacio
                         superior de la barra de cocktails, que combina funcionalidad y estética para el almacenamiento
                         de botellas, demostrando así la capacidad innovadora en el diseño de productos para la
                         hostelería.
-                        <br> . <br><br>
+                    </p>
+                    <p class="en">
                         Giralia, a rotating hanging bottle rack developed in collaboration with Quimbaya Restaurant by
                         Edwin Rodriguez located in Madrid, Spain. Designed to optimize the upper space of the cocktail
                         bar, it combines functionality and aesthetics for bottle storage, thus showcasing innovative
@@ -765,14 +930,20 @@
         </div>
 
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
     </div>
 
     <!-- SINGULAR ESSENCE -->
     <div id="singular" class="seccion">
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
 
         <div class="titulo-singular">
@@ -786,14 +957,15 @@
                     <img src="img/perfume1.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
                 </div>
                 <div class="texto-singular">
-                    <p>
+                    <p class="es">
                         Diseño de envase de perfume unisex, inspirado en la obra "Estudio sexual indiferenciado" de
                         Teresa Solar. En el arte contemporáneo, la identidad de género es un tema que muchos artistas
                         están abordando, y Solar desafía las etiquetas tradicionales. Este diseño reflexiona sobre la
                         diversidad sexual y la no conformidad con las categorías de género en la vida cotidiana. La obra
                         de Solar nos recuerda que las personas van más allá de las etiquetas de hombre o mujer, llamando
                         a la diversidad y desafiando los moldes establecidos.
-                        <br>.<br><br>
+                    </p>
+                    <p class="en">
                         Perfume packaging design, inspired by Teresa Solar's artwork "Indifferent Sexual Study". In
                         contemporary art, gender identity is a theme many artists are exploring, and Solar challenges
                         traditional labels. This design reflects on sexual diversity and non-conformity with gender
@@ -816,31 +988,41 @@
         </div>
 
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
     </div>
 
     <!-- ZENTIDE -->
     <div id="zentide" class="seccion">
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
 
         <div class="titulo-zentide">
             <h1>ZenTide</h1>
-            <p class="subtitulo">Ondas de bienestar</p>
+            <p class="subtitulo">
+                <span class="es">Ondas de bienestar</span>
+                <span class="en">Waves of wellness</span>
+            </p>
         </div>
 
         <div class="cuadricula-zentide">
             <div class="bloque-sup-zentide">
                 <div class="texto-zentide">
-                    <p>
+                    <p class="es">
                         Zen tide es más que una apariencia estética: brinda una experiencia sensorial para disfrutar un
                         momento de tranquilidad y explorar la salud mental y física. Cada onda representa cuerpo, mente
                         y espíritu, invitándote a conectar con tus sentidos, encontrar equilibrio mental y sumergirte en
                         una experiencia espiritual. Al descorchar y saborear cada vino, se crea un espacio para la
                         relajación, la contemplación y el crecimiento personal.
-                        <br>.<br><br>
+                    </p>
+                    <p class="en">
                         Zen tide is more than an aesthetic appearance: it provides a sensory experience to enjoy a
                         moment of tranquility and explore mental and physical health. Each wave represents body, mind
                         and spirit, inviting you to connect with your senses, find mental balance and immerse yourself
@@ -864,26 +1046,44 @@
         </div>
 
         <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">Volver a proyectos</a>
+            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+                <span class="es">Volver a proyectos</span>
+                <span class="en">Back to projects</span>
+            </a>
         </div>
     </div>
 
     <!-- seccion contacto -->
     <div id="contacto" class="seccion">
         <form id="contactForm" class="animado">
-            <h2 class="titulo-contacto">Contacto</h2>
+            <h2 class="titulo-contacto">
+                <span class="es">Contacto</span>
+                <span class="en">Contact</span>
+            </h2>
 
-            <label for="nombre">Nombre</label>
+            <label for="nombre">
+                <span class="es">Nombre</span>
+                <span class="en">Name</span>
+            </label>
             <input type="text" id="nombre" required>
 
-            <label for="subject">Asunto</label>
+            <label for="subject">
+                <span class="es">Asunto</span>
+                <span class="en">Subject</span>
+            </label>
             <input type="text" id="subject" required>
 
-            <label for="mensaje">Mensaje</label>
+            <label for="mensaje">
+                <span class="es">Mensaje</span>
+                <span class="en">Message</span>
+            </label>
             <textarea id="mensaje" rows="4" required></textarea>
 
             <button type="submit">
-                <p id="texto-enviar">Enviar</p>
+                <p id="texto-enviar">
+                    <span class="es">Enviar</span>
+                    <span class="en">Send</span>
+                </p>
             </button>
 
             <div class="redes-sociales" style="margin-top: 30px;">
