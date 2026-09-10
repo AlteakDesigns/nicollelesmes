@@ -1752,3 +1752,48 @@ button {
 .hub-menu:hover a:not(:hover) {
     opacity: 0.3;
 }
+
+
+/* ESTILOS DE BIENVENIDA BILINGÜE */
+.bienvenida-botones {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    opacity: 0;
+    animation: aparecerSuave 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.opcion-idioma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.subtitulo-btn {
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    font-style: italic;
+    color: #aaa;
+    font-weight: 300;
+}
+
+/* Ajuste del botón para que encaje bien en este modo doble */
+.bienvenida-botones .btn-entrar {
+    opacity: 1;
+    animation: none;
+    margin-bottom: 0;
+    width: 90px;
+    padding: 10px 0;
+}
+
+@media (max-width: 600px) {
+    .bienvenida-botones {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 30px;
+    }
+}
