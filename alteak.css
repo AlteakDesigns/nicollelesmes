@@ -1797,3 +1797,23 @@ button {
         margin-top: 30px;
     }
 }
+
+
+/* =========================================
+   SISTEMA BILINGÜE MAESTRO
+   ========================================= */
+
+/* Si el body tiene la clase español, oculta TODO lo que tenga la clase 'en' */
+body.lang-es .en {
+    display: none !important;
+}
+
+/* Si el body tiene la clase inglés, oculta TODO lo que tenga la clase 'es' */
+body.lang-en .es {
+    display: none !important;
+}
+
+/* Evitar que queden espacios en blanco extraños en los botones o enlaces */
+.es, .en {
+    transition: opacity 0.3s ease;
+}
