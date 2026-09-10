@@ -106,27 +106,41 @@ main {
     width: 100%;
 }
 
+/* Contenedor del logo en PC (Computador) */
 .logo-orbita-container {
     perspective: 1000px;
     padding-top: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 140px; /* Le da todo el aire necesario abajo en PC */
     width: 90%;     
     max-width: 550px;   
-    height: 120px;
+    height: 160px; /* Altura real para que las capas 3D no se salgan */
     position: relative;
     margin-left: auto;   
     margin-right: auto;
 }
 
+/* Responsive para Tablets */
 @media (max-width: 768px) {
     .logo-orbita-container {
-        height: 80px;
+        height: 100px;
+        margin-bottom: 100px;
     }
 }
 
+/* Responsive para Celular (Evita que el logo aplaste los botones) */
 @media (max-width: 480px) {
     .logo-orbita-container {
-        height: 50px;
+        height: 80px;
+        margin-bottom: 120px; /* Empuja los botones de idioma bien abajo */
+    }
+}
+
+/* Apila y separa los botones ES / EN en el celular */
+@media (max-width: 600px) {
+    .bienvenida-botones {
+        flex-direction: column;
+        gap: 40px; 
+        margin-top: 20px;
     }
 }
 
