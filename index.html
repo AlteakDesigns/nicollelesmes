@@ -25,17 +25,14 @@
                 <img src="img/logo_2.svg" alt="Alteak Designs">
             </div>
             
-            <div class="lang-toggle" onclick="cambiarIdioma()" style="cursor: pointer; font-family: 'Space Grotesk', sans-serif; font-weight: bold; color: #888;">
-                <span id="btn-es" class="activo" style="color: #fff;">ES</span> | <span id="btn-en">EN</span>
-            </div>
-            
+             
             <div class="hamburger" onclick="desplegarMenu()">
                 ☰ 
             </div>
         </nav>
     </header>
 
-    <!-- seccion bienvenida -->
+<!-- seccion bienvenida -->
     <div id="bienvenida" class="seccion activa">
         <div class="contenedor-bienvenida">
             <div class="logo-orbita-container">
@@ -49,14 +46,18 @@
                     <img src="img/logo_2.svg" class="logo-layer" style="--z: -6px; filter: brightness(0.6);">
                 </div>
             </div>
-            <h1>
-                <span class="es">Dónde se crea con sentido...</span>
-                <span class="en">Where creation makes sense...</span>
-            </h1>
-            <button class="btn-entrar" onclick="mostrarSeccion('sub-inicio')">
-                <span class="es">Entrar</span>
-                <span class="en">Enter</span>
-            </button>
+
+            <!-- Contenedor de selección de idioma -->
+            <div class="bienvenida-botones">
+                <div class="opcion-idioma">
+                    <span class="subtitulo-btn">Dónde se crea con sentido...</span>
+                    <button class="btn-entrar" onclick="entrarConIdioma('es')">Entrar</button>
+                </div>
+                <div class="opcion-idioma">
+                    <span class="subtitulo-btn">Where creation makes sense...</span>
+                    <button class="btn-entrar" onclick="entrarConIdioma('en')">Enter</button>
+                </div>
+            </div>
         </div>
     </div>
 
