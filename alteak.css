@@ -737,10 +737,11 @@ html {
 
 @media (max-width: 480px) {
     .nemyx-sup-imgs {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr !important; 
     }
     .nemyx-galeria-inferior {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
     }
 }
 
@@ -913,7 +914,8 @@ html {
 
 @media (max-width: 480px) {
     .amma-sup-imgs { grid-template-columns: 1fr !important; }
-    .amma-galeria-inferior { grid-template-columns: 1fr; }
+   .amma-galeria-inferior { grid-template-columns: repeat(2, 1fr); 
+    }
 }
 
 /* 1eer proyecto estilos ondara */
