@@ -972,17 +972,13 @@
 
         <div class="singular-contenido">
             
-            <!-- 1. FOTO PRINCIPAL FULL ANCHO -->
+            <!-- 1. Banner Principal -->
             <div class="singular-banner-principal">
                 <img src="img/perfume2.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
             </div>
 
-            <!-- 2. BLOQUE 1: perfume3 y perfume7 + Texto 1 -->
-            <div class="singular-seccion-intercalada">
-                <div class="singular-galeria-dos">
-                    <img src="img/perfume3.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                    <img src="img/perfume7.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                </div>
+            <!-- Fila 1: Texto 1 + Cuadrícula (perfume 3, 7, 9, 1) -->
+            <div class="singular-fila">
                 <div class="singular-texto-bloque">
                     <p class="es">
                         Diseño de envase de perfume unisex, inspirado en la obra "Estudio sexual indiferenciado" de
@@ -994,34 +990,43 @@
                         Gender identity is a prominent theme in contemporary art, and Solar challenges traditional labels.
                     </p>
                 </div>
+                <div class="singular-grid-cuatro">
+                    <img src="img/perfume3.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                    <img src="img/perfume7.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                    <img src="img/perfume9.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                    <img src="img/perfume1.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                </div>
             </div>
 
-            <!-- 3. BLOQUE 2: perfume1 y perfume9 + Texto 2 (Invertido) -->
-            <div class="singular-seccion-intercalada invertido">
-                <div class="singular-galeria-dos">
-                    <img src="img/perfume1.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                    <img src="img/perfume9.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                </div>
+            <!-- Fila 2: Texto 2 + Demás fotos (perfume 4, 5, 6, 8) (Invertido en PC) -->
+            <div class="singular-fila invertido">
                 <div class="singular-texto-bloque">
                     <p class="es">
                         Este diseño reflexiona sobre la diversidad sexual y la no conformidad con las categorías de género 
-                        en la vida cotidiana. La obra de Solar nos recuerda que las personas van más allá de las etiquetas 
-                        de hombre o mujer, llamando a la diversidad y desafiando los moldes establecidos.
+                        en la vida cotidiana.
                     </p>
                     <p class="en">
-                        This design reflects on sexual diversity and gender non-conformity in everyday life. Solar's work reminds 
-                        us that individuals transcend the binary labels of man or woman, advocating for diversity and breaking 
-                        established molds.
+                        This design reflects on sexual diversity and gender non-conformity in everyday life.
                     </p>
+                </div>
+                <div class="singular-grid-cuatro">
+                    <img src="img/perfume4.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                    <img src="img/perfume5.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                    <img src="img/perfume6.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                    <img src="img/perfume8.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
                 </div>
             </div>
 
-            <!-- 4. BLOQUE 3: Fotos restantes sobrantes -->
-            <div class="singular-galeria-final">
-                <img src="img/perfume4.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/perfume5.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/perfume6.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/perfume8.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
+            <!-- Texto Final -->
+            <div class="singular-texto-final">
+                <p class="es">
+                    La obra de Solar nos recuerda que las personas van más allá de las etiquetas de hombre o mujer, llamando 
+                    a la diversidad y desafiando los moldes establecidos.
+                </p>
+                <p class="en">
+                    Solar's work reminds us that individuals transcend the binary labels of man or woman, advocating for 
+                    diversity and breaking established molds.
+                </p>
             </div>
 
         </div>
@@ -1033,7 +1038,6 @@
             </a>
         </div>
     </div>
-    
 
     <!-- ZENTIDE -->
     <div id="zentide" class="seccion">
