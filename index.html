@@ -17,10 +17,12 @@
 
     <header class="navbar">
         <nav class="navbar-container">
+            <!-- NAVBAR SUPERIOR -->
             <ul class="menu" id="menu">
                 <li><a href="#" onclick="mostrarSeccion('acerca')"><span class="es">Acerca de mí</span><span class="en">About me</span></a></li>
-                <li><a href="#" onclick="mostrarSeccion('cv')"><span class="es">Perfil profesional</span><span class="en">Professional Profile</span></a></li>
-                <li><a href="#" onclick="mostrarSeccion('proyectos')"><span class="es">Mis proyectos</span><span class="en">My projects</span></a></li>
+                <li><a href="#" onclick="mostrarSeccion('portafolio')"><span class="es">Portafolio</span><span class="en">Portfolio</span></a></li>
+                <li><a href="#" onclick="mostrarSeccion('proyectos')"><span class="es">Proyectos</span><span class="en">Projects</span></a></li>
+                <li><a href="#" onclick="mostrarSeccion('cv')"><span class="es">Perfil Profesional</span><span class="en">Professional Profile</span></a></li>
                 <li><a href="#" onclick="mostrarSeccion('contacto')"><span class="es">Contacto</span><span class="en">Contact</span></a></li>
             </ul>
 
@@ -65,30 +67,36 @@
         </div>
     </div>
 
-    <!-- HUB MENU FLOTANTE (SUB-INICIO) -->
+   <!-- HUB MENU FLOTANTE (SUB-INICIO) -->
     <div id="sub-inicio" class="seccion">
         <div class="hub-container animado">
             <nav class="hub-menu">
-                <a href="#" onclick="mostrarSeccion('acerca')">
+                <a href="#" onclick="mostrarSeccion('acerca')" class="link-secundario">
                     <span class="es">Acerca de mí</span>
                     <span class="en">About me</span>
                 </a>
-                <a href="#" onclick="mostrarSeccion('cv')">
+                <a href="#" onclick="mostrarSeccion('portafolio')" class="link-secundario">
+                    <span class="es">Portafolio Interactivo</span>
+                    <span class="en">Interactive Portfolio</span>
+                </a>
+                
+                <!-- EL MÁS IMPORTANTE EN EL CENTRO -->
+                <a href="#" onclick="mostrarSeccion('proyectos')" class="link-principal">
+                    <span class="es">Mis Proyectos</span>
+                    <span class="en">My Projects</span>
+                </a>
+                
+                <a href="#" onclick="mostrarSeccion('cv')" class="link-secundario">
                     <span class="es">Perfil Profesional</span>
                     <span class="en">Professional Profile</span>
                 </a>
-                <a href="#" onclick="mostrarSeccion('proyectos')">
-                    <span class="es">Proyectos</span>
-                    <span class="en">Projects</span>
-                </a>
-                <a href="#" onclick="mostrarSeccion('contacto')">
+                <a href="#" onclick="mostrarSeccion('contacto')" class="link-secundario">
                     <span class="es">Contacto</span>
                     <span class="en">Contact</span>
                 </a>
             </nav>
         </div>
     </div>
-
     <!-- seccion acerca de mi -->
     <div id="acerca" class="seccion">
         <div class="contenedor-acerca">
@@ -133,12 +141,51 @@
         </div>
     </div>
 
-    <!-- seccion cv -->
+<!-- SECCIÓN 1: PORTAFOLIO INTERACTIVO -->
+    <div id="portafolio" class="seccion animado">
+        <h1 class="titulo-perfil">
+            <span class="es">Portafolio</span>
+            <span class="en">Portfolio</span>
+        </h1>
+
+        <div class="portafolio-interactivo">
+            <div class="portafolio-texto-cta">
+                <h2>
+                    <span class="es">Explora mi proceso</span>
+                    <span class="en">Explore my process</span>
+                </h2>
+                <p>
+                    <span class="es">Metodologías y proyectos detallados en un formato editorial de alta resolución.</span>
+                    <span class="en">Methodologies and detailed projects in a high-resolution editorial format.</span>
+                </p>
+                <!-- Botones Flipbook -->
+                <a href="https://heyzine.com/flip-book/e6d3ed9e8c.html" target="_blank" class="btn-leer es">Abrir Flipbook</a>
+                <a href="https://heyzine.com/flip-book/3b4d5a11d8.html" target="_blank" class="btn-leer en">Open Flipbook</a>
+            </div>
+
+            <div class="portafolio-libro-cta">
+                <a href="https://heyzine.com/flip-book/e6d3ed9e8c.html" target="_blank" class="es">
+                    <img src="https://cdnm.heyzine.com/flip-book/cover/e6d3ed9e8c.jpg" alt="Portafolio Nicolle Lesmes">
+                </a>
+                <a href="https://heyzine.com/flip-book/3b4d5a11d8.html" target="_blank" class="en">
+                    <img src="https://cdnm.heyzine.com/flip-book/cover/3b4d5a11d8.jpg" alt="Nicolle Lesmes Portfolio">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 2: CV -->
     <div id="cv" class="seccion animado">
         <h1 class="titulo-perfil">
             <span class="es">Perfil Profesional</span>
             <span class="en">Professional Profile</span>
         </h1>
+
+        <div class="cv-descarga-container">
+            <a href="docs/CV_Nicolle_Lesmes_Producto_Diseñadora.pdf" target="_blank" class="btn-descarga-cv es">Descargar CV (PDF)</a>
+            <a href="docs/CV_Nicolle_Lesmes_Product_Designer.pdf" target="_blank" class="btn-descarga-cv en">Download CV (PDF)</a>
+        </div>
+
         <div class="contenedor-cv">
             <div class="columna-izq">
                 <div class="bloque-cv">
@@ -157,32 +204,13 @@
                         <span class="en">Technical Skills</span>
                     </h3>
                     <ul>
-                        <li>Rhinoceros</li>
-                        <li>Adobe Creative Suite</li>
-                        <li><span class="es">BOM y Manufactura Aditiva</span><span class="en">BOM & Additive Manufacturing</span></li>
-                        <li>Fusion 360</li>
-                        <li>KeyShot</li>
-                        <li>AutoCad</li>
-                        <li>SolidEdge</li>
-                        <li>SketchBook</li>
-                        <li>Microsoft 360</li>
-                        
-                    </ul>
-                </div>
-                <br>
-                <div class="bloque-cv">
-                    <h3>
-                        <span class="es">Habilidades Personales</span>
-                        <span class="en">Soft Skills</span>
-                    </h3>
-                    <ul>
-                        <li><span class="es">Resolución de problemas</span><span class="en">Problem-solving</span></li>
-                        <li><span class="es">Manejo de conflictos</span><span class="en">Conflict resolution</span></li>
-                        <li><span class="es">Trabajo en equipo</span><span class="en">Teamwork</span></li>
-                        <li><span class="es">Adaptabilidad</span><span class="en">Adaptability</span></li>
-                        <li><span class="es">Creatividad</span><span class="en">Creativity</span></li>
-                        <li><span class="es">Comunicación</span><span class="en">Communication</span></li>
-                        <li><span class="es">Gestión eficaz del tiempo</span><span class="en">Effective time management</span></li>
+                        <li><span class="es"><b>Modelado 3D & Renderizado:</b><br>Rhinoceros, Fusion 360, KeyShot, Grasshopper, AutoCAD, Solid Edge.</span><span class="en"><b>3D Modeling & Rendering:</b><br>Rhinoceros, Fusion 360, KeyShot, Grasshopper, AutoCAD, Solid Edge.</span></li>
+                        <br>
+                        <li><span class="es"><b>Desarrollo & Fabricación:</b><br>Planos técnicos, BOMs, Prototipado, Impresión 3D (Bambulab, ANYCUBIC), Búsqueda proveedores.</span><span class="en"><b>Product Development & Manufacturing:</b><br>Technical drawings, BOMs, prototyping, 3D Printing, materials research, supplier sourcing.</span></li>
+                        <br>
+                        <li><span class="es"><b>Gráfica & Visual:</b><br>Adobe CS (Illustrator, Photoshop, InDesign, Dimension), Sketchbook.</span><span class="en"><b>Graphic & Visual:</b><br>Adobe CS (Illustrator, Photoshop, InDesign, Dimension), Sketchbook.</span></li>
+                        <br>
+                        <li><span class="es"><b>Flujos de Trabajo:</b><br>Herramientas IA (Gemini, Vizcom, ChatGPT, Manus), Análisis de tendencias.</span><span class="en"><b>Workflows:</b><br>AI-powered design tools (Gemini, Vizcom, ChatGPT, Manus), trend analysis.</span></li>
                     </ul>
                 </div>
                 <br>
@@ -201,69 +229,58 @@
             <div class="columna-der">
                 <div class="bloque-cv">
                     <h3>
-                        <span class="es">Experiencia</span>
-                        <span class="en">Experience</span>
+                        <span class="es">Experiencia Profesional</span>
+                        <span class="en">Professional Experience</span>
                     </h3>
                     <div class="cv">
                         <h4>
-                            <span class="es">María Torné Cerámica & Joyería | Práctica (Octubre 2025 - Marzo 2026)</span>
-                            <span class="en">María Torné Ceramics & Jewelry | Internship (October 2025 - March 2026)</span>
+                            <span class="es">María Torné Cerámica & Joyería | Diseñadora Interna (Oct 2025 - Mar 2026)</span>
+                            <span class="en">María Torné Cerámica & Joyería | Product Designer Intern (Oct 2025 - Mar 2026)</span>
                         </h4>
-                        <p class="es">Experiencia en la fabricación de joyas en porcelana, abarcando todo el proceso desde la preparación del material hasta el acabado, control de calidad y embalaje. Manejo de componentes metálicos, montaje final de piezas y desarrollo de plantillas y prototipos mediante modelado e impresión 3D.</p>
-                        <p class="en">Experience in porcelain jewelry manufacturing, covering the entire process from material preparation to finishing, quality control, and packaging. Handling of metallic components, final assembly of pieces, and development of templates and prototypes through 3D modeling and printing.</p>
+                        <p class="es">Gestión end-to-end del ciclo de producción de joyería en porcelana. Diseño de utillajes y desarrollo de prototipos mediante modelado e impresión 3D para optimizar la precisión y fabricación.</p>
+                        <p class="en">Managed the end-to-end production cycle for porcelain and metal jewelry. Designed tools and developed prototypes using 3D modeling and printing to ensure precision and optimize manufacturing.</p>
                         <br>
                         <h4>
-                            <span class="es">Parfums Christian Dior Iberia | Colaboradora (Septiembre 2024 - Mayo 2025)</span>
-                            <span class="en">Parfums Christian Dior Iberia | Collaborator (September 2024 - May 2025)</span>
+                            <span class="es">Parfums Christian Dior | Diseñadora Colaboradora (Sep 2024 - May 2025)</span>
+                            <span class="en">Parfums Christian Dior | Product Designer Collab (Sep 2024 - May 2025)</span>
                         </h4>
-                        <p class="es">Proyecto Colaborativo UDIT | Diseño integral de Dior's Embrace, una experiencia corporativa inmersiva concebida para fortalecer el employer branding de la marca. El proyecto incluyó el desarrollo de un regalo corporativo «Dior’s Embrace» de lujo sostenible y circular, equilibrando estética de alta gama de Dior con la responsabilidad medioambiental.</p>
-                        <p class="en">UDIT Collaborative Project | Comprehensive design of Dior's Embrace, an immersive corporate experience conceived to strengthen the brand's employer branding. The project included the development of a 'Dior’s Embrace' corporate gift of sustainable and circular luxury, balancing Dior's high-end aesthetics with environmental responsibility.</p>
+                        <p class="es">Diseño integral de "Dior's Essence": regalo corporativo inmersivo. Desarrollo de packaging ecosostenible de lujo en cartón, textil y rafia reciclados. Diseño estructural a medida con compartimentación.</p>
+                        <p class="en">Designed "Dior's Essence," an immersive corporate gift. Developed sustainable luxury packaging using recycled cardboard, textiles, and raffia. Created custom structural design with high-precision compartmentalization.</p>
                         <br>
                         <h4>
-                            <span class="es">Old Jeffrey | Diseñadora de Producto (Octubre 2023 - Junio 2024)</span>
-                            <span class="en">Old Jeffrey | Product Designer (October 2023 - June 2024)</span>
+                            <span class="es">Old Jeffrey | Diseñadora de Producto (Oct 2023 - Jun 2024)</span>
+                            <span class="en">Old Jeffrey | Product Designer (Oct 2023 - Jun 2024)</span>
                         </h4>
-                        <p class="es">Lideré el desarrollo integral del diseño 3D y estructural de una nueva linea de perfumería masculina. Tambien gestioné el proceso integral de diseño de estampados textiles exclusivos para la colección de baño 2025 OJ Napoli.</p>
-                        <p class="en">Led the comprehensive 3D and structural design development for a new men's fragrance line. Also managed the end-to-end design process of exclusive textile prints for the OJ Napoli 2025 swimwear collection.</p>
+                        <p class="es">Diseño integral de proyecto de perfumería (botella, tapón, etiquetas, packaging), gestionando fichas técnicas con fabricantes. Diseño de estampados para colección de baño 2025 (Top 5 Fuera de Serie).</p>
+                        <p class="en">Comprehensive design for a perfumery project (bottle, cap, labels, packaging), managing technical files with manufacturers. Designed exclusive textile patterns for 2025 swimwear Napoli collection (Top 5 Fuera de Serie).</p>
                         <br>
                         <h4>
-                            <span class="es">Quimbaya by Edwin Rodriguez | Colaboradora (Septiembre 2023 - Mayo 2024)</span>
-                            <span class="en">Quimbaya by Edwin Rodriguez | Collaborator (September 2023 - May 2024)</span>
+                            <span class="es">Quimbaya by Edwin Rodríguez | Diseñadora Colaboradora (Sep 2023 - May 2024)</span>
+                            <span class="en">Quimbaya by Edwin Rodríguez | Product Designer Collab (Sep 2023 - May 2024)</span>
                         </h4>
-                        <p class="es">Colaborativo UDIT | Conceptualización y desarrollo de Giralia, botellero colgante giratorio para barras de coctelería profesional, optimizando capacidad de almacenaje y ergonomía operativa mediante la fusión de viabilidad técnica y estética premium adaptada a las exigencias de la alta restauración.</p>
-                        <p class="en">UDIT Collaborative | Conceptualization and development of Giralia, a rotating hanging bottle rack for professional cocktail bars, optimizing storage capacity and operational ergonomics through the fusion of technical feasibility and premium aesthetics adapted to the demands of high-end dining.</p>
+                        <p class="es">Desarrollo de "Girallia": botellero colgante giratorio para barra de coctelería, optimizando almacenaje y ergonomía operativa. Fusión de viabilidad técnica y estética premium.</p>
+                        <p class="en">Development of "Girallia": a rotating hanging bottle rack for cocktail bars, optimizing storage capacity and operational ergonomics. Fusion of technical feasibility and premium aesthetics.</p>
                         <br>
                     </div>
                 </div>
 
                 <div class="bloque-cv">
                     <h3>
-                        <span class="es">Estudios</span>
+                        <span class="es">Formación</span>
                         <span class="en">Education</span>
                     </h3>
                     <div class="cv">
                         <h4>
-                            <span class="es">Grado Oficial Diseño de Producto (2022 - 2026)</span>
-                            <span class="en">Official Degree in Product Design (2022 - 2026)</span>
+                            <span class="es">Grado Oficial en Diseño de Producto (Jun 2026)</span>
+                            <span class="en">Official Degree in Product Design (Jun 2026)</span>
                         </h4>
-                        <p>
-                            <span class="es">UDIT, Universidad de Diseño, Innovación y Tecnología.<br>Madrid, España.</span>
-                            <span class="en">UDIT, University of Design, Innovation and Technology.<br>Madrid, Spain.</span>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bloque-cv">
-                    <h3>
-                        <span class="es">Certificaciones Cursos</span>
-                        <span class="en">Certifications & Courses</span>
-                    </h3>
-                    <div class="cv">
-                        <h4>Business Management Institute of Berlin - 2021, Online</h4>
-                        <p class="detalle-curso">Basics of Innovation Management<br>Certificate ID: 322944-161-127-5324</p>
+                        <p>UDIT. Madrid.</p>
                         <br>
-                        <h4>Business Management Institute of Berlin - 2021, Online</h4>
-                        <p class="detalle-curso">Leadership and Team Development<br>Certificate ID: 322944-161-222-7803</p>
+                        <h4>
+                            <span class="es">Bachillerato Internacional (Jun 2019)</span>
+                            <span class="en">International Baccalaureate (Jun 2019)</span>
+                        </h4>
+                        <p>Knightsbridge Schools International. Bogotá.</p>
                     </div>
                 </div>
             </div>
