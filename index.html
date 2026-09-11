@@ -406,6 +406,7 @@
     <!-- DETALLES DE CADA PROYECTO -->
 
     <!-- NEMYX -->
+   <!-- NEMYX -->
     <div id="nemyx" class="seccion">
         <div class="detalle-nav">
             <a href="#" onclick="cerrarProyecto()" class="btn-volver">
@@ -423,15 +424,16 @@
         </div>
 
         <div class="nemyx-contenido">
-            <div class="nemyx-sup">
-                <div class="nemyx-sup-imgs">
+            
+            <!-- BLOQUE 1: 4 Fotos iniciales + Primer Texto -->
+            <div class="nemyx-seccion-intercalada">
+                <div class="nemyx-galeria-cuadricula">
                     <img src="img/NEMYX.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
                     <img src="img/nemyx2.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
                     <img src="img/n9.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
                     <img src="img/n10.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
                 </div>
-                
-                <div class="nemyx-descripcion">
+                <div class="nemyx-texto-bloque">
                     <p class="es">
                         Nemyx es una vía de escape donde la escultura gótica y la tecnología colisionan. 
                         Esta pieza actúa como un lienzo vivo, su sensor captura el ritmo acústico y lo traduce en 
@@ -439,7 +441,7 @@
                         buscan perpetuar la sensibilidad y el arte frente a la indiferencia moderna.
                     </p>
                     <p class="en">
-                        > Nemyx is an escape where Gothic sculpture and technology collide. This piece acts as a 
+                        Nemyx is an escape where Gothic sculpture and technology collide. This piece acts as a 
                         living canvas; its sensor captures acoustic rhythms and translates them into light pulses, 
                         like brushstrokes in the dark. It is crafted for imaginative observers seeking to preserve 
                         sensitivity and art against modern indifference.
@@ -447,39 +449,53 @@
                 </div>
             </div>
 
-            <div class="nemyx-medio">
-                <div class="nemyx-medio-texto">
+            <!-- BLOQUE 2: 4 Multimedia + Segundo Texto (Invertido en PC) -->
+            <div class="nemyx-seccion-intercalada invertido">
+                <div class="nemyx-galeria-cuadricula">
+                    <img src="img/n1.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                    <img src="img/n2.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                    <img src="img/n3.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                    <video src="videos/n4.mp4" onclick="reproducirVideo(this)" class="video-zoom" autoplay muted loop playsinline></video>
+                </div>
+                <div class="nemyx-texto-bloque">
                     <p class="es">
                         El desarrollo de NEMYX partió de una investigación que fusiona armaduras neogóticas y bioluminiscencia. Al 
                         requerir una morfología orgánica, descarté el diseño digital inicial: modelé el prototipo a mano en plastilina
                         para capturar la fluidez anatómica y lo digitalicé con un escáner 3D. En Rhino, procesé la malla y apliqué
-                        simetría. Posteriormente, imprimí el exoesqueleto en TPU para garantizar flexibilidad estructural. En la fase
+                        simetría.
+                    </p>
+                    <p class="en">
+                        The development of NEMYX stemmed from research merging neo-Gothic armor and bioluminescence. Because it required an organic shape, I scrapped the initial digital design: I hand-modeled the prototype in clay to capture its anatomical fluidity and digitized it using a 3D scanner. In Rhino, I processed the mesh and applied symmetry.
+                    </p>
+                </div>
+            </div>
+
+            <!-- BLOQUE 3: 4 Fotos + Tercer Texto -->
+            <div class="nemyx-seccion-intercalada">
+                <div class="nemyx-galeria-cuadricula">
+                    <img src="img/n5.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                    <img src="img/n6.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                    <img src="img/n7.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                    <img src="img/n8.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                </div>
+                <div class="nemyx-texto-bloque">
+                    <p class="es">
+                        Posteriormente, imprimí el exoesqueleto en TPU para garantizar flexibilidad estructural. En la fase
                         técnica, soldé y programé la electrónica para que la luz reaccione acústicamente en tiempo real. Para finalizar,
                         ensamblé el hardware y el modelo 3D sobre unas monturas Ray-Ban reutilizadas, integrando rigor técnico y
                         sostenibilidad mediante upcycling.
                     </p>
                     <p class="en">
-                        > The development of NEMYX stemmed from research merging neo-Gothic armor and bioluminescence. Because it required an organic shape, I scrapped the initial digital design: I hand-modeled the prototype in clay to capture its anatomical fluidity and digitized it using a 3D scanner. In Rhino, I processed the mesh and applied symmetry. Afterwards, I printed the exoskeleton in TPU to ensure structural flexibility. During the technical phase, I soldered and programmed the electronics so the light reacts to sound in real time. Finally, I assembled the hardware and the 3D model onto repurposed Ray-Ban frames, combining technical rigor with sustainability through upcycling.
+                        Afterwards, I printed the exoskeleton in TPU to ensure structural flexibility. During the technical phase, I soldered and programmed the electronics so the light reacts to sound in real time. Finally, I assembled the hardware and the 3D model onto repurposed Ray-Ban frames, combining technical rigor with sustainability through upcycling.
                     </p>
                 </div>
             </div>
 
-           <div class="nemyx-galeria-inferior">
-                <img src="img/n1.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/n2.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/n3.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                
-                <!-- Video 1 -->
-                <video src="videos/n4.mp4" onclick="reproducirVideo(this)" class="video-zoom" autoplay muted loop playsinline></video>
-                
-                <img src="img/n5.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/n6.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/n7.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/n8.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-            
-                <!-- Video 2 -->
+            <!-- BLOQUE 4: Video Final -->
+            <div class="nemyx-video-final-container">
                <video src="videos/nemyx_web.mp4" onclick="abrirVideo(this)" class="video-zoom video-full" autoplay muted loop playsinline></video>
             </div>
+            
         </div>
 
         <div class="detalle-nav">
@@ -489,7 +505,6 @@
             </a>
         </div>
     </div>
-
 
     <!-- AMMA -->
     <div id="amma" class="seccion">
