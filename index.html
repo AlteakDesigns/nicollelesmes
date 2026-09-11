@@ -20,8 +20,8 @@
             <!-- NAVBAR SUPERIOR -->
             <ul class="menu" id="menu">
                 <li><a href="#" onclick="mostrarSeccion('acerca')"><span class="es">Acerca de mí</span><span class="en">About me</span></a></li>
+                <li><a href="#" onclick="mostrarSeccion('proyectos')"><span class="es">Galería</span><span class="en">Gallery</span></a></li>
                 <li><a href="#" onclick="mostrarSeccion('portafolio')"><span class="es">Portafolio</span><span class="en">Portfolio</span></a></li>
-                <li><a href="#" onclick="mostrarSeccion('proyectos')"><span class="es">Proyectos</span><span class="en">Projects</span></a></li>
                 <li><a href="#" onclick="mostrarSeccion('cv')"><span class="es">Perfil Profesional</span><span class="en">Professional Profile</span></a></li>
                 <li><a href="#" onclick="mostrarSeccion('contacto')"><span class="es">Contacto</span><span class="en">Contact</span></a></li>
             </ul>
@@ -67,23 +67,20 @@
         </div>
     </div>
 
-   <!-- HUB MENU FLOTANTE (SUB-INICIO) -->
-    <div id="sub-inicio" class="seccion">
-        <div class="hub-container animado">
-            <nav class="hub-menu">
+   <nav class="hub-menu">
                 <a href="#" onclick="mostrarSeccion('acerca')" class="link-secundario">
                     <span class="es">Acerca de mí</span>
                     <span class="en">About me</span>
                 </a>
-                <a href="#" onclick="mostrarSeccion('portafolio')" class="link-secundario">
-                    <span class="es">Portafolio</span>
-                    <span class="en">Portfolio</span>
+                <a href="#" onclick="mostrarSeccion('proyectos')" class="link-secundario">
+                    <span class="es">Galería de Proyectos</span>
+                    <span class="en">Project Gallery</span>
                 </a>
                 
                 <!-- EL MÁS IMPORTANTE EN EL CENTRO -->
-                <a href="#" onclick="mostrarSeccion('proyectos')" class="link-principal">
-                    <span class="es">Mis Proyectos</span>
-                    <span class="en">My Projects</span>
+                <a href="#" onclick="mostrarSeccion('portafolio')" class="link-principal">
+                    <span class="es">Portafolio</span>
+                    <span class="en">Portfolio</span>
                 </a>
                 
                 <a href="#" onclick="mostrarSeccion('cv')" class="link-secundario">
@@ -95,8 +92,7 @@
                     <span class="en">Contact</span>
                 </a>
             </nav>
-        </div>
-    </div>
+    
     <!-- seccion acerca de mi -->
     <div id="acerca" class="seccion">
         <div class="contenedor-acerca">
@@ -292,12 +288,12 @@
     <div id="proyectos" class="seccion animado">
         <div class="portada-proyectos">
             <h1>
-                <span class="es">Mis proyectos</span>
-                <span class="en">My projects</span>
+                <span class="es">Galería de Proyectos</span>
+                <span class="en">Project Gallery</span>
             </h1>
             <p>
-                <span class="es">Desliza para ver más</span>
-                <span class="en">Scroll to see more</span>
+                <span class="es">Exploración visual y resultados</span>
+                <span class="en">Visual exploration and results</span>
             </p>
             <a href="#galeria" class="flecha-bajar" onclick="deslizarAbajo(event)"></a>
         </div>
