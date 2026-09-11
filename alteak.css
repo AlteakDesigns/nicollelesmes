@@ -533,124 +533,156 @@ html {
 }
 
 /* =========================================
-   GALERÍA FOCAL (EFECTO LENTE A CANVAS)
+   GALERÍA DE PROYECTOS (ESTILO EDITORIAL PREMIUM)
    ========================================= */
 .contenedor-galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centra el bloque entero en la pantalla */
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    gap: 30px;
     padding: 50px 5%;
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
-/* Estado Base: Círculos perfectos apagados */
 .proyecto {
     position: relative;
     display: block;
-    width: 280px;
-    height: 280px;
-    border-radius: 50%; 
     overflow: hidden;
     cursor: pointer;
-    border: 2px solid #222;
-    background-color: #000;
-    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    border-radius: 3px; 
+    text-decoration: none !important; /* Mata el subrayado de enlaces */
 }
 
 .proyecto img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(80%) opacity(0.6);
-    transform: scale(1.2); /* Zoom inverso preparado para salir */
-    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.2, 1);
 }
 
-/* Animación Hover: De círculo a marco de arte luminoso */
-.proyecto:hover {
-    border-radius: 12px;
-    transform: scale(1.2); /* Crece y sobresale del resto */
-    border-color: #fff;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.9), 0 0 25px rgba(255,255,255,0.2);
-    z-index: 10;
-}
+/* Tamaños asimétricos */
+.proyecto:nth-child(1) { grid-column: span 12; aspect-ratio: 21/9; }
+.proyecto:nth-child(2), .proyecto:nth-child(3) { grid-column: span 6; aspect-ratio: 1/1; }
+.proyecto:nth-child(4) { grid-column: span 7; aspect-ratio: 4/3; }
+.proyecto:nth-child(5) { grid-column: span 5; aspect-ratio: 3/4; }
+.proyecto:nth-child(6), .proyecto:nth-child(7) { grid-column: span 6; aspect-ratio: 4/3; }
+.proyecto:nth-child(8) { grid-column: span 5; aspect-ratio: 3/4; }
+.proyecto:nth-child(9) { grid-column: span 7; aspect-ratio: 4/3; }
+.proyecto:nth-child(10) { grid-column: span 12; aspect-ratio: 21/9; }
 
-.proyecto:hover img {
-    filter: grayscale(0%) opacity(1);
-    transform: scale(1);
-}
-
-/* El texto oculto con degradado cinematográfico */
+/* Overlay de texto (Blindado contra colores de enlaces visitados) */
 .info-overlay {
     position: absolute;
-    bottom: 0;
+    bottom: 0; 
     left: 0;
-    width: 100%;
+    width: 100%; 
     height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    text-align: center;
-    padding: 30px 20px;
+    justify-content: flex-end; 
+    align-items: flex-start;
+    padding: 40px;
     opacity: 0;
-    transition: opacity 0.4s ease 0.1s;
-}
-
-.proyecto:hover .info-overlay {
-    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 
 .info-overlay h3 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     letter-spacing: 2px;
+    margin-bottom: 10px;
     text-transform: uppercase;
-    margin-bottom: 5px;
-    transform: translateY(15px);
-    transition: transform 0.4s ease;
+    color: #ffffff !important; /* Fuerza el blanco siempre */
+    transform: translateY(20px);
+    transition: transform 0.5s cubic-bezier(0.2, 1, 0.2, 1);
 }
 
 .info-overlay p {
+    font-size: 0.95rem;
+    color: #dddddd !important; /* Fuerza el gris claro siempre */
+    font-weight: 300;
+    transform: translateY(20px);
+    transition: transform 0.5s cubic-bezier(0.2, 1, 0.2, 1) 0.1s; 
+}
+
+.proyecto:hover .info-overlay { opacity: 1; }
+.proyecto:hover .info-overlay h3, 
+.proyecto:hover .info-overlay p { transform: translateY(0); }
+.proyecto:hover img { transform: scale(1.05); }
+
+@media (max-width: 900px) {
+    .proyecto:nth-child(n) { 
+        grid-column: span 12; 
+        aspect-ratio: 4/3; 
+    }
+    .info-overlay { padding: 25px; }
+    .info-overlay h3 { font-size: 1.5rem; }
+}
+
+/* =========================================
+   FOOTER PREMIUM
+   ========================================= */
+.footer-premium {
+    background-color: #050505; /* Un negro un poco más profundo que el fondo */
+    border-top: 1px solid #222;
+    padding: 40px 5%;
+    margin-top: 60px;
+}
+
+.footer-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-izq p {
+    color: #666;
     font-size: 0.85rem;
-    color: #ccc;
-    transform: translateY(15px);
-    transition: transform 0.4s ease 0.1s;
+    letter-spacing: 1px;
+    font-weight: 300;
 }
 
-.proyecto:hover .info-overlay h3,
-.proyecto:hover .info-overlay p {
-    transform: translateY(0);
+.footer-centro {
+    display: flex;
+    gap: 25px;
 }
 
-/* RESPONSIVE MÓVIL: Evitar fallos táctiles */
+.footer-centro a {
+    color: #666;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-centro a:hover {
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.footer-der .btn-arriba {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.footer-der .btn-arriba:hover {
+    color: #fff;
+}
+
 @media (max-width: 768px) {
-    .contenedor-galeria { gap: 30px; }
-    
-    /* En móvil no hay ratón para hacer "hover", forzamos los cuadrados legibles */
-    .proyecto {
-        width: 100%;
-        max-width: 350px;
-        height: 350px;
-        border-radius: 12px; 
-        border-color: #444;
-    }
-    .proyecto img {
-        filter: grayscale(0%) opacity(1);
-        transform: scale(1);
-    }
-    .info-overlay {
-        opacity: 1;
-        height: 60%; 
-        background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
-    }
-    .info-overlay h3, .info-overlay p {
-        transform: translateY(0);
+    .footer-contenido {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
     }
 }
-
 /* -----------------------------------
    NEMYX (DISEÑO INTERCALADO MODULAR)
 ----------------------------------- */
