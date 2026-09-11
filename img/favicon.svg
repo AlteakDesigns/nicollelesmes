@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+    <!-- Fondo oscuro ALTEAK -->
+    <rect width="512" height="512" fill="#111111" rx="40"/>
+    
+    <!-- Las 3 barras de la "E" -->
+    <rect x="116" y="146" width="280" height="55" fill="#ffffff" />
+    <rect x="116" y="228" width="280" height="55" fill="#ffffff" />
+    <rect x="116" y="310" width="280" height="55" fill="#ffffff" />
+</svg>
