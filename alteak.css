@@ -533,127 +533,122 @@ html {
 }
 
 /* =========================================
-   GALERÍA DE PROYECTOS (ESTILO EDITORIAL PREMIUM)
+   GALERÍA FOCAL (EFECTO LENTE A CANVAS)
    ========================================= */
 .contenedor-galeria {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr); /* Cuadrícula avanzada de 12 columnas */
-    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra el bloque entero en la pantalla */
+    gap: 40px;
     padding: 50px 5%;
-    max-width: 1400px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
+/* Estado Base: Círculos perfectos apagados */
 .proyecto {
     position: relative;
     display: block;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%; 
     overflow: hidden;
     cursor: pointer;
-    border-radius: 3px; /* Toque mínimo de elegancia en los bordes */
+    border: 2px solid #222;
+    background-color: #000;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Imagen base con zoom súper suave */
 .proyecto img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.8s cubic-bezier(0.2, 1, 0.2, 1);
+    filter: grayscale(80%) opacity(0.6);
+    transform: scale(1.2); /* Zoom inverso preparado para salir */
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* -----------------------------------------
-   TAMAÑOS ASIMÉTRICOS (ROMPIENDO LA MONOTONÍA)
-   ----------------------------------------- */
-/* 1. Nemyx - Banner Hero (Ancho completo) */
-.proyecto:nth-child(1) { grid-column: span 12; aspect-ratio: 21/9; }
+/* Animación Hover: De círculo a marco de arte luminoso */
+.proyecto:hover {
+    border-radius: 12px;
+    transform: scale(1.2); /* Crece y sobresale del resto */
+    border-color: #fff;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.9), 0 0 25px rgba(255,255,255,0.2);
+    z-index: 10;
+}
 
-/* 2. Amma y 3. Ondara - Mitad y mitad (Cuadrados) */
-.proyecto:nth-child(2), .proyecto:nth-child(3) { grid-column: span 6; aspect-ratio: 1/1; }
+.proyecto:hover img {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1);
+}
 
-/* 4. Naya y 5. Dior - Desiguales 60/40 (Verticales y apaisados) */
-.proyecto:nth-child(4) { grid-column: span 7; aspect-ratio: 4/3; }
-.proyecto:nth-child(5) { grid-column: span 5; aspect-ratio: 3/4; }
-
-/* 6. Napoli y 7. Soleris - Mitad y mitad (Apaisados) */
-.proyecto:nth-child(6), .proyecto:nth-child(7) { grid-column: span 6; aspect-ratio: 4/3; }
-
-/* 8. Giralia y 9. Singular Essence - Desiguales 40/60 (Invertido) */
-.proyecto:nth-child(8) { grid-column: span 5; aspect-ratio: 3/4; }
-.proyecto:nth-child(9) { grid-column: span 7; aspect-ratio: 4/3; }
-
-/* 10. ZenTide - Banner Final (Ancho completo) */
-.proyecto:nth-child(10) { grid-column: span 12; aspect-ratio: 21/9; }
-
-
-/* -----------------------------------------
-   OVERLAY PREMIUM (TEXTO ANIMADO DESDE ABAJO)
-   ----------------------------------------- */
+/* El texto oculto con degradado cinematográfico */
 .info-overlay {
     position: absolute;
-    bottom: 0; 
+    bottom: 0;
     left: 0;
-    width: 100%; 
+    width: 100%;
     height: 100%;
-    /* Degradado cinematográfico en lugar de una caja negra plana */
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
-    color: white;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Alineado abajo estilo revista */
-    align-items: flex-start;
-    padding: 40px;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.4s ease 0.1s;
+}
+
+.proyecto:hover .info-overlay {
+    opacity: 1;
 }
 
 .info-overlay h3 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     letter-spacing: 2px;
-    margin-bottom: 10px;
     text-transform: uppercase;
-    transform: translateY(20px);
-    transition: transform 0.5s cubic-bezier(0.2, 1, 0.2, 1);
+    margin-bottom: 5px;
+    transform: translateY(15px);
+    transition: transform 0.4s ease;
 }
 
 .info-overlay p {
-    font-size: 0.95rem;
-    color: #ddd;
-    font-weight: 300;
-    transform: translateY(20px);
-    transition: transform 0.5s cubic-bezier(0.2, 1, 0.2, 1) 0.1s; /* Ligero retraso para que suba después del título */
+    font-size: 0.85rem;
+    color: #ccc;
+    transform: translateY(15px);
+    transition: transform 0.4s ease 0.1s;
 }
 
-/* Efectos al pasar el ratón */
-.proyecto:hover .info-overlay { opacity: 1; }
-.proyecto:hover .info-overlay h3, 
-.proyecto:hover .info-overlay p { transform: translateY(0); }
-.proyecto:hover img { transform: scale(1.05); }
+.proyecto:hover .info-overlay h3,
+.proyecto:hover .info-overlay p {
+    transform: translateY(0);
+}
 
-/* RESPONSIVE: En móvil todo vuelve a ser una columna ancha */
-@media (max-width: 900px) {
-    .proyecto:nth-child(n) { 
-        grid-column: span 12; 
-        aspect-ratio: 4/3; 
+/* RESPONSIVE MÓVIL: Evitar fallos táctiles */
+@media (max-width: 768px) {
+    .contenedor-galeria { gap: 30px; }
+    
+    /* En móvil no hay ratón para hacer "hover", forzamos los cuadrados legibles */
+    .proyecto {
+        width: 100%;
+        max-width: 350px;
+        height: 350px;
+        border-radius: 12px; 
+        border-color: #444;
     }
-    .info-overlay { padding: 25px; }
-    .info-overlay h3 { font-size: 1.5rem; }
-}
-
-.btn-volver {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 30px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    padding-top: 20px;
-    padding-left: 20px;
-    gap: 10px;
-}
-
-.btn-volver::before {
-    content: "←";
+    .proyecto img {
+        filter: grayscale(0%) opacity(1);
+        transform: scale(1);
+    }
+    .info-overlay {
+        opacity: 1;
+        height: 60%; 
+        background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+    }
+    .info-overlay h3, .info-overlay p {
+        transform: translateY(0);
+    }
 }
 
 /* -----------------------------------
@@ -1954,4 +1949,48 @@ body.lang-en .es {
         gap: 40px;
     }
     .portafolio-libro-cta { order: -1; }
+}
+
+/* =========================================
+   NAVBAR RESPONSIVE (MENÚ HAMBURGUESA MÓVIL)
+   ========================================= */
+@media (max-width: 900px) {
+    .hamburger { 
+        display: block; 
+        color: #fff;
+    }
+    
+    .menu {
+        display: none; /* Lo oculta por defecto */
+        flex-direction: column;
+        background-color: #111;
+        position: absolute;
+        top: 80px; /* Baja justo debajo del logo */
+        left: 0;
+        width: 100%;
+        padding: 30px 0;
+        gap: 25px;
+        align-items: center;
+        z-index: 9999;
+        border-bottom: 1px solid #333;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    }
+    
+    .menu.activo { 
+        display: flex; /* Lo muestra cuando haces clic */
+    }
+    
+    .menu a {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    
+    .logo img { 
+        height: 40px; 
+    }
+    
+    .navbar-container {
+        justify-content: space-between;
+    }
 }
