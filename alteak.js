@@ -28,22 +28,28 @@ function mostrarSeccion(id, subirArriba = true) {
 
 // Abrir proyectos
 function verProyecto(id) {
-    // Guardamos la posición actual antes de ocultar la galería
+    // 1. Bloquea el salto hacia arriba del href="#"
+    if (window.event) window.event.preventDefault();
+
+    // 2. Guarda la posición exacta del scroll actual
     posicionScrollProyectos = window.scrollY;
     
-    // Mostramos el proyecto y forzamos a que empiece desde arriba
+    // 3. Muestra el proyecto y fuerza a que el proyecto empiece desde arriba
     mostrarSeccion(id, true);
 }
 
 // Cerrar proyectos
 function cerrarProyecto() {
-    // Mostramos la galería pero le decimos que NO suba al tope
+    // 1. Bloquea el salto hacia arriba del botón volver
+    if (window.event) window.event.preventDefault();
+
+    // 2. Muestra la galería pero le dice que NO suba al tope
     mostrarSeccion('proyectos', false);
     
-    // Te devolvemos exactamente a la posición guardada
+    // 3. Te devuelve exactamente a la posición guardada
     window.scrollTo({
         top: posicionScrollProyectos,
-        behavior: 'instant' // Instantáneo, sin animaciones molestas
+        behavior: 'instant'
     });
 }
 
