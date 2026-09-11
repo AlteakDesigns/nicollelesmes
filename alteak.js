@@ -3,8 +3,11 @@ function desplegarMenu() {
     document.getElementById('menu').classList.toggle('activo');
 }
 
+// Variable para memorizar la posición en la galería
+let posicionScrollProyectos = 0;
+
 // Navegación entre secciones
-function mostrarSeccion(id) {
+function mostrarSeccion(id, subirArriba = true) {
     const secciones = document.getElementsByClassName('seccion');
     for (let i = 0; i < secciones.length; i++) {
         secciones[i].classList.remove('activa');
@@ -17,18 +20,31 @@ function mostrarSeccion(id) {
 
     document.getElementById('menu').classList.remove('activo');
     
-    // Fuerza a subir siempre que cambie de pantalla
-    window.scrollTo(0, 0);
+    // Solo sube al tope si la función lo permite
+    if (subirArriba) {
+        window.scrollTo(0, 0);
+    }
 }
 
-// Abrir y cerrar proyectos
+// Abrir proyectos
 function verProyecto(id) {
-    mostrarSeccion(id);
-    window.scrollTo(0, 0);
+    // Guardamos la posición actual antes de ocultar la galería
+    posicionScrollProyectos = window.scrollY;
+    
+    // Mostramos el proyecto y forzamos a que empiece desde arriba
+    mostrarSeccion(id, true);
 }
 
+// Cerrar proyectos
 function cerrarProyecto() {
-    mostrarSeccion('proyectos');
+    // Mostramos la galería pero le decimos que NO suba al tope
+    mostrarSeccion('proyectos', false);
+    
+    // Te devolvemos exactamente a la posición guardada
+    window.scrollTo({
+        top: posicionScrollProyectos,
+        behavior: 'instant' // Instantáneo, sin animaciones molestas
+    });
 }
 
 // Flecha para bajar suavemente a la galería de proyectos
