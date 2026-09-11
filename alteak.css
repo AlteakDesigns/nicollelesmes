@@ -552,6 +552,7 @@ html {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center center; 
     transition: transform 0.5s ease;
 }
 
@@ -1399,12 +1400,6 @@ html {
     }
 }
 
-/* ARREGLO PORTADA SINGULAR ESSENCE EN GALERÍA */
-.proyecto img.img-portada-contain {
-    object-fit: contain !important;
-    padding: 20px;
-    background-color: #1a1a1a; /* Cámbialo a #fff si tu logo es de letras negras */
-}
 
 /* -----------------------------------
    SINGULAR ESSENCE (DISEÑO INTERCALADO)
@@ -1758,4 +1753,39 @@ body.lang-en .es {
 /* Evitar que queden espacios en blanco extraños en los botones o enlaces */
 .es, .en {
     transition: opacity 0.3s ease;
+}
+
+/* FIRMA SEO BIENVENIDA */
+.firma-seo {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: #888;
+    text-transform: uppercase;
+    margin-top: -60px; /* Compensa el margen inferior del logo en PC */
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
+    opacity: 0;
+    animation: aparecerSuave 1s ease-out forwards;
+    animation-delay: 0.3s; /* Aparece justo después del logo y antes de los botones */
+}
+
+/* Ajustes Responsive para que siga centrado */
+@media (max-width: 768px) {
+    .firma-seo {
+        margin-top: -40px; 
+        margin-bottom: 10px;
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .firma-seo {
+        margin-top: -60px; /* Compensa el margen de 120px que pusimos en el celular */
+        font-size: 0.75rem;
+        letter-spacing: 2.5px;
+    }
 }
