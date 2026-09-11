@@ -717,182 +717,122 @@ html {
 }
 
 /* -----------------------------------
-   AMMA
+   AMMA (DISEÑO INTERCALADO MODULAR)
 ----------------------------------- */
-#amma {
-    padding-bottom: 30px;
-}
+#amma { padding-bottom: 30px; }
+.titulo-amma { text-align: center; margin-bottom: 40px; padding: 0 5%; }
+.titulo-amma h1 { font-size: 1.5rem; letter-spacing: 2px; margin-bottom: 10px; }
+.titulo-amma .subtitulo { font-size: 1.2rem; color: #888; font-weight: normal; }
+.amma-contenido { padding: 0 5%; }
 
-.titulo-amma {
-    text-align: center;
-    margin-bottom: 40px;
-    padding: 0 5%;
-}
-
-.titulo-amma h1 {
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.titulo-amma .subtitulo {
-    font-size: 1.2rem;
-    color: #888;
-    font-weight: normal;
-}
-
-.amma-contenido {
-    padding: 0 5%;
-}
-
-.amma-descripcion p,
-.amma-medio-texto p {
-    color: #ccc;
-    line-height: 1.6;
-    font-size: 1rem;
-    text-align: center;
-}
-
-.amma-sup {
-    display: flex !important;
-    flex-direction: row !important; 
-    flex-wrap: nowrap !important;
+/* Estructura base de PC: Flexbox al 60/40 */
+.amma-seccion-intercalada {
+    display: flex;
+    align-items: center;
     gap: 40px;
     margin-bottom: 60px;
-    align-items: stretch !important;
     width: 100%;
 }
 
-.amma-sup-imgs {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 15px !important;
-    width: 60% !important; 
+/* Invierte el orden en el bloque del medio en PC */
+.amma-seccion-intercalada.invertido {
+    flex-direction: row-reverse;
 }
 
-.amma-sup-imgs img {
-    width: 100% !important;
+/* Contenedor de 4 fotos (Bloque 1) */
+.amma-galeria-cuadricula {
+    flex: 1.5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.amma-galeria-cuadricula img {
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    display: block;
+}
+
+/* Contenedor de imagen única central (Bloque 2) */
+.amma-imagen-destacada {
+    flex: 1.5;
+}
+.amma-imagen-destacada img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
     display: block;
 }
 
-.amma-descripcion {
-    width: 40% !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.amma-medio {
-    display: flex;
-    gap: 40px;
-    margin-bottom: 60px;
-    align-items: stretch;
-}
-
-.amma-medio-texto {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.amma-medio-img {
-    width: 60%;
-}
-
-.amma-medio-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.amma-galeria-inferior {
+/* Contenedor de 6 fotos (Bloque 3) */
+.amma-galeria-seis {
+    flex: 1.5;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    margin-bottom: 40px;
+}
+.amma-galeria-seis img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    display: block;
 }
 
-.amma-galeria-inferior img {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    display: block;
+/* Texto para los tres bloques */
+.amma-texto-bloque {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
+}
+.amma-texto-bloque p {
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 1rem;
 }
 
 .amma-footer {
     text-align: center;
+    margin-top: 20px;
     margin-bottom: 40px;
 }
 
-.texto-h4-pequeno {
-    color: #888;
-    font-size: 0.8rem;
-    font-weight: normal;
-    margin: 0;
-}
-
-.img-zoom {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.img-zoom:hover {
-    transform: scale(1.02);
-}
-
+/* RESPONSIVE MÓVIL: FORZADO AL ORDEN EXACTO (FOTOS ARRIBA, TEXTO ABAJO) */
 @media (max-width: 768px) {
-    .amma-sup {
-        display: flex !important;
+    .amma-seccion-intercalada, 
+    .amma-seccion-intercalada.invertido {
         flex-direction: column !important;
         gap: 20px;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
     }
-    .amma-sup-imgs {
-        width: 100% !important;
-        order: -1 !important;
+    
+    /* Obligamos a todas las fotos a ir arriba del texto correspondiente */
+    .amma-galeria-cuadricula,
+    .amma-imagen-destacada,
+    .amma-galeria-seis {
+        width: 100%;
+        order: -1 !important; 
     }
-    .amma-descripcion {
-        width: 100% !important;
-        padding: 0 !important;
-        order: 0 !important;
+    
+    .amma-galeria-seis {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móvil queda mejor para 6 fotos */
     }
-    .amma-medio {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 20px;
-        margin-bottom: 40px;
-    }
-    .amma-medio-img {
-        width: 100% !important;
-        order: -1 !important;
-    }
-    .amma-medio-texto {
-        width: 100% !important;
-        padding: 0 !important;
-        order: 0 !important;
-    }
-    .amma-galeria-inferior {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+    
+    .amma-texto-bloque {
+        width: 100%;
+        padding: 0;
+        order: 0 !important; 
     }
 }
 
 @media (max-width: 480px) {
-    .amma-sup-imgs {
-        grid-template-columns: 1fr !important;
-    }
-    .amma-galeria-inferior {
-        grid-template-columns: repeat(2, 1fr);
+    .amma-galeria-cuadricula,
+    .amma-galeria-seis { 
+        gap: 10px; 
     }
 }
+
 
 /* 1eer proyecto estilos ondara */
 .ondara-titulo {
@@ -1459,86 +1399,118 @@ html {
     }
 }
 
-/* 7mo proyecto singular essence */
-.titulo-singular {
-    text-align: center;
-    margin-bottom: 40px;
-    padding: 0 5%;
+/* ARREGLO PORTADA SINGULAR ESSENCE EN GALERÍA */
+.proyecto img.img-portada-contain {
+    object-fit: contain !important;
+    padding: 20px;
+    background-color: #1a1a1a; /* Cámbialo a #fff si tu logo es de letras negras */
 }
 
-.titulo-singular h1 {
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
+/* -----------------------------------
+   SINGULAR ESSENCE (DISEÑO INTERCALADO)
+----------------------------------- */
+#singular { padding-bottom: 30px; }
+.titulo-singular { text-align: center; margin-bottom: 40px; padding: 0 5%; }
+.titulo-singular h1 { font-size: 1.5rem; letter-spacing: 2px; margin-bottom: 10px; }
+.titulo-singular .subtitulo { font-size: 1.2rem; color: #888; font-weight: normal; }
+.singular-contenido { padding: 0 5%; }
 
-.titulo-singular .subtitulo {
-    color: #888;
-    font-size: 1.2rem;
-}
-
-.cuadricula-singular {
+/* Estructura PC */
+.singular-seccion-intercalada {
     display: flex;
-    flex-direction: column;
-    gap: 50px;
-    padding: 0 5%;
-}
-
-.bloque-sup-singular {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
     align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    width: 100%;
 }
 
-.imagen-grande-singular img {
+.singular-seccion-intercalada.invertido {
+    flex-direction: row-reverse;
+}
+
+/* Bloque 1: 2 Fotos */
+.singular-galeria-dos {
+    flex: 1.5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.singular-galeria-dos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/5;
+    display: block;
+}
+
+/* Bloque 2: Foto Destacada Central */
+.singular-imagen-destacada {
+    flex: 1.5;
+}
+.singular-imagen-destacada img {
     width: 100%;
     height: auto;
-    aspect-ratio: 1/1;
     object-fit: cover;
     display: block;
 }
 
-.texto-singular {
-    text-align: center;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #ddd;
-    padding: 0 20px;
-}
-
-.perfume-galeria {
+/* Bloque 3: Cuadrícula final */
+.singular-galeria-seis {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
 }
-
-.perfume-galeria img {
+.singular-galeria-seis img {
     width: 100%;
-    height: auto;
-    aspect-ratio: 1/1;
+    height: 100%;
     object-fit: cover;
+    aspect-ratio: 1/1;
+    display: block;
 }
 
+/* Bloques de Texto */
+.singular-texto-bloque {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
+}
+.singular-texto-bloque p {
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* RESPONSIVE MÓVIL: FOTOS ARRIBA, TEXTO ABAJO */
 @media (max-width: 768px) {
-    .bloque-sup-singular {
-        display: flex !important;
+    .singular-seccion-intercalada, 
+    .singular-seccion-intercalada.invertido {
         flex-direction: column !important;
         gap: 20px;
+        margin-bottom: 50px;
     }
-    .imagen-grande-singular {
-        width: 100% !important;
-        order: -1 !important;
+    
+    .singular-galeria-dos,
+    .singular-imagen-destacada,
+    .singular-galeria-seis {
+        width: 100%;
+        order: -1 !important; 
     }
-    .texto-singular {
-        width: 100% !important;
-        text-align: center;
-        padding: 0 !important;
-        order: 0 !important;
+    
+    .singular-galeria-seis {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .perfume-galeria {
-        grid-template-columns: 1fr 1fr;
+    
+    .singular-texto-bloque {
+        width: 100%;
+        padding: 0;
+        order: 0 !important; 
     }
+}
+
+@media (max-width: 480px) {
+    .singular-galeria-dos,
+    .singular-galeria-seis { gap: 10px; }
 }
 
 /* 8mo proyecto zentide */
