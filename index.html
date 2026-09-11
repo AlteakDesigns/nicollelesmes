@@ -110,7 +110,7 @@
                         creativa y consistente.
                     </p>
                     <p class="en">
-                        > I am passionate about turning ideas into viable, functional objects, balancing aesthetics with utility. 
+                        I am passionate about turning ideas into viable, functional objects, balancing aesthetics with utility. 
                         I believe in intentional design that goes beyond the obvious to bring meaning, refinement, and coherence 
                         to every project. I enjoy every stage of the creative process: researching, sketching, prototyping, 3D modeling, 
                         and bringing to life solutions that tell a story and engage with their context. I am a curious, proactive, and 
@@ -380,7 +380,7 @@
             </a>
 
             <a href="#" class="proyecto" onclick="verProyecto('singular')">
-                <img src="img/perfumelogo.png" alt="SINGULAR ESSENCE">
+                <img src="img/perfumelogo.png" alt="SINGULAR ESSENCE" class="img-portada-contain">
                 <div class="info-overlay">
                     <h3>SINGULAR ESSENCE</h3>
                     <p>
@@ -391,7 +391,7 @@
             </a>
 
             <a href="#" class="proyecto" onclick="verProyecto('zentide')">
-                <img src="img/zenportada.png" alt="ZENTIDE">
+                <img src="img/zenportada.png" alt="ZENTIDE" class="img-portada-contain">
                 <div class="info-overlay">
                     <h3>ZENTIDE</h3>
                     <p>
@@ -405,7 +405,6 @@
 
     <!-- DETALLES DE CADA PROYECTO -->
 
-    <!-- NEMYX -->
    <!-- NEMYX -->
     <div id="nemyx" class="seccion">
         <div class="detalle-nav">
@@ -506,6 +505,8 @@
         </div>
     </div>
 
+
+    
     <!-- AMMA -->
     <div id="amma" class="seccion">
         <div class="detalle-nav">
@@ -524,15 +525,16 @@
         </div>
 
         <div class="amma-contenido">
-            <div class="amma-sup">
-                <div class="amma-sup-imgs">
+            
+            <!-- BLOQUE 1: 4 Fotos + Primer Texto -->
+            <div class="amma-seccion-intercalada">
+                <div class="amma-galeria-cuadricula">
                     <img src="img/amma1.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
                     <img src="img/amma2.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
                     <img src="img/amma3.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
                     <img src="img/amma4.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
                 </div>
-                
-                <div class="amma-descripcion">
+                <div class="amma-texto-bloque">
                     <p class="es">
                         Opera como una startup de puericultura que nace para acabar con la obsolescencia biológica 
                         de los productos infantiles. La industria actual obliga a los compradores a adquirir artículos
@@ -541,41 +543,55 @@
                         adulto con crossbody desplegable).
                     </p>
                     <p class="en">
-                        > It operates as a childcare startup founded to eliminate the biological obsolescence of baby products. The current industry forces consumers to purchase items that become useless within months as the child grows. AMMA’s value proposition solves this through a three-stage evolutionary system: a baby carrier, a toddler backpack, and an adult bag with a deployable crossbody strap.
+                        It operates as a childcare startup founded to eliminate the biological obsolescence of baby products. 
+                        The current industry forces consumers to purchase items that become useless within months as the child grows. 
+                        AMMA’s value proposition solves this through a three-stage evolutionary system: a baby carrier, a toddler backpack, 
+                        and an adult bag with a deployable crossbody strap.
                     </p>
                 </div>
             </div>
 
-            <div class="amma-medio">
-                <div class="amma-medio-texto">
+            <!-- BLOQUE 2: Foto Central (Amma11) + Segundo Texto (Invertido en PC) -->
+            <div class="amma-seccion-intercalada invertido">
+                <div class="amma-imagen-destacada">
+                    <img src="img/amma11.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                </div>
+                <div class="amma-texto-bloque">
                     <p class="es">
                         AMMA da respuesta a la ineficiente movilidad en la crianza, causante de estrés crónico, sobrecostes familiares 
                         y residuos medioambientales. Respaldado por una sólida investigación que evidenció la pérdida de autonomía y 
                         agotamiento en la mayoría de los cuidadores, el proyecto recorrió todo el ciclo de diseño: de la conceptualización 
                         y estrategia al desarrollo de un producto final sostenible, funcional y 100% viable en el mercado.
-                        <br><br>
+                    </p>
+                    <p class="en">
+                        AMMA addresses inefficient mobility in parenting, a source of chronic stress, added family costs, and environmental waste. 
+                        Backed by solid research revealing a loss of autonomy and exhaustion among most caregivers, the project covered the entire 
+                        design cycle: from conceptualization and strategy to the development of a sustainable, functional, and 100% market-viable final product.
+                    </p>
+                </div>
+            </div>
+
+            <!-- BLOQUE 3: 6 Fotos + Tercer Texto -->
+            <div class="amma-seccion-intercalada">
+                <div class="amma-galeria-seis">
+                    <img src="img/amma5.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                    <img src="img/amma6.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                    <img src="img/amma7.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                    <img src="img/amma8.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                    <img src="img/amma9.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                    <img src="img/amma10.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                </div>
+                <div class="amma-texto-bloque">
+                    <p class="es">
                         Construido en algodón 100% EtaProof de alta durabilidad y libre de toxinas, garantiza un rendimiento óptimo y seguro 
                         en todas sus configuraciones. Esta fusión de funcionalidad técnica y diseño consciente convierte a AMMA en una herramienta 
                         versátil y duradera.
                     </p>
                     <p class="en">
-                        AMMA addresses inefficient mobility in parenting, a source of chronic stress, added family costs, and environmental waste. Backed by solid research revealing a loss of autonomy and exhaustion among most caregivers, the project covered the entire design cycle: from conceptualization and strategy to the development of a sustainable, functional, and 100% market-viable final product.
-                        <br><br>
-                        > Crafted from highly durable, 100% toxin-free EtaProof cotton, it ensures safe and optimal performance in every configuration. This blend of technical functionality and conscious design makes AMMA a versatile, long-lasting tool.
+                        Crafted from highly durable, 100% toxin-free EtaProof cotton, it ensures safe and optimal performance in every configuration. 
+                        This blend of technical functionality and conscious design makes AMMA a versatile, long-lasting tool.
                     </p>
                 </div>
-                <div class="amma-medio-img">
-                    <img src="img/amma11.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                </div>
-            </div>
-
-            <div class="amma-galeria-inferior">
-                <img src="img/amma5.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/amma6.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/amma7.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/amma8.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/amma9.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/amma10.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
             </div>
 
             <div class="amma-footer">
@@ -593,6 +609,7 @@
             </a>
         </div>
     </div>
+    
 
     <!-- ONDARA -->
     <div id="ondara" class="seccion">
@@ -624,7 +641,7 @@
                         una pieza donde la geometría y la luz se entienden como un mismo gesto.
                     </p>
                     <p class="en">
-                        > It stems from experimentation with parametric design, leaving behind the traditional spiral to explore a more fluid and controlled language. The waves build the form and guide the light, creating a smooth movement that shifts depending on the viewpoint and the space. The result is a piece where geometry and light are understood as a single gesture.
+                        It stems from experimentation with parametric design, leaving behind the traditional spiral to explore a more fluid and controlled language. The waves build the form and guide the light, creating a smooth movement that shifts depending on the viewpoint and the space. The result is a piece where geometry and light are understood as a single gesture.
                     </p>
                 </div>
             </div>
@@ -681,7 +698,7 @@
                         medieval con diseño 3D, simbolizando resistencia, tradición e innovación.
                     </p>
                     <p class="en">
-                        > An earring collection that reimagines Colombian colonization through an alternative future where indigenous cultures triumph. It merges Colombian indigenous and medieval aesthetics with 3D design, symbolizing resistance, tradition, and innovation.
+                        An earring collection that reimagines Colombian colonization through an alternative future where indigenous cultures triumph. It merges Colombian indigenous and medieval aesthetics with 3D design, symbolizing resistance, tradition, and innovation.
                     </p>
                 </div>
             </div>
@@ -737,7 +754,7 @@
                         personal de Dior.
                     </p>
                     <p class="en">
-                        > Created in collaboration with Dior, it offers an immersive experience balancing luxury and sustainability. The box combines cardboard with recycled textiles, adding color and symbolizing environmental commitment. Its versatile design features a gift compartment made of recycled raffia and a personalized letter, reinforcing exclusivity and the emotional connection with Dior's staff.
+                        Created in collaboration with Dior, it offers an immersive experience balancing luxury and sustainability. The box combines cardboard with recycled textiles, adding color and symbolizing environmental commitment. Its versatile design features a gift compartment made of recycled raffia and a personalized letter, reinforcing exclusivity and the emotional connection with Dior's staff.
                     </p>
                 </div>
             </div>
@@ -903,7 +920,7 @@
                         hostelería.
                     </p>
                     <p class="en">
-                        > Giralia is a rotating hanging bottle rack developed in collaboration with the restaurant Quimbaya by Edwin Rodriguez in Madrid, Spain. Designed to optimize the overhead space of the cocktail bar, it merges functionality and aesthetics for bottle storage, showcasing innovative product design for the hospitality sector.
+                        Giralia is a rotating hanging bottle rack developed in collaboration with the restaurant Quimbaya by Edwin Rodriguez in Madrid, Spain. Designed to optimize the overhead space of the cocktail bar, it merges functionality and aesthetics for bottle storage, showcasing innovative product design for the hospitality sector.
                     </p>
                 </div>
                 <div class="imagen-grande-giralia">
@@ -931,43 +948,62 @@
         </div>
     </div>
 
-    <!-- SINGULAR ESSENCE -->
     <div id="singular" class="seccion">
-        <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
-                <span class="es">Volver a proyectos</span>
-                <span class="en">Back to projects</span>
-            </a>
-        </div>
+    <div class="detalle-nav">
+        <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+            <span class="es">Volver a proyectos</span>
+            <span class="en">Back to projects</span>
+        </a>
+    </div>
 
-        <div class="titulo-singular">
-            <h1>Singular Essence</h1>
-            <p class="subtitulo">For Him, For Her...</p>
-        </div>
+    <div class="titulo-singular">
+        <h1>Singular Essence</h1>
+        <p class="subtitulo">For Him, For Her...</p>
+    </div>
 
-        <div class="cuadricula-singular">
-            <div class="bloque-sup-singular">
-                <div class="imagen-grande-singular">
-                    <img src="img/perfume1.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                </div>
-                <div class="texto-singular">
-                    <p class="es">
-                        Diseño de envase de perfume unisex, inspirado en la obra "Estudio sexual indiferenciado" de
-                        Teresa Solar. En el arte contemporáneo, la identidad de género es un tema que muchos artistas
-                        están abordando, y Solar desafía las etiquetas tradicionales. Este diseño reflexiona sobre la
-                        diversidad sexual y la no conformidad con las categorías de género en la vida cotidiana. La obra
-                        de Solar nos recuerda que las personas van más allá de las etiquetas de hombre o mujer, llamando
-                        a la diversidad y desafiando los moldes establecidos.
-                    </p>
-                    <p class="en">
-                        > A unisex perfume bottle design inspired by Teresa Solar's artwork, "Estudio sexual indiferenciado." Gender identity is a prominent theme in contemporary art, and Solar challenges traditional labels. This design reflects on sexual diversity and gender non-conformity in everyday life. Solar's work reminds us that individuals transcend the binary labels of man or woman, advocating for diversity and breaking established molds.
-                    </p>
-                </div>
-            </div>
-
-            <div class="perfume-galeria">
+    <div class="singular-contenido">
+        
+        <!-- BLOQUE 1: Text 1 + perfume3 & perfume7 -->
+        <div class="singular-seccion-intercalada">
+            <div class="singular-galeria-dos">
                 <img src="img/perfume3.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
                 <img src="img/perfume7.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
+            </div>
+            <div class="singular-texto-bloque">
+                <p class="es">
+                    Diseño de envase de perfume unisex, inspirado en la obra "Estudio sexual indiferenciado" de
+                    Teresa Solar. En el arte contemporáneo, la identidad de género es un tema que muchos artistas
+                    están abordando, y Solar desafía las etiquetas tradicionales.
+                </p>
+                <p class="en">
+                    A unisex perfume bottle design inspired by Teresa Solar's artwork, "Estudio sexual indiferenciado." 
+                    Gender identity is a prominent theme in contemporary art, and Solar challenges traditional labels.
+                </p>
+            </div>
+        </div>
+
+        <!-- BLOQUE 2: Text 2 + perfume1 (Imagen Central Destacada) -->
+        <div class="singular-seccion-intercalada invertido">
+            <div class="singular-imagen-destacada">
+                <img src="img/perfume1.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
+            </div>
+            <div class="singular-texto-bloque">
+                <p class="es">
+                    Este diseño reflexiona sobre la diversidad sexual y la no conformidad con las categorías de género 
+                    en la vida cotidiana. La obra de Solar nos recuerda que las personas van más allá de las etiquetas 
+                    de hombre o mujer, llamando a la diversidad y desafiando los moldes establecidos.
+                </p>
+                <p class="en">
+                    This design reflects on sexual diversity and gender non-conformity in everyday life. Solar's work reminds 
+                    us that individuals transcend the binary labels of man or woman, advocating for diversity and breaking 
+                    established molds.
+                </p>
+            </div>
+        </div>
+
+        <!-- BLOQUE 3: Demás fotos en cuadrícula final -->
+        <div class="singular-seccion-intercalada">
+            <div class="singular-galeria-seis">
                 <img src="img/perfume8.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
                 <img src="img/perfume9.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
                 <img src="img/perfume6.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
@@ -977,13 +1013,16 @@
             </div>
         </div>
 
-        <div class="detalle-nav">
-            <a href="#" onclick="cerrarProyecto()" class="btn-volver">
-                <span class="es">Volver a proyectos</span>
-                <span class="en">Back to projects</span>
-            </a>
-        </div>
     </div>
+
+    <div class="detalle-nav">
+        <a href="#" onclick="cerrarProyecto()" class="btn-volver">
+            <span class="es">Volver a proyectos</span>
+            <span class="en">Back to projects</span>
+        </a>
+    </div>
+</div>
+    
 
     <!-- ZENTIDE -->
     <div id="zentide" class="seccion">
@@ -1013,7 +1052,7 @@
                         relajación, la contemplación y el crecimiento personal.
                     </p>
                     <p class="en">
-                        > Zen Tide goes beyond mere aesthetics: it offers a sensory experience to enjoy a moment of peace while exploring physical and mental well-being. Each wave represents body, mind, and spirit, inviting you to connect with your senses, find mental balance, and immerse yourself in a spiritual experience. Uncorking and savoring each wine creates a space for relaxation, contemplation, and personal growth.
+                        Zen Tide goes beyond mere aesthetics: it offers a sensory experience to enjoy a moment of peace while exploring physical and mental well-being. Each wave represents body, mind, and spirit, inviting you to connect with your senses, find mental balance, and immerse yourself in a spiritual experience. Uncorking and savoring each wine creates a space for relaxation, contemplation, and personal growth.
                     </p>
                 </div>
                 <div class="imagen-banner-zentide">
