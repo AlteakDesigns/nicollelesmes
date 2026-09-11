@@ -1402,7 +1402,7 @@ html {
 
 
 /* -----------------------------------
-   SINGULAR ESSENCE (DISEÑO REORGANIZADO)
+   SINGULAR ESSENCE 
 ----------------------------------- */
 #singular { padding-bottom: 30px; }
 .titulo-singular { text-align: center; margin-bottom: 40px; padding: 0 5%; }
@@ -1410,7 +1410,20 @@ html {
 .titulo-singular .subtitulo { font-size: 1.2rem; color: #888; font-weight: normal; }
 .singular-contenido { padding: 0 5%; }
 
-/* Bloque Superior PC: Imagen principal a un lado y contenedor derecho al otro */
+/* Banner principal horizontal */
+.singular-banner-principal {
+    width: 100%;
+    margin-bottom: 50px;
+}
+.singular-banner-principal img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    display: block;
+}
+
+/* Bloques intercalados */
 .singular-seccion-intercalada {
     display: flex;
     align-items: center;
@@ -1419,32 +1432,18 @@ html {
     width: 100%;
 }
 
-.singular-imagen-principal {
-    flex: 1.2;
+.singular-seccion-intercalada.invertido {
+    flex-direction: row-reverse;
 }
 
-.singular-imagen-principal img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    aspect-ratio: 4/5;
-    display: block;
-}
-
-.singular-bloque-derecha {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.singular-mini-galeria {
+.singular-galeria-dos {
+    flex: 1.5;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 }
 
-.singular-mini-galeria img {
+.singular-galeria-dos img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1452,27 +1451,27 @@ html {
     display: block;
 }
 
-.singular-texto p, 
-.singular-texto-secundario p {
+.singular-texto-bloque {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.singular-texto-bloque p {
     color: #ccc;
     line-height: 1.6;
     font-size: 1rem;
-    text-align: center;
 }
 
-/* Bloque Inferior */
-.singular-texto-secundario {
-    max-width: 900px;
-    margin: 0 auto 40px auto;
-}
-
-.perfume-galeria {
+/* Cuadrícula de fotos restantes */
+.singular-galeria-final {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
+    margin-top: 50px;
 }
 
-.perfume-galeria img {
+.singular-galeria-final img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1480,32 +1479,34 @@ html {
     display: block;
 }
 
-/* RESPONSIVE MÓVIL: FOTOS ARRIBA, TEXTO ABAJO */
+/* RESPONSIVE MÓVIL */
 @media (max-width: 768px) {
-    .singular-seccion-intercalada {
+    .singular-seccion-intercalada,
+    .singular-seccion-intercalada.invertido {
         flex-direction: column !important;
         gap: 20px;
         margin-bottom: 40px;
     }
     
-    .singular-imagen-principal {
+    .singular-galeria-dos {
         width: 100%;
-        order: -1 !important; /* Fuerza la foto principal arriba en móvil */
+        order: -1 !important; 
     }
     
-    .singular-bloque-derecha {
+    .singular-texto-bloque {
         width: 100%;
-        order: 0 !important;
+        padding: 0;
+        order: 0 !important; 
     }
     
-    .perfume-galeria {
+    .singular-galeria-final {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
-    .singular-mini-galeria,
-    .perfume-galeria { 
+    .singular-galeria-dos,
+    .singular-galeria-final { 
         gap: 10px; 
     }
 }
