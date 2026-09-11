@@ -2022,3 +2022,19 @@ body.lang-en .es {
         justify-content: space-between;
     }
 }
+
+/* =========================================
+   CORRECCIÓN DEFINITIVA BOTÓN VOLVER
+   ========================================= */
+.detalle-nav {
+    padding: 30px 5% 20px 5% !important;
+}
+
+.detalle-nav a.btn-volver,
+.detalle-nav a.btn-volver:link,
+.detalle-nav a.btn-volver:visited,
+.detalle-nav a.btn-volver:hover,
+.detalle-nav a.btn-volver:active {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
