@@ -620,144 +620,100 @@ html {
 }
 
 /* -----------------------------------
-   NEMYX
+   NEMYX (DISEÑO INTERCALADO MODULAR)
 ----------------------------------- */
-#nemyx {
-    padding-bottom: 30px;
-}
+#nemyx { padding-bottom: 30px; }
+.titulo-nemyx { text-align: center; margin-bottom: 40px; padding: 0 5%; }
+.titulo-nemyx h1 { font-size: 1.5rem; letter-spacing: 2px; margin-bottom: 10px; }
+.titulo-nemyx .subtitulo { font-size: 1.2rem; color: #888; font-weight: normal; }
+.nemyx-contenido { padding: 0 5%; }
 
-.titulo-nemyx {
-    text-align: center;
-    margin-bottom: 40px;
-    padding: 0 5%;
-}
-
-.titulo-nemyx h1 {
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.titulo-nemyx .subtitulo {
-    font-size: 1.2rem;
-    color: #888;
-    font-weight: normal;
-}
-
-.nemyx-contenido {
-    padding: 0 5%;
-}
-
-.nemyx-descripcion p,
-.nemyx-medio-texto p {
-    color: #ccc;
-    line-height: 1.6;
-    font-size: 1rem;
-    text-align: center;
-}
-
-.nemyx-sup {
-    display: flex !important;
-    flex-direction: row !important; 
-    flex-wrap: nowrap !important;
+/* Estructura base de PC: Flexbox al 60/40 */
+.nemyx-seccion-intercalada {
+    display: flex;
+    align-items: center;
     gap: 40px;
     margin-bottom: 60px;
-    align-items: stretch !important;
     width: 100%;
 }
 
-.nemyx-sup-imgs {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 15px !important;
-    width: 60% !important; 
+/* Invierte el orden en el bloque del medio para que se vea dinámico en PC */
+.nemyx-seccion-intercalada.invertido {
+    flex-direction: row-reverse;
 }
 
-.nemyx-sup-imgs img {
-    width: 100% !important;
+.nemyx-galeria-cuadricula {
+    flex: 1.5; /* Ocupa más espacio que el texto */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.nemyx-galeria-cuadricula img, 
+.nemyx-galeria-cuadricula video {
+    width: 100%;
     height: 100%;
     object-fit: cover;
+    aspect-ratio: 1/1; /* Cuadros perfectos siempre */
     display: block;
 }
 
-.nemyx-descripcion {
-    width: 40% !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.nemyx-texto-bloque {
+    flex: 1; /* Ocupa menos espacio */
+    text-align: center;
     padding: 0 20px;
 }
 
-.nemyx-medio {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 60px;
+.nemyx-texto-bloque p {
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 1rem;
 }
 
-.nemyx-medio-texto {
-    max-width: 900px;
+.nemyx-video-final-container {
     width: 100%;
-}
-
-.nemyx-galeria-inferior {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
     margin-bottom: 40px;
 }
 
-.nemyx-galeria-inferior img,
-.nemyx-galeria-inferior video {
+.nemyx-video-final-container video {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 16/9; /* Apaisado para PC */
     object-fit: cover;
     display: block;
 }
 
-.nemyx-galeria-inferior .video-full {
-    grid-column: 1 / -1;
-    aspect-ratio: 16 / 9;
-}
-
-.video-zoom {
+.video-zoom, .img-zoom {
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.video-zoom:hover {
+.video-zoom:hover, .img-zoom:hover {
     transform: scale(1.02);
 }
 
+/* RESPONSIVE MÓVIL: FORZADO AL ORDEN EXACTO */
 @media (max-width: 768px) {
-    .nemyx-sup { 
-        display: flex !important; 
-        flex-direction: column !important; 
-        gap: 20px; 
-        margin-bottom: 40px; 
+    .nemyx-seccion-intercalada, 
+    .nemyx-seccion-intercalada.invertido {
+        flex-direction: column !important; /* Rompe el intercalado de PC y apila todo */
+        gap: 20px;
+        margin-bottom: 50px;
     }
-    .nemyx-sup-imgs { 
-        width: 100% !important; 
-        order: -1 !important; 
-    } /* Sube la foto */
-    .nemyx-descripcion { 
-        width: 100% !important; 
-        padding: 0 !important; 
-        order: 0 !important; 
-    } /* Baja el texto */
-    .nemyx-galeria-inferior { 
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 10px; 
+    
+    .nemyx-galeria-cuadricula {
+        width: 100%;
+        order: -1 !important; /* Magia negra: Fuerza siempre la galería arriba del texto */
+    }
+    
+    .nemyx-texto-bloque {
+        width: 100%;
+        padding: 0;
+        order: 0 !important; /* Texto abajo */
     }
 }
+
 @media (max-width: 480px) {
-    .nemyx-sup-imgs { 
-        grid-template-columns: 
-        1fr !important; 
-    }
-    .nemyx-galeria-inferior { 
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 10px; }
+    .nemyx-galeria-cuadricula { gap: 10px; }
 }
 
 /* -----------------------------------
