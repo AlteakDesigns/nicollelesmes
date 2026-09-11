@@ -532,75 +532,111 @@ html {
     50% { transform: rotate(45deg) translate(5px, 5px); }
 }
 
+/* =========================================
+   GALERÍA DE PROYECTOS (ESTILO EDITORIAL PREMIUM)
+   ========================================= */
 .contenedor-galeria {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(12, 1fr); /* Cuadrícula avanzada de 12 columnas */
     gap: 30px;
     padding: 50px 5%;
-    min-height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .proyecto {
     position: relative;
     display: block;
-    height: 300px;
     overflow: hidden;
     cursor: pointer;
+    border-radius: 3px; /* Toque mínimo de elegancia en los bordes */
 }
 
+/* Imagen base con zoom súper suave */
 .proyecto img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center; 
-    transition: transform 0.5s ease;
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.2, 1);
 }
 
+/* -----------------------------------------
+   TAMAÑOS ASIMÉTRICOS (ROMPIENDO LA MONOTONÍA)
+   ----------------------------------------- */
+/* 1. Nemyx - Banner Hero (Ancho completo) */
+.proyecto:nth-child(1) { grid-column: span 12; aspect-ratio: 21/9; }
+
+/* 2. Amma y 3. Ondara - Mitad y mitad (Cuadrados) */
+.proyecto:nth-child(2), .proyecto:nth-child(3) { grid-column: span 6; aspect-ratio: 1/1; }
+
+/* 4. Naya y 5. Dior - Desiguales 60/40 (Verticales y apaisados) */
+.proyecto:nth-child(4) { grid-column: span 7; aspect-ratio: 4/3; }
+.proyecto:nth-child(5) { grid-column: span 5; aspect-ratio: 3/4; }
+
+/* 6. Napoli y 7. Soleris - Mitad y mitad (Apaisados) */
+.proyecto:nth-child(6), .proyecto:nth-child(7) { grid-column: span 6; aspect-ratio: 4/3; }
+
+/* 8. Giralia y 9. Singular Essence - Desiguales 40/60 (Invertido) */
+.proyecto:nth-child(8) { grid-column: span 5; aspect-ratio: 3/4; }
+.proyecto:nth-child(9) { grid-column: span 7; aspect-ratio: 4/3; }
+
+/* 10. ZenTide - Banner Final (Ancho completo) */
+.proyecto:nth-child(10) { grid-column: span 12; aspect-ratio: 21/9; }
+
+
+/* -----------------------------------------
+   OVERLAY PREMIUM (TEXTO ANIMADO DESDE ABAJO)
+   ----------------------------------------- */
 .info-overlay {
     position: absolute;
-    top: 0;
+    bottom: 0; 
     left: 0;
-    width: 100%;
+    width: 100%; 
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    /* Degradado cinematográfico en lugar de una caja negra plana */
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end; /* Alineado abajo estilo revista */
+    align-items: flex-start;
+    padding: 40px;
     opacity: 0;
-    transition: opacity 0.3s ease;
-    text-align: center;
-    padding: 20px;
+    transition: opacity 0.5s ease;
 }
 
-.proyecto:hover .info-overlay {
-    opacity: 1;
+.info-overlay h3 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    transform: translateY(20px);
+    transition: transform 0.5s cubic-bezier(0.2, 1, 0.2, 1);
 }
 
-.proyecto:hover img {
-    transform: scale(1.1);
+.info-overlay p {
+    font-size: 0.95rem;
+    color: #ddd;
+    font-weight: 300;
+    transform: translateY(20px);
+    transition: transform 0.5s cubic-bezier(0.2, 1, 0.2, 1) 0.1s; /* Ligero retraso para que suba después del título */
 }
 
-@media (max-width: 768px) {
-    .hamburger { display: block; }
-    .menu {
-        display: none;
-        flex-direction: column;
-        background-color: #1a1a1a;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        padding: 20px 0;
-        align-items: center;
-        z-index: 100;
+/* Efectos al pasar el ratón */
+.proyecto:hover .info-overlay { opacity: 1; }
+.proyecto:hover .info-overlay h3, 
+.proyecto:hover .info-overlay p { transform: translateY(0); }
+.proyecto:hover img { transform: scale(1.05); }
+
+/* RESPONSIVE: En móvil todo vuelve a ser una columna ancha */
+@media (max-width: 900px) {
+    .proyecto:nth-child(n) { 
+        grid-column: span 12; 
+        aspect-ratio: 4/3; 
     }
-    .menu.activo { display: flex; }
-    .logo img { height: 30px; }
-    .contenedor-galeria { grid-template-columns: 1fr; }
+    .info-overlay { padding: 25px; }
+    .info-overlay h3 { font-size: 1.5rem; }
 }
-
 
 .btn-volver {
     color: #fff;
@@ -1402,102 +1438,82 @@ html {
 
 
 /* -----------------------------------
-   SINGULAR ESSENCE (PREMIUM & MÓVIL)
+   SINGULAR ESSENCE (DISEÑO EDITORIAL PREMIUM)
 ----------------------------------- */
-#singular { padding-bottom: 30px; }
-.titulo-singular { text-align: center; margin-bottom: 40px; padding: 0 5%; }
-.titulo-singular h1 { font-size: 1.5rem; letter-spacing: 2px; margin-bottom: 10px; }
-.titulo-singular .subtitulo { font-size: 1.2rem; color: #888; font-weight: normal; }
-.singular-contenido { padding: 0 5%; }
+#singular { padding-bottom: 50px; }
+.titulo-singular { text-align: center; margin-bottom: 60px; padding: 0 5%; }
+.titulo-singular h1 { font-size: 1.8rem; letter-spacing: 3px; margin-bottom: 10px; text-transform: uppercase; }
+.titulo-singular .subtitulo { font-size: 1.1rem; color: #888; font-weight: 300; font-style: italic; }
 
-/* Banner principal */
-.singular-banner-principal {
+.singular-contenido { padding: 0 5%; max-width: 1200px; margin: 0 auto; }
+
+/* Banner con aire */
+.singular-banner {
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
-.singular-banner-principal img {
+.singular-banner img {
     width: 100%;
     height: auto;
     object-fit: cover;
     aspect-ratio: 16/9;
     display: block;
+    border-radius: 2px;
 }
 
-/* Filas intercaladas para Computador */
-.singular-fila {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 60px;
-    width: 100%;
-}
-
-.singular-fila.invertido {
-    flex-direction: row-reverse;
-}
-
-.singular-texto-bloque {
-    flex: 1;
+/* Textos elegantes y angostos */
+.singular-texto-centrado {
+    max-width: 800px;
+    margin: 0 auto 70px auto;
     text-align: center;
     padding: 0 20px;
 }
-
-.singular-texto-bloque p,
-.singular-texto-final p {
-    color: #ccc;
-    line-height: 1.6;
-    font-size: 1rem;
+.singular-texto-centrado p {
+    color: #ddd;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    font-weight: 300;
+}
+.singular-texto-centrado.final {
+    margin-bottom: 30px;
 }
 
-.singular-grid-cuatro {
-    flex: 1.5;
+/* Cuadrículas en fila (Premium Look) */
+.singular-grid-premium {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 70px;
 }
-
-.singular-grid-cuatro img {
+.singular-grid-premium img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    aspect-ratio: 1/1;
+    aspect-ratio: 3/4; /* Formato vertical estilo revista */
     display: block;
+    border-radius: 2px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.singular-grid-premium img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    z-index: 2;
 }
 
-.singular-texto-final {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 0 20px 40px 20px;
-}
-
-/* RESPONSIVE MÓVIL: Apilado vertical exacto */
-@media (max-width: 768px) {
-    .singular-fila,
-    .singular-fila.invertido {
-        flex-direction: column !important;
-        gap: 20px;
-        margin-bottom: 40px;
-    }
-    
-    .singular-texto-bloque {
-        width: 100%;
-        padding: 0;
-        order: 2 !important; /* Texto debajo de su bloque respectivo */
-    }
-    
-    .singular-grid-cuatro {
-        width: 100%;
-        order: 1 !important; /* Fotos arriba */
+/* RESPONSIVE MÓVIL EXACTO */
+@media (max-width: 900px) {
+    .singular-grid-premium {
+        grid-template-columns: repeat(2, 1fr); /* En móvil / tablet se hacen bloques de 2x2 */
+        gap: 15px;
     }
 }
 
 @media (max-width: 480px) {
-    .singular-grid-cuatro { 
-        gap: 10px; 
-    }
+    .singular-banner { margin-bottom: 50px; }
+    .singular-texto-centrado { margin-bottom: 50px; padding: 0; }
+    .singular-grid-premium { margin-bottom: 50px; gap: 10px; }
+    .singular-grid-premium img { aspect-ratio: 1/1; /* En celular muy pequeño se hacen cuadradas */ }
 }
-
 
 
 /* 8mo proyecto zentide */
