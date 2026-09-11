@@ -1402,7 +1402,7 @@ html {
 
 
 /* -----------------------------------
-   SINGULAR ESSENCE 
+   SINGULAR ESSENCE (PREMIUM & MÓVIL)
 ----------------------------------- */
 #singular { padding-bottom: 30px; }
 .titulo-singular { text-align: center; margin-bottom: 40px; padding: 0 5%; }
@@ -1410,10 +1410,10 @@ html {
 .titulo-singular .subtitulo { font-size: 1.2rem; color: #888; font-weight: normal; }
 .singular-contenido { padding: 0 5%; }
 
-/* Banner principal horizontal */
+/* Banner principal */
 .singular-banner-principal {
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 .singular-banner-principal img {
     width: 100%;
@@ -1423,32 +1423,17 @@ html {
     display: block;
 }
 
-/* Bloques intercalados */
-.singular-seccion-intercalada {
+/* Filas intercaladas para Computador */
+.singular-fila {
     display: flex;
     align-items: center;
     gap: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     width: 100%;
 }
 
-.singular-seccion-intercalada.invertido {
+.singular-fila.invertido {
     flex-direction: row-reverse;
-}
-
-.singular-galeria-dos {
-    flex: 1.5;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-}
-
-.singular-galeria-dos img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    aspect-ratio: 1/1;
-    display: block;
 }
 
 .singular-texto-bloque {
@@ -1457,21 +1442,21 @@ html {
     padding: 0 20px;
 }
 
-.singular-texto-bloque p {
+.singular-texto-bloque p,
+.singular-texto-final p {
     color: #ccc;
     line-height: 1.6;
     font-size: 1rem;
 }
 
-/* Cuadrícula de fotos restantes */
-.singular-galeria-final {
+.singular-grid-cuatro {
+    flex: 1.5;
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-    margin-top: 50px;
 }
 
-.singular-galeria-final img {
+.singular-grid-cuatro img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1479,34 +1464,36 @@ html {
     display: block;
 }
 
-/* RESPONSIVE MÓVIL */
+.singular-texto-final {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px 40px 20px;
+}
+
+/* RESPONSIVE MÓVIL: Apilado vertical exacto */
 @media (max-width: 768px) {
-    .singular-seccion-intercalada,
-    .singular-seccion-intercalada.invertido {
+    .singular-fila,
+    .singular-fila.invertido {
         flex-direction: column !important;
         gap: 20px;
         margin-bottom: 40px;
     }
     
-    .singular-galeria-dos {
-        width: 100%;
-        order: -1 !important; 
-    }
-    
     .singular-texto-bloque {
         width: 100%;
         padding: 0;
-        order: 0 !important; 
+        order: 2 !important; /* Texto debajo de su bloque respectivo */
     }
     
-    .singular-galeria-final {
-        grid-template-columns: repeat(2, 1fr);
+    .singular-grid-cuatro {
+        width: 100%;
+        order: 1 !important; /* Fotos arriba */
     }
 }
 
 @media (max-width: 480px) {
-    .singular-galeria-dos,
-    .singular-galeria-final { 
+    .singular-grid-cuatro { 
         gap: 10px; 
     }
 }
