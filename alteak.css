@@ -110,10 +110,10 @@ main {
 .logo-orbita-container {
     perspective: 1000px;
     padding-top: 50px;
-    margin-bottom: 140px; /* Le da todo el aire necesario abajo en PC */
+    margin-bottom: 140px;
     width: 90%;     
     max-width: 550px;   
-    height: 160px; /* Altura real para que las capas 3D no se salgan */
+    height: 160px;
     position: relative;
     margin-left: auto;   
     margin-right: auto;
@@ -131,7 +131,7 @@ main {
 @media (max-width: 480px) {
     .logo-orbita-container {
         height: 80px;
-        margin-bottom: 120px; /* Empuja los botones de idioma bien abajo */
+        margin-bottom: 120px;
     }
 }
 
@@ -1841,10 +1841,14 @@ body.lang-en .es {
    ========================================= */
 #portafolio {
     min-height: 80vh;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     padding-bottom: 50px;
+    display: none;
+}
+
+#portafolio.activa {
+    display: flex; 
 }
 
 .portafolio-interactivo {
