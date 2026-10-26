@@ -1144,7 +1144,7 @@
     </div>
 
     <!-- SOLERIS -->
-    <div id="soleris" class="seccion sl">
+    <div id="soleris" class="seccion">
         <div class="detalle-nav">
             <a href="#" onclick="cerrarProyecto()" class="btn-volver">
                 <span class="es">Volver a proyectos</span>
@@ -1152,74 +1152,68 @@
             </a>
         </div>
 
-        <div class="cs">
-            <!-- PORTADA PARTIDA: título gigante sobre la foto vertical -->
-            <header class="sl-hero">
-                <h1 class="sl-titulo" aria-label="Soleris"><span>Sole</span><span>ris</span></h1>
-                <figure class="sl-hero-foto">
-                    <img src="img/soleris_hero.webp" alt="Lámpara SOLERIS encendida, proyectando su luz sobre la pared" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
-                </figure>
-                <p class="sl-hero-lema">
-                    <span class="es">Un fragmento de luz entre dos órbitas, apoyado en una roca.</span>
-                    <span class="en">A fragment of light between two orbits, resting on a rock.</span>
-                </p>
-                <p class="sl-hero-meta"><span class="es">Iluminación y fabricación, 2025</span><span class="en">Lighting and fabrication, 2025</span></p>
-            </header>
-        </div>
-
-        <!-- INTERRUPTOR: apagada / encendida -->
-        <section class="sl-interruptor" id="sl-interruptor">
-            <div class="cs">
-                <div class="sl-interruptor-marco">
-                    <img class="sl-foto-apagada" src="img/soleris_apagada.webp" alt="SOLERIS apagada, a la luz del día" loading="lazy">
-                    <img class="sl-foto-encendida" src="img/soleris_encendida.webp" alt="SOLERIS encendida, con la luz atravesando los anillos" loading="lazy">
-                </div>
-                <div class="sl-interruptor-pie">
-                    <button type="button" class="sl-boton" onclick="alternarLuzSoleris()" aria-pressed="false">
-                        <span class="sl-boton-pista"><span class="sl-boton-punto"></span></span>
-                        <span class="sl-boton-texto es">Enciende la luz</span>
-                        <span class="sl-boton-texto en">Turn on the light</span>
-                    </button>
-                    <p><span class="es">Dos anillos de madera que orbitan alrededor de la luz, como planetas en equilibrio.</span><span class="en">Two wooden rings orbiting the light, like planets in balance.</span></p>
-                </div>
+        <!-- PORTADA -->
+        <header class="cs-hero">
+            <img src="img/soleris_hero.webp" alt="Lámpara SOLERIS encendida junto a unos libros, con la luz proyectada en la pared" style="object-position: 50% 45%;">
+            <div class="cs-hero-texto">
+                <h1>Soleris</h1>
+                <p><span class="es">Un fragmento de luz</span><span class="en">A fragment of light</span></p>
             </div>
-        </section>
+        </header>
 
         <div class="cs">
-            <!-- MATERIALES COMO TIPOGRAFÍA + COLLAGE ESCALONADO -->
-            <section class="sl-materiales">
-                <div class="sl-palabras">
-                    <p class="sl-palabra">Madera<span class="sl-palabra-nota"><span class="es">anillos cortados con CNC y lijados</span><span class="en">CNC-cut, sanded rings</span></span></p>
-                    <p class="sl-palabra">PVC<span class="sl-palabra-nota"><span class="es">difusor termoconformado</span><span class="en">thermoformed diffuser</span></span></p>
-                    <p class="sl-palabra">Cemento<span class="sl-palabra-nota"><span class="es">base moldeada en silicona desde un modelo en PLA</span><span class="en">base cast in silicone from a PLA model</span></span></p>
+            <p class="cs-frase">
+                <span class="es">Mitad escultura, mitad estantería: una luz entre dos anillos y una roca a cada lado que sostiene tus libros.</span>
+                <span class="en">Half sculpture, half shelf: a light between two rings, with a rock on each side holding your books.</span>
+            </p>
+
+            <dl class="cs-datos">
+                <div><dt><span class="es">Qué es</span><span class="en">What it is</span></dt>
+                    <dd><span class="es">Lámpara de mesa y sujetalibros en una sola pieza</span><span class="en">Table lamp and bookend in one piece</span></dd></div>
+                <div><dt><span class="es">Técnicas</span><span class="en">Techniques</span></dt>
+                    <dd><span class="es">CNC, termoconformado y molde de silicona</span><span class="en">CNC, thermoforming and silicone moulding</span></dd></div>
+                <div><dt><span class="es">Materiales</span><span class="en">Materials</span></dt>
+                    <dd><span class="es">Madera, PVC y cemento</span><span class="en">Wood, PVC and concrete</span></dd></div>
+                <div><dt><span class="es">Año</span><span class="en">Year</span></dt>
+                    <dd>2025</dd></div>
+            </dl>
+
+            <!-- LA LUZ: texto izquierda, foto derecha -->
+            <section class="cs-fila cs-fila-concepto">
+                <div class="cs-texto">
+                    <h2><span class="es">La luz, en el centro</span><span class="en">Light at the centre</span></h2>
+                    <p class="es">Dos anillos giran alrededor de la bombilla como si fueran órbitas, y dejan que la luz salga hacia la pared en abanico.</p>
+                    <p class="en">Two rings circle the bulb like orbits, letting the light fan out onto the wall.</p>
+                    <p class="es">Abajo, una base de cemento áspera, casi una piedra, que le da peso y la ancla a la mesa.</p>
+                    <p class="en">Below, a rough concrete base, almost a stone, gives it weight and anchors it to the table.</p>
                 </div>
-                <div class="sl-collage">
-                    <img src="img/soleris_cnc.webp" alt="Anillos de madera laminada cortados con CNC" onclick="abrirFoto(this)" class="img-zoom sl-c1" loading="lazy">
-                    <img src="img/soleris_madera.webp" alt="Los dos anillos de madera ensamblados sobre su base" onclick="abrirFoto(this)" class="img-zoom sl-c2" loading="lazy">
-                    <img src="img/soleris_termo.webp" alt="Difusor de PVC saliendo de la termoconformadora" onclick="abrirFoto(this)" class="img-zoom sl-c3" loading="lazy">
-                    <img src="img/soleris_molde.webp" alt="Molde de silicona de la base" onclick="abrirFoto(this)" class="img-zoom sl-c4" loading="lazy">
-                    <img src="img/soleris_base.webp" alt="Las dos piezas de la base de cemento con textura de roca" onclick="abrirFoto(this)" class="img-zoom sl-c5" loading="lazy">
+                <figure class="cs-foto-alta">
+                    <img src="img/soleris_encendida.webp" alt="SOLERIS encendida, con la luz saliendo entre los anillos hacia la pared" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                </figure>
+            </section>
+
+            <!-- HECHA A MANO: fotos izquierda, texto derecha -->
+            <section class="cs-fila cs-fila-proceso">
+                <div class="cs-par">
+                    <img src="img/soleris_madera.webp" alt="Los dos anillos de madera ensamblados sobre su base, antes del acabado" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/soleris_madera2.webp" alt="Los anillos de madera recién cortados con CNC, antes de montarlos" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                </div>
+                <div class="cs-texto">
+                    <h2><span class="es">Hecha a mano, pieza a pieza</span><span class="en">Handmade, piece by piece</span></h2>
+                    <p class="es">Los anillos salieron de madera laminada cortada con CNC y lijada a mano. El difusor es una lámina de PVC termoconformada, y la base se vertió en cemento dentro de un molde de silicona.</p>
+                    <p class="en">The rings were CNC-cut from laminated wood and sanded by hand. The diffuser is a thermoformed PVC sheet, and the base was cast in concrete inside a silicone mould.</p>
                 </div>
             </section>
         </div>
 
-        <!-- SUJETALIBROS: foto grande con frase encima -->
-        <section class="cs-hero sl-libros">
-            <img src="img/soleris_libros.webp" alt="SOLERIS encendida sujetando unos libros con un lateral de la base" loading="lazy">
-            <div class="cs-hero-texto">
-                <h2><span class="es">Y también sujeta tus libros.</span><span class="en">And it holds your books, too.</span></h2>
-                <p><span class="es">En espacios pequeños, cada objeto debería hacer más de una cosa.</span><span class="en">In small spaces, every object should do more than one thing.</span></p>
-            </div>
-        </section>
-
-        <div class="cs">
-            <!-- DETALLES ESCALONADOS -->
-            <section class="sl-detalles">
+        <!-- BANDA FINAL: el acabado -->
+        <section class="cs-banda">
+            <div class="cs-banda-fotos cs-banda-cuadrada" style="--n: 3; --n-movil: 1;">
                 <img src="img/soleris_d1.webp" alt="SOLERIS de frente, con los anillos plateados y la base de cemento" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
                 <img src="img/soleris_d2.webp" alt="SOLERIS en ángulo, con la bombilla entre los anillos" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
                 <img src="img/soleris_d3.webp" alt="Detalle de los anillos y la bombilla de SOLERIS" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
-            </section>
-        </div>
+            </div>
+        </section>
 
         <div class="detalle-nav">
             <a href="#" onclick="cerrarProyecto()" class="btn-volver">

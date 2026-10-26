@@ -240,12 +240,3 @@ function silenciarVideosPagina() {
     });
 }
 
-// --- SOLERIS: interruptor de luz ---
-function alternarLuzSoleris() {
-    const seccion = document.getElementById('sl-interruptor');
-    const boton = seccion.querySelector('.sl-boton');
-    const encendida = seccion.classList.toggle('encendida');
-    boton.setAttribute('aria-pressed', encendida ? 'true' : 'false');
-    boton.querySelector('.es').textContent = encendida ? 'Apaga la luz' : 'Enciende la luz';
-    boton.querySelector('.en').textContent = encendida ? 'Turn off the light' : 'Turn on the light';
-}
