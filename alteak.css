@@ -1367,6 +1367,10 @@ html {
 }
 
 
+.cs-pasos-4 { grid-template-columns: repeat(4, 1fr); }
+.cs-foto-apaisada img { aspect-ratio: 4/3; }
+@media (max-width: 900px) { .cs-pasos-4 { grid-auto-columns: 60%; } }
+
 /* Títulos de portada largos */
 .cs-hero-texto h1, .cs-hero-texto p { text-shadow: 0 1px 12px rgba(0,0,0,0.35); }
 .cs-hero-claro .cs-hero-texto h1, .cs-hero-claro .cs-hero-texto p { text-shadow: none; }
