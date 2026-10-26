@@ -1397,6 +1397,10 @@ html {
 .cs-par-leyenda figure { margin: 0; }
 .cs-par-leyenda figcaption { color: #999; font-size: 0.85rem; margin-top: 8px; }
 
+/* Portada con el título a la derecha (cuando el objeto está a la izquierda) */
+.cs-hero-titulo-derecha .cs-hero-texto { left: auto; right: 5%; text-align: right; top: 8%; bottom: auto; }
+.cs-hero-titulo-derecha::after { background: linear-gradient(to bottom left, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 45%, transparent 70%); }
+
 /* Títulos de portada largos */
 .cs-hero-texto h1, .cs-hero-texto p { text-shadow: 0 1px 12px rgba(0,0,0,0.35); }
 .cs-hero-claro .cs-hero-texto h1, .cs-hero-claro .cs-hero-texto p { text-shadow: none; }
