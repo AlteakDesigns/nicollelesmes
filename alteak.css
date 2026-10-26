@@ -1451,7 +1451,8 @@ html {
 /* Logo del cliente encima del título del bloque */
 .cs-logo-cliente { width: 72px; height: auto; display: block; margin-bottom: 22px; }
 /* Pareja de fotos cuadradas */
-.cs-par-cuadrado img { aspect-ratio: 1/1; }
+.cs-par-cuadrado img, .cs-par-cuadrado video { aspect-ratio: 1/1; }
+.cs-par video { width: 100%; object-fit: cover; display: block; }
 
 /* 1eer proyecto estilos ondara */
 .ondara-titulo {
