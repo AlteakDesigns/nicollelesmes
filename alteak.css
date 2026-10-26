@@ -1390,6 +1390,13 @@ html {
     .cs-antes-despues figcaption { font-size: 1.05rem; }
 }
 
+.cs-lista { list-style: none; padding: 0; margin: 6px 0 0 0; max-width: 34em; }
+.cs-lista li { color: #bbb; line-height: 1.6; padding: 10px 0; border-top: 1px solid #2c2c2c; }
+.cs-lista li:last-child { border-bottom: 1px solid #2c2c2c; }
+
+.cs-par-leyenda figure { margin: 0; }
+.cs-par-leyenda figcaption { color: #999; font-size: 0.85rem; margin-top: 8px; }
+
 /* Títulos de portada largos */
 .cs-hero-texto h1, .cs-hero-texto p { text-shadow: 0 1px 12px rgba(0,0,0,0.35); }
 .cs-hero-claro .cs-hero-texto h1, .cs-hero-claro .cs-hero-texto p { text-shadow: none; }
