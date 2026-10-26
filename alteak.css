@@ -1298,9 +1298,15 @@ html {
 
 .cs-montaje .amma-funcion { max-width: none; margin: 0 0 50px 0; }
 .cs-montaje .amma-funcion:last-child { margin-bottom: 0; }
-.cs-texto .cs-nota-ia { color: #888; font-size: 0.85rem; border-left: 2px solid #444; padding-left: 12px; }
+.cs-bocetos { margin-bottom: 80px; }
+.cs-bocetos .cs-texto { margin-bottom: 30px; }
+.cs-bocetos-laminas { gap: 16px; }
+.cs-bocetos-laminas img { background: #fff; }
+.cs-bocetos .cs-nota-ia { margin-top: 18px; }
+.cs-nota-ia, .cs-texto .cs-nota-ia { color: #888; font-size: 0.85rem; border-left: 2px solid #444; padding-left: 12px; }
 
 @media (max-width: 900px) {
+    .cs-bocetos-laminas { grid-template-columns: 1fr !important; }
     .cs-credito { margin-top: -30px; margin-bottom: 50px; }
     .cs-banda-fotos { grid-template-columns: repeat(var(--n-movil, 3), 1fr); }
     .cs-hero .btn-sonido { bottom: 6%; }
