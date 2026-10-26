@@ -1433,20 +1433,6 @@ html {
         radial-gradient(55% 28% at 70% 88%, rgba(255, 184, 108, 0.08), transparent 70%);
 }
 
-/* Tira de detalles con pie corto */
-.cs-detalles {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-    margin-bottom: 120px;
-}
-.cs-detalles figure { margin: 0; }
-.cs-detalles img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
-.cs-detalles figcaption { color: #999; font-size: 0.85rem; margin-top: 10px; }
-@media (max-width: 900px) {
-    .cs-detalles { grid-template-columns: repeat(2, 1fr); margin-bottom: 80px; }
-}
-
 /* 1eer proyecto estilos ondara */
 .ondara-titulo {
     text-align: center;
