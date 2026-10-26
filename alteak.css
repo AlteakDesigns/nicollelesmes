@@ -1374,6 +1374,22 @@ html {
 .cs-video-cuadrado { margin: 0; }
 .cs-video-cuadrado video { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
 
+/* Antes y después: dos columnas iguales con etiqueta arriba */
+.cs-antes-despues {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 110px;
+}
+.cs-antes-despues figure { margin: 0; }
+.cs-antes-despues figcaption { font-size: 1.3rem; font-weight: 400; margin-bottom: 14px; }
+.cs-antes-despues img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; }
+.cs-antes-despues p { color: #999; font-size: 0.9rem; line-height: 1.5; margin-top: 12px; }
+@media (max-width: 600px) {
+    .cs-antes-despues { gap: 12px; margin-bottom: 70px; }
+    .cs-antes-despues figcaption { font-size: 1.05rem; }
+}
+
 /* Títulos de portada largos */
 .cs-hero-texto h1, .cs-hero-texto p { text-shadow: 0 1px 12px rgba(0,0,0,0.35); }
 .cs-hero-claro .cs-hero-texto h1, .cs-hero-claro .cs-hero-texto p { text-shadow: none; }
