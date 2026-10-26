@@ -1316,6 +1316,17 @@ html {
     .cs-hero .btn-sonido { bottom: 6%; }
 }
 
+
+/* Portadas y bandas con el mismo margen que el resto del contenido (nunca de borde a borde).
+   .cs usa max-width 1200px y padding lateral 5%, así que el ancho útil es min(1200px, 100%) - 10%. */
+.cs-hero, .cs-banda {
+    width: calc(min(1200px, 100%) - 10%);
+    margin-left: auto;
+    margin-right: auto;
+}
+.cs-banda-titulo { padding: 0; max-width: none; }
+.cs-banda-fotos { gap: 12px; }
+
 /* 1eer proyecto estilos ondara */
 .ondara-titulo {
     text-align: center;
