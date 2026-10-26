@@ -417,12 +417,12 @@
             </a>
 
             <a href="#" class="proyecto" onclick="verProyecto('giralia')">
-                <img src="img/giralia logo.png" alt="GIRALIA">
+                <img src="img/giralia_portada.webp" alt="Giralia instalado sobre la barra de Quimbaya" loading="lazy">
                 <div class="info-overlay">
                     <h3>GIRALIA</h3>
                     <p>
-                        <span class="es">Hostelería para Quimbaya - Mobiliario Hostelería, 2024</span>
-                        <span class="en">Hospitality for Quimbaya - Hospitality Furniture, 2024</span>
+                        <span class="es">Mobiliario · Hostelería — Quimbaya, estrella Michelin, 2024</span>
+                        <span class="en">Furniture · Hospitality — Quimbaya, Michelin star, 2024</span>
                     </p>
                 </div>
             </a>
@@ -1232,44 +1232,79 @@
             </a>
         </div>
 
-        <div class="titulo-giralia">
-            <h1>Giralia</h1>
-            <p class="subtitulo">
-                <span class="es">Transforma mezclas, eleva tu coctelería</span>
-                <span class="en">Transform mixes, elevate your mixology</span>
+        <!-- PORTADA -->
+        <header class="cs-hero">
+            <img src="img/giralia_hero.webp" alt="Giralia instalado sobre la barra de Quimbaya, con los platillos colgantes llenos de botellas" style="object-position: 50% 30%;">
+            <div class="cs-hero-texto">
+                <h1>Giralia</h1>
+                <p><span class="es">Transforma mezclas, eleva tu coctelería</span><span class="en">Transform mixes, elevate your mixology</span></p>
+            </div>
+        </header>
+
+        <div class="cs">
+            <p class="cs-frase">
+                <span class="es">Un botellero que cuelga sobre la barra y gira, para tener cada botella a mano sin quitarle sitio al bartender.</span>
+                <span class="en">A bottle display that hangs above the bar and spins, keeping every bottle within reach without taking space from the bartender.</span>
             </p>
+
+            <dl class="cs-datos">
+                <div><dt><span class="es">Cliente</span><span class="en">Client</span></dt>
+                    <dd>Quimbaya by Edwin Rodríguez × UDIT</dd></div>
+                <div><dt><span class="es">Qué es</span><span class="en">What it is</span></dt>
+                    <dd><span class="es">Botellero colgante con 11 platillos giratorios iluminados</span><span class="en">Hanging display with 11 lit rotating trays</span></dd></div>
+                <div><dt><span class="es">Resultado</span><span class="en">Outcome</span></dt>
+                    <dd><span class="es">Propuesta destacada por el chef Edwin Rodríguez</span><span class="en">Proposal highlighted by chef Edwin Rodríguez</span></dd></div>
+                <div><dt><span class="es">Año</span><span class="en">Year</span></dt>
+                    <dd>2024</dd></div>
+            </dl>
+
+            <!-- PARA QUIMBAYA: texto izquierda, foto derecha -->
+            <section class="cs-fila cs-fila-concepto">
+                <div class="cs-texto">
+                    <h2><span class="es">Hecho a medida de Quimbaya</span><span class="en">Made to measure for Quimbaya</span></h2>
+                    <p class="es">Quimbaya, en Madrid, es el primer restaurante colombiano con estrella Michelin en Europa, y su nombre viene de la orfebrería precolombina. Por eso Giralia se viste de dorados y tonos tierra.</p>
+                    <p class="en">Quimbaya, in Madrid, is the first Colombian restaurant in Europe with a Michelin star, and its name comes from pre-Columbian goldsmithing. That's why Giralia wears golds and earthy tones.</p>
+                    <p class="es">La barra era pequeña y el espacio de arriba no se usaba, así que el botellero cuelga del techo y deja libre toda la superficie de trabajo.</p>
+                    <p class="en">The bar was small and the space above it went unused, so the display hangs from the ceiling and leaves the whole work surface free.</p>
+                </div>
+                <figure class="cs-foto-alta">
+                    <img src="img/giralia_columna.webp" alt="Columna de platillos colgantes de Giralia con botellas" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                </figure>
+            </section>
+
+            <!-- GIRA DE VERDAD: vídeo izquierda, texto derecha -->
+            <section class="cs-fila cs-fila-proceso">
+                <figure class="cs-video-cuadrado">
+                    <video src="videos/giralia_web.mp4" poster="img/giralia_video_poster.jpg" onclick="abrirVideo(this)" class="video-zoom" data-autoplay muted loop playsinline preload="none" aria-label="Prototipo real de un platillo de Giralia girando"></video>
+                </figure>
+                <div class="cs-texto">
+                    <h2><span class="es">Gira de verdad</span><span class="en">It really spins</span></h2>
+                    <p class="es">Cada platillo gira sobre un eje central, así que el bartender acerca la botella que necesita con un solo gesto. Lleva luz integrada para que las botellas se vean desde toda la sala.</p>
+                    <p class="en">Each tray turns on a central axis, so the bartender brings the bottle they need closer in one move. Built-in lighting makes the bottles visible from across the room.</p>
+                    <p class="es">Lo modelé en 3D, preparé los planos con medidas reales para el corte CNC y fabricamos un prototipo.</p>
+                    <p class="en">I modelled it in 3D, prepared drawings to real measurements for CNC cutting, and we built a prototype.</p>
+                </div>
+            </section>
+
+            <h2 class="cs-banda-titulo"><span class="es">Antes de llegar aquí, tres caminos</span><span class="en">Three routes before getting here</span></h2>
         </div>
 
-        <div class="cuadricula-giralia">
-            <div class="bloque-sup-giralia">
-                <div class="texto-giralia">
-                    <p class="es">
-                        Giralia, un botellero colgante giratorio desarrollado en colaboración con el Restaurante
-                        Quimbaya by Edwin Rodriguez ubicado en Madrid, España. Diseñado para optimizar el espacio
-                        superior de la barra de cocktails, que combina funcionalidad y estética para el almacenamiento
-                        de botellas, demostrando así la capacidad innovadora en el diseño de productos para la
-                        hostelería.
-                    </p>
-                    <p class="en">
-                        Giralia is a rotating hanging bottle rack developed in collaboration with the restaurant Quimbaya by Edwin Rodriguez in Madrid, Spain. Designed to optimize the overhead space of the cocktail bar, it merges functionality and aesthetics for bottle storage, showcasing innovative product design for the hospitality sector.
-                    </p>
-                </div>
-                <div class="imagen-grande-giralia">
-                    <img src="img/quimbaya1.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                </div>
+        <!-- BANDA: las tres propuestas -->
+        <section class="cs-banda">
+            <div class="cs-banda-fotos cs-banda-apaisada" style="--n: 3; --n-movil: 1;">
+                <img src="img/giralia_p1.webp" alt="Primera propuesta: platillos colgantes con botelleros dorados" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                <img src="img/giralia_p2.webp" alt="Segunda propuesta: estantería de arcos dorados" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                <img src="img/giralia_p3.webp" alt="Tercera propuesta: soportes de arcos colgados del techo" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
             </div>
-            
-            <div class="giralia-galeria">
-                <img src="img/quimbaya0.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/quimbaya2.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/quimbaya5.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/quimbaya4.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/quimbaya3.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <div class="giralia-video">
-                    <video src="videos/quimbaya-video.mp4" onclick="abrirVideo(this)" class="video-zoom" autoplay muted loop playsinline></video>
-                </div>
+        </section>
+
+        <!-- BANDA FINAL: el platillo y el sistema -->
+        <section class="cs-banda">
+            <div class="cs-banda-fotos cs-banda-apaisada" style="--n: 2; --n-movil: 1;">
+                <img src="img/giralia_platillo.webp" alt="Render del platillo giratorio de Giralia" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                <img src="img/giralia_colgantes.webp" alt="Las columnas de platillos colgantes de Giralia" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
             </div>
-        </div>
+        </section>
 
         <div class="detalle-nav">
             <a href="#" onclick="cerrarProyecto()" class="btn-volver">
@@ -1278,7 +1313,6 @@
             </a>
         </div>
     </div>
-
 
 
 <!-- SINGULAR ESSENCE -->
