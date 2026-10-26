@@ -340,12 +340,12 @@
 
         <div id="galeria" class="contenedor-galeria">
             <a href="#" class="proyecto" onclick="verProyecto('nemyx')">
-                <img src="img/NEMYXP.jpg" alt="NEMYX">
+                <img src="img/nemyxp.webp" alt="NEMYX, gafas escultóricas que traducen el sonido en luz" loading="lazy">
                 <div class="info-overlay">
                     <h3>NEMYX</h3>
                     <p>
-                        <span class="es">Accesorios, Gafas, Darkwear - Scanner, Modelado e Impresión 3D & Programación, 2026</span>
-                        <span class="en">Accessories, Eyewear, Darkwear - Scanner, 3D Modeling & Printing & Programming, 2026</span>
+                        <span class="es">Accesorios · Wearable — Escaneo 3D, TPU y electrónica, 2026</span>
+                        <span class="en">Accessories · Wearable — 3D Scanning, TPU & Electronics, 2026</span>
                     </p>
                 </div>
             </a>
@@ -470,15 +470,34 @@
             </h2>
         </div>
 
+        <!-- FICHA DEL PROYECTO -->
+        <div class="nemyx-ficha">
+            <div class="ficha-item">
+                <h4><span class="es">Reto</span><span class="en">Challenge</span></h4>
+                <p class="es">Crear una pieza donde el gótico y la tecnología colisionen, y la luz responda al entorno.</p>
+                <p class="en">Create a piece where the Gothic and technology collide, and light responds to its surroundings.</p>
+            </div>
+            <div class="ficha-item">
+                <h4><span class="es">Mi rol</span><span class="en">My role</span></h4>
+                <p class="es">Prototipo a mano, escaneo y modelado 3D, impresión y electrónica.</p>
+                <p class="en">Hand-made prototype, 3D scanning and modelling, printing and electronics.</p>
+            </div>
+            <div class="ficha-item">
+                <h4><span class="es">Materiales</span><span class="en">Materials</span></h4>
+                <p class="es">TPU impreso en 3D, tira LED reactiva al sonido y montura Ray-Ban reutilizada.</p>
+                <p class="en">3D-printed TPU, sound-reactive LED strip and repurposed Ray-Ban frames.</p>
+            </div>
+        </div>
+
         <div class="nemyx-contenido">
             
-            <!-- BLOQUE 1: 4 Fotos iniciales + Primer Texto -->
+            <!-- BLOQUE 1: Producto final + Concepto -->
             <div class="nemyx-seccion-intercalada">
                 <div class="nemyx-galeria-cuadricula">
-                    <img src="img/NEMYX.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                    <img src="img/nemyx2.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                    <img src="img/n9.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                    <img src="img/n10.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                    <img src="img/nemyx.webp" alt="Modelo de perfil con las gafas NEMYX iluminadas" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/nemyx2.webp" alt="Modelo de frente con las gafas NEMYX y la tira LED encendida" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/n9.webp" alt="Gafas NEMYX en estudio, vista frontal" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/n10.webp" alt="Gafas NEMYX en estudio, vista lateral con la electrónica en la patilla" onclick="abrirFoto(this)" class="img-zoom" loading="lazy" style="object-position: 30% center;">
                 </div>
                 <div class="nemyx-texto-bloque">
                     <p class="es">
@@ -496,34 +515,38 @@
                 </div>
             </div>
 
-            <!-- BLOQUE 2: 4 Multimedia + Segundo Texto (Invertido en PC) -->
+            <!-- BLOQUE 2: Investigación, prototipo a mano y escaneo (Invertido en PC) -->
             <div class="nemyx-seccion-intercalada invertido">
                 <div class="nemyx-galeria-cuadricula">
-                    <img src="img/n1.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                    <img src="img/n2.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                    <img src="img/n3.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                    <video src="videos/n4.mp4" onclick="reproducirVideo(this)" class="video-zoom" autoplay muted loop playsinline></video>
+                    <img src="img/n1.webp" alt="Moodboard de NEMYX: bioluminiscencia y armaduras neogóticas" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/n2.webp" alt="Prototipo modelado a mano en plastilina sobre unas gafas" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/n3.webp" alt="Prototipo de plastilina, vista lateral" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <video src="videos/n4_web.mp4" poster="img/n4_poster.jpg" onclick="abrirVideo(this)" class="video-zoom" data-autoplay muted loop playsinline preload="none"></video>
                 </div>
                 <div class="nemyx-texto-bloque">
                     <p class="es">
-                        El desarrollo de NEMYX partió de una investigación que fusiona armaduras neogóticas y bioluminiscencia. Al 
-                        requerir una morfología orgánica, descarté el diseño digital inicial: modelé el prototipo a mano en plastilina
-                        para capturar la fluidez anatómica y lo digitalicé con un escáner 3D. En Rhino, procesé la malla y apliqué
-                        simetría.
+                        La investigación partió de dos referencias: los ctenóforos, en los que la luz recorre el cuerpo
+                        como un arcoíris vivo, y las armaduras neogóticas, que convierten la protección en ornamento.
+                        Al requerir una morfología orgánica, descarté el diseño digital inicial: modelé el prototipo a mano
+                        en plastilina para capturar la fluidez anatómica y lo digitalicé con un escáner 3D. En Rhino,
+                        procesé la malla y apliqué simetría.
                     </p>
                     <p class="en">
-                        The development of NEMYX stemmed from research merging neo-Gothic armor and bioluminescence. Because it required an organic shape, I scrapped the initial digital design: I hand-modeled the prototype in clay to capture its anatomical fluidity and digitized it using a 3D scanner. In Rhino, I processed the mesh and applied symmetry.
+                        The research started from two references: comb jellies, where light travels across the body like
+                        a living rainbow, and neo-Gothic armour, which turns protection into ornament. Because it required
+                        an organic shape, I scrapped the initial digital design: I hand-modelled the prototype in clay to
+                        capture its anatomical fluidity and digitised it with a 3D scanner. In Rhino, I processed the mesh
+                        and applied symmetry.
                     </p>
                 </div>
             </div>
 
-            <!-- BLOQUE 3: 4 Fotos + Tercer Texto -->
+            <!-- BLOQUE 3: Modelado técnico y electrónica -->
             <div class="nemyx-seccion-intercalada">
-                <div class="nemyx-galeria-cuadricula">
-                    <img src="img/n5.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                    <img src="img/n6.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                    <img src="img/n7.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                    <img src="img/n8.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
+                <div class="nemyx-galeria-tecnica">
+                    <img src="img/n6.webp" alt="Vistas del modelo 3D del exoesqueleto en Rhinoceros" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/n7.webp" alt="Modelo 3D del exoesqueleto ensamblado sobre la montura en Rhinoceros" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/n8.webp" alt="Tira LED soldada y programada para reaccionar al sonido" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
                 </div>
                 <div class="nemyx-texto-bloque">
                     <p class="es">
@@ -538,9 +561,18 @@
                 </div>
             </div>
 
-            <!-- BLOQUE 4: Video Final -->
+            <!-- BLOQUE 4: Video final (la luz reacciona al sonido) -->
             <div class="nemyx-video-final-container">
-               <video src="videos/nemyx_web.mp4" onclick="abrirVideo(this)" class="video-zoom video-full" autoplay muted loop playsinline></video>
+                <video src="videos/nemyx_loop.mp4" poster="img/nemyx_loop_poster.jpg" onclick="abrirVideo(this)" class="video-zoom video-full" data-autoplay muted loop playsinline preload="none"></video>
+                <button type="button" class="btn-sonido" onclick="alternarSonido(event, this)">
+                    <span class="icono-sonido"><i class="fas fa-volume-mute"></i></span>
+                    <span class="es">Activar sonido</span>
+                    <span class="en">Sound on</span>
+                </button>
+                <p class="nemyx-video-nota">
+                    <span class="es">La luz reacciona en tiempo real a la música.</span>
+                    <span class="en">The light reacts to the music in real time.</span>
+                </p>
             </div>
             
         </div>
@@ -552,6 +584,7 @@
             </a>
         </div>
     </div>
+
 
 
     

@@ -776,6 +776,89 @@ html {
     .nemyx-galeria-cuadricula { gap: 10px; }
 }
 
+
+/* NEMYX: ficha del proyecto (reto / rol / materiales) */
+.nemyx-ficha {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 60px auto;
+    padding: 25px 5%;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #2a2a2a;
+}
+.ficha-item h4 {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 10px;
+}
+.ficha-item p {
+    color: #ddd;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* NEMYX: galería técnica (imágenes alargadas sin recortar) */
+.nemyx-galeria-tecnica {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.nemyx-galeria-tecnica img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #1a1a1a;
+}
+
+/* NEMYX: botón de sonido sobre el vídeo final */
+.nemyx-video-final-container { position: relative; }
+.btn-sonido {
+    position: absolute;
+    right: 20px;
+    bottom: 60px;
+    width: auto;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    backdrop-filter: blur(6px);
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+.btn-sonido:hover { background-color: rgba(255, 255, 255, 0.15); }
+.nemyx-video-nota {
+    text-align: center;
+    color: #888;
+    font-size: 0.85rem;
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .nemyx-ficha {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .nemyx-galeria-tecnica { width: 100%; order: -1 !important; }
+    .btn-sonido { right: 10px; bottom: 50px; padding: 8px 14px; font-size: 0.7rem; }
+}
+
 /* -----------------------------------
    AMMA (DISEÑO INTERCALADO MODULAR)
 ----------------------------------- */

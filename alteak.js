@@ -18,6 +18,9 @@ function mostrarSeccion(id, subirArriba = true) {
         seccionActiva.classList.add('activa');
     }
 
+    // Reproduce solo los vídeos de la sección visible (ahorra datos al cargar la web)
+    gestionarVideos(seccionActiva);
+
     document.getElementById('menu').classList.remove('activo');
     
     // Solo sube al tope si la función lo permite
@@ -90,6 +93,7 @@ function mostrarEnVisor(elemento) {
     const videoVisor = document.getElementById('video-visor');
     
     videoVisor.pause();
+    silenciarVideosPagina(); // evita que suenen dos vídeos a la vez
 
     if (elemento.tagName.toLowerCase() === 'img') {
         imgVisor.src = elemento.src;
@@ -198,4 +202,39 @@ function entrarConIdioma(idioma) {
     }
     // Manda directo al sub-inicio (menú flotante)
     mostrarSeccion('sub-inicio');
+}
+
+// --- VÍDEOS: carga diferida y botón de sonido ---
+function gestionarVideos(seccionActiva) {
+    document.querySelectorAll('video[data-autoplay]').forEach(video => {
+        if (seccionActiva && seccionActiva.contains(video)) {
+            video.play().catch(() => {});
+        } else {
+            video.pause();
+        }
+    });
+}
+
+function alternarSonido(evento, boton) {
+    evento.stopPropagation();
+    const video = boton.parentElement.querySelector('video');
+    video.muted = !video.muted;
+    if (!video.muted) video.play().catch(() => {});
+
+    const icono = boton.querySelector('.icono-sonido i');
+    icono.className = video.muted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+    boton.querySelector('.es').textContent = video.muted ? 'Activar sonido' : 'Silenciar';
+    boton.querySelector('.en').textContent = video.muted ? 'Sound on' : 'Mute';
+}
+
+function silenciarVideosPagina() {
+    document.querySelectorAll('.btn-sonido').forEach(boton => {
+        const video = boton.parentElement.querySelector('video');
+        if (video && !video.muted) {
+            video.muted = true;
+            boton.querySelector('.icono-sonido i').className = 'fas fa-volume-mute';
+            boton.querySelector('.es').textContent = 'Activar sonido';
+            boton.querySelector('.en').textContent = 'Sound on';
+        }
+    });
 }
