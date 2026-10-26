@@ -1454,6 +1454,17 @@ html {
 .cs-par-cuadrado img, .cs-par-cuadrado video { aspect-ratio: 1/1; }
 .cs-par video { width: 100%; object-fit: cover; display: block; }
 
+
+/* CIERRE de cada proyecto: la imagen más potente, en grande y con el mismo margen */
+.cs-cierre {
+    width: calc(min(1200px, 100%) - 10%);
+    margin: 0 auto 40px auto;
+}
+.cs-cierre img { width: 100%; aspect-ratio: 3/2; object-fit: cover; display: block; }
+/* Pareja vídeo vertical + foto (Dior) */
+.cs-par-video video { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
+@media (max-width: 900px) { .cs-cierre img { aspect-ratio: 4/5; } }
+
 /* 1eer proyecto estilos ondara */
 .ondara-titulo {
     text-align: center;
