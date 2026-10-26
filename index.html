@@ -362,12 +362,12 @@
             </a>
             
             <a href="#" class="proyecto" onclick="verProyecto('ondara')">
-                <img src="img/ondara.jpg" alt="ONDARA">
+                <img src="img/ondara_portada.webp" alt="Detalle de las ondas impresas en 3D de la lámpara ONDARA" loading="lazy">
                 <div class="info-overlay">
                     <h3>ONDARA</h3>
                     <p>
-                        <span class="es">Luminaria Conceptual - Impresión 3D PETG, 2025</span>
-                        <span class="en">Conceptual Luminaire - 3D Printing PETG, 2025</span>
+                        <span class="es">Iluminación · Diseño paramétrico — PETG y PLA, 2025</span>
+                        <span class="en">Lighting · Parametric design — PETG & PLA, 2025</span>
                     </p>
                 </div>
             </a>
@@ -834,33 +834,129 @@
             </h2>
         </div>
 
+        <!-- FICHA DEL PROYECTO -->
+        <div class="proyecto-ficha">
+            <div class="ficha-item">
+                <h4><span class="es">Reto</span><span class="en">Challenge</span></h4>
+                <p class="es">Romper con las geometrías repetitivas de las lámparas impresas en 3D y con los montajes que necesitan tornillos o adhesivos.</p>
+                <p class="en">Break away from the repetitive geometries of 3D-printed lamps and from assemblies that need screws or adhesives.</p>
+            </div>
+            <div class="ficha-item">
+                <h4><span class="es">Mi rol</span><span class="en">My role</span></h4>
+                <p class="es">Diseño paramétrico en Rhino y Grasshopper, impresión 3D en PETG y PLA y sistema de montaje a presión.</p>
+                <p class="en">Parametric design in Rhino and Grasshopper, 3D printing in PETG and PLA, and snap-fit assembly system.</p>
+            </div>
+            <div class="ficha-item">
+                <h4><span class="es">Ficha técnica</span><span class="en">Specifications</span></h4>
+                <p class="es">Ø 192 × 248,7 mm · Pantalla PETG, base PLA · LED RGBW E14 de 4,8 W con mando · Montaje snap-fit.</p>
+                <p class="en">Ø 192 × 248.7 mm · PETG shade, PLA base · 4.8 W E14 RGBW LED with remote · Snap-fit assembly.</p>
+            </div>
+        </div>
+
         <div class="ondara-contenido">
-            <div class="ondara-sup">
-                <div class="ondara-img-principal">
-                    <img src="img/ondara00.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
+
+            <!-- BLOQUE 1: Pieza final + Concepto -->
+            <div class="p-bloque">
+                <div class="p-galeria p-galeria-2">
+                    <img src="img/ondara_principal.webp" alt="Lámpara ONDARA encendida en luz cálida sobre sus patas" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/ondara_control.webp" alt="Vista superior de ONDARA con la bombilla RGBW y el mando a distancia" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
                 </div>
-                <div class="ondara-descripcion">
+                <div class="p-texto">
                     <p class="es">
                         Nace de la experimentación con el diseño paramétrico, dejando atrás la espiral tradicional para
-                        explorar un lenguaje más fluido y controlado. Las ondas construyen la forma y dirigen la luz,
-                        generando un movimiento suave que cambia según el punto de vista y el espacio. El resultado es
-                        una pieza donde la geometría y la luz se entienden como un mismo gesto.
+                        explorar un lenguaje más fluido y controlado. Su geometría se inspira matemáticamente en las olas
+                        del mar, y la apertura superior proyecta la luz hacia arriba recreando el efecto de las auroras
+                        boreales. El resultado es una pieza donde la geometría y la luz se entienden como un mismo gesto.
                     </p>
                     <p class="en">
-                        It stems from experimentation with parametric design, leaving behind the traditional spiral to explore a more fluid and controlled language. The waves build the form and guide the light, creating a smooth movement that shifts depending on the viewpoint and the space. The result is a piece where geometry and light are understood as a single gesture.
+                        It stems from experimentation with parametric design, leaving behind the traditional spiral to explore
+                        a more fluid and controlled language. Its geometry is mathematically inspired by ocean waves, and the
+                        top opening casts light upwards, recreating the effect of the northern lights. The result is a piece
+                        where geometry and light are understood as a single gesture.
                     </p>
                 </div>
             </div>
 
-           <div class="ondara-galeria">
-                <img src="img/ondara2.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/ondara 3.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/ondara4.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/ondara5.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-
-                <div class="ondara-video">
-                    <video src="videos/ondaravideo.mp4" onclick="abrirVideo(this)" class="video-zoom" autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+            <!-- BLOQUE 2: Diseño paramétrico y fabricación (Invertido en PC) -->
+            <div class="p-bloque invertido">
+                <div class="p-galeria p-galeria-2 p-panoramica">
+                    <img src="img/ondara_gh1.webp" alt="Definición de Grasshopper que genera las ondas de la pantalla" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/ondara_gh2.webp" alt="Variación de las ondas en Rhino y Grasshopper" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/ondara_gh3.webp" alt="Geometría final de la pantalla en Rhino" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/ondara_slicer.webp" alt="Preparación de la impresión en PETG en Bambu Studio" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
                 </div>
+                <div class="p-texto">
+                    <p class="es">
+                        El diseño computacional con Rhino y Grasshopper da un control exhaustivo sobre la dispersión de la
+                        luz y el comportamiento del material capa a capa. La pantalla se imprime en PETG para maximizar la
+                        difusión sin sacrificar resistencia térmica, y la base en PLA para garantizar rigidez estructural.
+                    </p>
+                    <p class="en">
+                        Computational design with Rhino and Grasshopper gives full control over how light disperses and how
+                        the material behaves layer by layer. The shade is printed in PETG to maximise diffusion without
+                        losing heat resistance, and the base in PLA for structural rigidity.
+                    </p>
+                </div>
+            </div>
+
+            <!-- BLOQUE 3: Montaje sin tornillos -->
+            <div class="p-pasos-bloque">
+                <h3 class="p-etiqueta">
+                    <span class="es">Montaje sin tornillos ni pegamento</span>
+                    <span class="en">No screws, no glue</span>
+                </h3>
+                <p class="p-pasos-intro">
+                    <span class="es">Todo el conjunto se monta por ajuste a presión (snap-fit), sin piezas extra.</span>
+                    <span class="en">The whole piece assembles by snap-fit, with no extra parts.</span>
+                </p>
+                <div class="p-pasos">
+                    <figure><img src="img/ondara_m1.webp" alt="Paso 1: insertar el casquillo en la base" onclick="abrirFoto(this)" class="img-zoom" loading="lazy"><figcaption><span class="es">1. Insertar</span><span class="en">1. Insert</span></figcaption></figure>
+                    <figure><img src="img/ondara_m2.webp" alt="Paso 2: ajustar el casquillo" onclick="abrirFoto(this)" class="img-zoom" loading="lazy"><figcaption><span class="es">2. Ajustar</span><span class="en">2. Secure</span></figcaption></figure>
+                    <figure><img src="img/ondara_m3.webp" alt="Paso 3: colocar la bombilla" onclick="abrirFoto(this)" class="img-zoom" loading="lazy"><figcaption><span class="es">3. Bombilla</span><span class="en">3. Bulb</span></figcaption></figure>
+                    <figure><img src="img/ondara_m4.webp" alt="Paso 4: ubicar la pantalla sobre la base" onclick="abrirFoto(this)" class="img-zoom" loading="lazy"><figcaption><span class="es">4. Ubicar</span><span class="en">4. Place</span></figcaption></figure>
+                    <figure><img src="img/ondara_m5.webp" alt="Paso 5: girar la pantalla hasta que encaje" onclick="abrirFoto(this)" class="img-zoom" loading="lazy"><figcaption><span class="es">5. Girar y ajustar</span><span class="en">5. Twist to lock</span></figcaption></figure>
+                </div>
+            </div>
+
+            <!-- BLOQUE 4: Experiencia lumínica + Sostenibilidad -->
+            <div class="p-bloque">
+                <div class="p-galeria p-galeria-3 p-vertical">
+                    <img src="img/ondara_c_normal.webp" alt="ONDARA apagada" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/ondara_c_calida.webp" alt="ONDARA en luz cálida" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/ondara_c_naranja.webp" alt="ONDARA en luz naranja" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/ondara_c_rojo.webp" alt="ONDARA en luz roja" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/ondara_c_fucsia.webp" alt="ONDARA en luz fucsia" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/ondara_c_lila.webp" alt="ONDARA en luz lila" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/ondara_c_azul.webp" alt="ONDARA en luz azul" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/ondara_c_aguamarina.webp" alt="ONDARA en luz aguamarina" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/ondara_c_verde.webp" alt="ONDARA en luz verde" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                </div>
+                <div class="p-texto">
+                    <p class="es">
+                        Una sola pieza, todos los colores. Con tecnología LED RGBW controlada a distancia, ONDARA cambia de
+                        ritmo, tono e intensidad sin modificar el objeto. Así evita imprimir la misma lámpara en varios colores
+                        y acumular stock, y su bombilla de 4,8 W de bajo consumo y larga duración reduce el gasto y los recambios.
+                    </p>
+                    <p class="en">
+                        One piece, every colour. With remote-controlled RGBW LED technology, ONDARA changes rhythm, tone and
+                        intensity without altering the object. This avoids printing the same lamp in several colours and
+                        building up stock, and its long-lasting, low-energy 4.8 W bulb cuts consumption and replacements.
+                    </p>
+                </div>
+            </div>
+
+            <!-- BLOQUE 5: Plano técnico -->
+            <div class="p-ancho p-plano">
+                <img src="img/ondara_planos.webp" alt="Plano técnico de ONDARA: planta, alzado y perspectiva, Ø 192 × 248,7 mm" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+            </div>
+
+            <!-- BLOQUE 6: Vídeo del proceso -->
+            <div class="p-ancho">
+                <video src="videos/ondara_web.mp4" poster="img/ondara_video_poster.jpg" onclick="abrirVideo(this)" class="video-zoom" data-autoplay muted loop playsinline preload="none"></video>
+                <p class="p-nota">
+                    <span class="es">Del modelo paramétrico a la pieza impresa.</span>
+                    <span class="en">From parametric model to printed piece.</span>
+                </p>
             </div>
         </div>
         
