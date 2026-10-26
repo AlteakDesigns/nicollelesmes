@@ -373,12 +373,12 @@
             </a>
 
             <a href="#" class="proyecto" onclick="verProyecto('naya')">
-                <img src="img/naya.jpeg" alt="NAYA">
+                <img src="img/naya_portada.webp" alt="Pendiente NAYA de rosas caladas en una modelo" loading="lazy">
                 <div class="info-overlay">
                     <h3>NAYA</h3>
                     <p>
-                        <span class="es">Joyería Conceptual - Impresión Resina 3D, 2025</span>
-                        <span class="en">Conceptual Jewelry - 3D Resin Printing, 2025</span>
+                        <span class="es">Joyería · Modelado paramétrico — Resina impresa en 3D, 2025</span>
+                        <span class="en">Jewellery · Parametric modelling — 3D-printed resin, 2025</span>
                     </p>
                 </div>
             </a>
@@ -897,45 +897,97 @@
             </a>
         </div>
 
-        <div class="titulo-naya">
-            <h1>Naya</h1>
-            <h2 class="subtitulo">
-                <span class="es">Una nueva visión</span>
-                <span class="en">A new vision</span>
-            </h2>
+        <!-- PORTADA -->
+        <header class="cs-hero cs-hero-derecha">
+            <img src="img/naya_hero.webp" alt="Los cuatro pendientes de la colección NAYA expuestos sobre soportes de metacrilato">
+            <div class="cs-hero-texto">
+                <h1>Naya</h1>
+                <p><span class="es">Una nueva visión</span><span class="en">A new vision</span></p>
+            </div>
+        </header>
+
+        <div class="cs">
+            <p class="cs-frase">
+                <span class="es">Orfebrería precolombina reinterpretada con impresión 3D.</span>
+                <span class="en">Pre-Columbian goldsmithing reinterpreted through 3D printing.</span>
+            </p>
+
+            <dl class="cs-datos">
+                <div><dt><span class="es">Reto</span><span class="en">Challenge</span></dt>
+                    <dd><span class="es">Reimaginar la herencia indígena colombiana desde un futuro alternativo, con tecnología contemporánea.</span><span class="en">Reimagine Colombian indigenous heritage from an alternative future, with contemporary technology.</span></dd></div>
+                <div><dt><span class="es">Mi rol</span><span class="en">My role</span></dt>
+                    <dd><span class="es">Concepto, modelado paramétrico, planos acotados y fabricación.</span><span class="en">Concept, parametric modelling, dimensioned drawings and fabrication.</span></dd></div>
+                <div><dt><span class="es">Material</span><span class="en">Material</span></dt>
+                    <dd><span class="es">Resina impresa en 3D con acabado plata</span><span class="en">3D-printed resin with a silver finish</span></dd></div>
+                <div><dt><span class="es">Año</span><span class="en">Year</span></dt>
+                    <dd>2025</dd></div>
+            </dl>
+
+            <!-- CONCEPTO: texto izquierda, foto derecha -->
+            <section class="cs-fila cs-fila-concepto">
+                <div class="cs-texto">
+                    <h2><span class="es">Un futuro donde la cultura indígena triunfa</span><span class="en">A future where indigenous culture prevails</span></h2>
+                    <p class="es">Colección de pendientes que reimagina la colonización colombiana desde un futuro alternativo en el que las culturas indígenas triunfan, y que simboliza resistencia, tradición e innovación.</p>
+                    <p class="en">An earring collection that reimagines Colombian colonisation through an alternative future where indigenous cultures prevail, symbolising resistance, tradition and innovation.</p>
+                    <p class="es">La orfebrería indígena domina la espiral, el calado y la repetición: de ahí salen las rosas caladas en espiral que forman toda la colección. Lo medieval aporta tensión y ritmo vertical, con caídas y flecos que alargan la pieza.</p>
+                    <p class="en">Indigenous goldsmithing masters the spiral, openwork and repetition: that became the spiralled openwork roses behind the whole collection. The medieval adds tension and vertical rhythm, with drops and fringes that lengthen the piece.</p>
+                </div>
+                <figure class="cs-foto-alta">
+                    <img src="img/naya_modelo_color.webp" alt="Modelo con pintura facial y un pendiente NAYA de tres rosas caladas" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                </figure>
+            </section>
+
+            <!-- PROCESO: modelado y planos izquierda, texto derecha -->
+            <section class="cs-fila cs-fila-proceso">
+                <div class="cs-natural" style="grid-template-columns: 956fr 1878fr;">
+                    <img src="img/naya_rhino.webp" alt="Los cuatro pendientes modelados en Rhinoceros, vista superior" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/naya_planos.webp" alt="Planos acotados de tres pendientes de la colección NAYA" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                </div>
+                <div class="cs-texto">
+                    <h2><span class="es">Calados imposibles de fundir</span><span class="en">Openwork you could never cast</span></h2>
+                    <p class="es">Modelé con superficies NURBS, SubD y mallas con flexibilidad paramétrica, y preparé planos acotados para fabricar.</p>
+                    <p class="en">I modelled with NURBS, SubD and mesh surfaces with parametric flexibility, and prepared dimensioned drawings for fabrication.</p>
+                    <p class="es">La impresión en resina permite calados que no saldrían en una fundición, así que optimicé las topologías para que cada pieza fuera ligera y funcional.</p>
+                    <p class="en">Resin printing allows openwork that casting couldn't produce, so I optimised the topologies to keep every piece light and wearable.</p>
+                </div>
+            </section>
+
+            <h2 class="cs-banda-titulo"><span class="es">Cuatro pendientes, un mismo módulo</span><span class="en">Four earrings, one module</span></h2>
         </div>
 
-        <div class="cuadricula-proyecto">
-            <div class="bloque-sup-naya">
-                <div class="cuadricula-fotos-modelo">
-                    <img src="img/naya1.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                    <img src="img/naya2.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                    <img src="img/naya3.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                    <img src="img/naya4.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                </div>
-                <div class="texto-descripcion">
-                    <p class="es">
-                        Colección de pendientes que re-imagina la colonización colombiana desde un futuro
-                        alternativo, donde las culturas indígenas triunfan. Fusiona estética indígena Colombiana y
-                        medieval con diseño 3D, simbolizando resistencia, tradición e innovación.
-                    </p>
-                    <p class="en">
-                        An earring collection that reimagines Colombian colonization through an alternative future where indigenous cultures triumph. It merges Colombian indigenous and medieval aesthetics with 3D design, symbolizing resistance, tradition, and innovation.
-                    </p>
-                </div>
+        <!-- BANDA: los cuatro pendientes -->
+        <section class="cs-banda">
+            <div class="cs-banda-fotos cs-banda-cuadrada" style="--n: 4; --n-movil: 2;">
+                <img src="img/naya_p4.webp" alt="Pendiente NAYA de rosa calada con flecos" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                <img src="img/naya_p2.webp" alt="Pendiente NAYA largo de tres rosas caladas" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                <img src="img/naya_p3.webp" alt="Pendiente NAYA de rosas caladas en horizontal" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                <img src="img/naya_p1.webp" alt="Pendiente NAYA de tres rosas pequeñas con remate" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
             </div>
+        </section>
 
-            <div class="bloque-medio">
-                <img src="img/naya5.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/naya6.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/naya7.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/naya8.jpeg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-            </div>
-
-            <div class="bloque-inferior">
-                <img src="img/naya10.png" alt="" onclick="abrirFoto(this)" class="img-full img-zoom">
-            </div>
+        <div class="cs">
+            <!-- PIEZAS REALES: texto izquierda, fotos derecha -->
+            <section class="cs-fila cs-fila-concepto">
+                <div class="cs-texto">
+                    <h2><span class="es">Del render a la pieza real</span><span class="en">From render to real piece</span></h2>
+                    <p class="es">Las cuatro piezas se imprimieron en resina y se terminaron con acabado plata. Puestas, mantienen el calado fino del modelo y pesan muy poco.</p>
+                    <p class="en">All four pieces were printed in resin and finished in silver. Worn, they keep the model's fine openwork and weigh very little.</p>
+                </div>
+                <div class="cs-par">
+                    <img src="img/naya_real1.webp" alt="Pendiente NAYA real con flecos, impreso en resina, puesto" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/naya_real2.webp" alt="Pendiente NAYA real de tres rosas, impreso en resina, puesto" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                </div>
+            </section>
         </div>
+
+        <!-- BANDA FINAL: retratos -->
+        <section class="cs-banda">
+            <div class="cs-banda-fotos" style="--n: 3; --n-movil: 1;">
+                <img src="img/naya_bn1.webp" alt="Retrato en blanco y negro con pendiente NAYA y collar" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                <img src="img/naya_bn2.webp" alt="Retrato en blanco y negro con pendiente NAYA de rosas en horizontal" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                <img src="img/naya_bn3.webp" alt="Retrato en blanco y negro con pendientes NAYA" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+            </div>
+        </section>
 
         <div class="detalle-nav">
             <a href="#" onclick="cerrarProyecto()" class="btn-volver">

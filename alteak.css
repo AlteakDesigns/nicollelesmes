@@ -1325,6 +1325,9 @@ html {
     margin-right: auto;
 }
 .cs-banda-titulo { padding: 0; max-width: none; }
+/* Portada con la imagen entera a la derecha y el título sobre el fondo negro (fotos con fondo negro) */
+.cs-hero-derecha img { object-fit: contain; object-position: right center; }
+.cs-hero-derecha::after { display: none; }
 .cs-banda-fotos { gap: 12px; }
 
 /* 1eer proyecto estilos ondara */
