@@ -1433,6 +1433,20 @@ html {
         radial-gradient(55% 28% at 70% 88%, rgba(255, 184, 108, 0.08), transparent 70%);
 }
 
+
+/* Proceso en blanco y negro (2x2) con números que enlazan con la lista */
+.cs-proceso-bn { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.cs-proceso-bn figure { margin: 0; position: relative; }
+.cs-proceso-bn img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
+.cs-proceso-bn figcaption {
+    position: absolute; left: 8px; top: 8px;
+    font-size: 0.85rem; color: #fff; line-height: 1;
+    background: rgba(0,0,0,0.6); padding: 5px 8px;
+}
+.cs-lista-num { counter-reset: tec; }
+.cs-lista-num li { counter-increment: tec; display: grid; grid-template-columns: 2em 1fr; }
+.cs-lista-num li::before { content: counter(tec); color: #777; }
+
 /* 1eer proyecto estilos ondara */
 .ondara-titulo {
     text-align: center;
