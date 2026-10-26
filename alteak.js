@@ -196,10 +196,10 @@ function entrarConIdioma(idioma) {
     const body = document.body;
     if (idioma === 'en') {
         body.classList.replace('lang-es', 'lang-en');
-        localStorage.setItem('idioma', 'en');
+        try { localStorage.setItem('idioma', 'en'); } catch (e) {}
     } else {
         body.classList.replace('lang-en', 'lang-es');
-        localStorage.setItem('idioma', 'es');
+        try { localStorage.setItem('idioma', 'es'); } catch (e) {}
     }
     // Manda directo al sub-inicio (menú flotante)
     mostrarSeccion('sub-inicio');
