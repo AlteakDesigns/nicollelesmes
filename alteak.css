@@ -1133,7 +1133,8 @@ html {
     bottom: 10%;
 }
 .cs-hero h1 {
-    font-size: clamp(3.5rem, 11vw, 9rem);
+    /* Mismo tamaño en todos los proyectos (cabe incluso "Dior's Embrace") */
+    font-size: clamp(2.8rem, 8vw, 7rem);
     font-weight: 300;
     letter-spacing: -0.02em;
     line-height: 0.9;
@@ -1336,7 +1337,6 @@ html {
 .cs-hero-claro::after { display: none; }
 .cs-hero-claro h1 { color: #141414; }
 .cs-hero-claro p { color: #555; }
-.cs-hero-largo h1 { font-size: clamp(2.6rem, 7vw, 6.2rem); }
 
 /* Proceso en lista: texto a la izquierda, tira de imágenes a la derecha */
 .cs-proceso-lista { list-style: none; padding: 0; margin: 0; counter-reset: fase; }
@@ -1397,14 +1397,9 @@ html {
 .cs-par-leyenda figure { margin: 0; }
 .cs-par-leyenda figcaption { color: #999; font-size: 0.85rem; margin-top: 8px; }
 
-/* Portada con el título a la derecha (cuando el objeto está a la izquierda) */
-.cs-hero-titulo-derecha .cs-hero-texto { left: auto; right: 5%; text-align: right; top: 8%; bottom: auto; }
-.cs-hero-titulo-derecha::after { background: linear-gradient(to bottom left, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 45%, transparent 70%); }
-
 /* Títulos de portada largos */
 .cs-hero-texto h1, .cs-hero-texto p { text-shadow: 0 1px 12px rgba(0,0,0,0.35); }
 .cs-hero-claro .cs-hero-texto h1, .cs-hero-claro .cs-hero-texto p { text-shadow: none; }
-.cs-hero h1.cs-titulo-largo { font-size: clamp(2.8rem, 8vw, 7rem); }
 
 /* Resultado: texto arriba y mosaico con vídeo vertical + dos fotos apiladas */
 .cs-resultado { margin-bottom: 100px; }
