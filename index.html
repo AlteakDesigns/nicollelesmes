@@ -1144,7 +1144,7 @@
     </div>
 
     <!-- SOLERIS -->
-    <div id="soleris" class="seccion">
+    <div id="soleris" class="seccion sl">
         <div class="detalle-nav">
             <a href="#" onclick="cerrarProyecto()" class="btn-volver">
                 <span class="es">Volver a proyectos</span>
@@ -1152,78 +1152,74 @@
             </a>
         </div>
 
-        <!-- PORTADA -->
-        <header class="cs-hero">
-            <img src="img/soleris_hero.webp" alt="Lámpara SOLERIS encendida, con la luz atravesando los anillos">
-            <div class="cs-hero-texto">
-                <h1>Soleris</h1>
-                <p><span class="es">Un fragmento de luz</span><span class="en">A fragment of light</span></p>
+        <div class="cs">
+            <!-- PORTADA PARTIDA: título gigante sobre la foto vertical -->
+            <header class="sl-hero">
+                <h1 class="sl-titulo" aria-label="Soleris"><span>Sole</span><span>ris</span></h1>
+                <figure class="sl-hero-foto">
+                    <img src="img/soleris_hero.webp" alt="Lámpara SOLERIS encendida, proyectando su luz sobre la pared" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                </figure>
+                <p class="sl-hero-lema">
+                    <span class="es">Un fragmento de luz entre dos órbitas, apoyado en una roca.</span>
+                    <span class="en">A fragment of light between two orbits, resting on a rock.</span>
+                </p>
+                <p class="sl-hero-meta"><span class="es">Iluminación y fabricación, 2025</span><span class="en">Lighting and fabrication, 2025</span></p>
+            </header>
+        </div>
+
+        <!-- INTERRUPTOR: apagada / encendida -->
+        <section class="sl-interruptor" id="sl-interruptor">
+            <div class="cs">
+                <div class="sl-interruptor-marco">
+                    <img class="sl-foto-apagada" src="img/soleris_apagada.webp" alt="SOLERIS apagada, a la luz del día" loading="lazy">
+                    <img class="sl-foto-encendida" src="img/soleris_encendida.webp" alt="SOLERIS encendida, con la luz atravesando los anillos" loading="lazy">
+                </div>
+                <div class="sl-interruptor-pie">
+                    <button type="button" class="sl-boton" onclick="alternarLuzSoleris()" aria-pressed="false">
+                        <span class="sl-boton-pista"><span class="sl-boton-punto"></span></span>
+                        <span class="sl-boton-texto es">Enciende la luz</span>
+                        <span class="sl-boton-texto en">Turn on the light</span>
+                    </button>
+                    <p><span class="es">Dos anillos de madera que orbitan alrededor de la luz, como planetas en equilibrio.</span><span class="en">Two wooden rings orbiting the light, like planets in balance.</span></p>
+                </div>
             </div>
-        </header>
+        </section>
 
         <div class="cs">
-            <p class="cs-frase">
-                <span class="es">Una lámpara escultórica fabricada con cuatro técnicas distintas, que además funciona como sujetalibros.</span>
-                <span class="en">A sculptural lamp made with four different techniques, which also works as a bookend.</span>
-            </p>
-
-            <dl class="cs-datos">
-                <div><dt><span class="es">Reto</span><span class="en">Challenge</span></dt>
-                    <dd><span class="es">Diseñar una luminaria con presencia escultórica que además funcione como sujetalibros.</span><span class="en">Design a light with sculptural presence that also works as a bookend.</span></dd></div>
-                <div><dt><span class="es">Mi rol</span><span class="en">My role</span></dt>
-                    <dd><span class="es">Concepto, planos, fabricación y acabado.</span><span class="en">Concept, drawings, fabrication and finishing.</span></dd></div>
-                <div><dt><span class="es">Materiales</span><span class="en">Materials</span></dt>
-                    <dd><span class="es">Madera laminada, PVC y cemento</span><span class="en">Laminated wood, PVC and concrete</span></dd></div>
-                <div><dt><span class="es">Año</span><span class="en">Year</span></dt>
-                    <dd>2025</dd></div>
-            </dl>
-
-            <!-- CONCEPTO: texto izquierda, foto derecha -->
-            <section class="cs-fila cs-fila-concepto">
-                <div class="cs-texto">
-                    <h2><span class="es">Órbitas en equilibrio</span><span class="en">Orbits in balance</span></h2>
-                    <p class="es">El movimiento planetario se percibe como órbitas en equilibrio: de ahí los dos anillos que rodean la luz.</p>
-                    <p class="en">Planetary motion reads as orbits in balance: hence the two rings around the light.</p>
-                    <p class="es">Y como lo etéreo necesita un contrapunto terrenal, la lámpara se apoya en una base de cemento con textura de roca.</p>
-                    <p class="en">And since the ethereal needs an earthly counterpoint, the lamp rests on a concrete base with a rock-like texture.</p>
+            <!-- MATERIALES COMO TIPOGRAFÍA + COLLAGE ESCALONADO -->
+            <section class="sl-materiales">
+                <div class="sl-palabras">
+                    <p class="sl-palabra">Madera<span class="sl-palabra-nota"><span class="es">anillos cortados con CNC y lijados</span><span class="en">CNC-cut, sanded rings</span></span></p>
+                    <p class="sl-palabra">PVC<span class="sl-palabra-nota"><span class="es">difusor termoconformado</span><span class="en">thermoformed diffuser</span></span></p>
+                    <p class="sl-palabra">Cemento<span class="sl-palabra-nota"><span class="es">base moldeada en silicona desde un modelo en PLA</span><span class="en">base cast in silicone from a PLA model</span></span></p>
                 </div>
-                <figure class="cs-foto-alta">
-                    <img src="img/soleris_encendida.webp" alt="SOLERIS encendida, con la luz atravesando los anillos y proyectándose en la pared" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
-                </figure>
-            </section>
-
-            <!-- PROCESO: cuatro técnicas en orden -->
-            <section class="cs-montaje">
-                <h2><span class="es">Cuatro técnicas, una lámpara</span><span class="en">Four techniques, one lamp</span></h2>
-                <ol class="cs-pasos cs-pasos-4">
-                    <li><img src="img/soleris_cnc.webp" alt="Anillos de madera laminada cortados con CNC y lijados" onclick="abrirFoto(this)" class="img-zoom" loading="lazy"><span class="es">Anillos de madera cortados con CNC</span><span class="en">CNC-cut wooden rings</span></li>
-                    <li><img src="img/soleris_termo.webp" alt="Difusor de PVC termoconformado en la máquina" onclick="abrirFoto(this)" class="img-zoom" loading="lazy"><span class="es">Difusor de PVC termoconformado</span><span class="en">Thermoformed PVC diffuser</span></li>
-                    <li><img src="img/soleris_molde.webp" alt="Molde de silicona hecho a partir de un modelo impreso en PLA" onclick="abrirFoto(this)" class="img-zoom" loading="lazy"><span class="es">Molde de silicona desde un modelo en PLA</span><span class="en">Silicone mould from a PLA model</span></li>
-                    <li><img src="img/soleris_base.webp" alt="Las dos piezas de la base de cemento con textura de roca" onclick="abrirFoto(this)" class="img-zoom" loading="lazy"><span class="es">Base de cemento con textura de roca</span><span class="en">Rock-textured concrete base</span></li>
-                </ol>
-            </section>
-
-            <!-- SUJETALIBROS: foto izquierda, texto derecha -->
-            <section class="cs-fila cs-fila-proceso">
-                <figure class="cs-foto-media cs-foto-apaisada">
-                    <img src="img/soleris_libros.webp" alt="SOLERIS encendida sujetando unos libros con un lateral de la base" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
-                </figure>
-                <div class="cs-texto">
-                    <h2><span class="es">Lámpara y sujetalibros</span><span class="en">Lamp and bookend</span></h2>
-                    <p class="es">En espacios pequeños cada objeto debe hacer más de una cosa, así que los laterales de la base sujetan los libros.</p>
-                    <p class="en">In small spaces every object should do more than one thing, so the sides of the base hold books.</p>
+                <div class="sl-collage">
+                    <img src="img/soleris_cnc.webp" alt="Anillos de madera laminada cortados con CNC" onclick="abrirFoto(this)" class="img-zoom sl-c1" loading="lazy">
+                    <img src="img/soleris_madera.webp" alt="Los dos anillos de madera ensamblados sobre su base" onclick="abrirFoto(this)" class="img-zoom sl-c2" loading="lazy">
+                    <img src="img/soleris_termo.webp" alt="Difusor de PVC saliendo de la termoconformadora" onclick="abrirFoto(this)" class="img-zoom sl-c3" loading="lazy">
+                    <img src="img/soleris_molde.webp" alt="Molde de silicona de la base" onclick="abrirFoto(this)" class="img-zoom sl-c4" loading="lazy">
+                    <img src="img/soleris_base.webp" alt="Las dos piezas de la base de cemento con textura de roca" onclick="abrirFoto(this)" class="img-zoom sl-c5" loading="lazy">
                 </div>
             </section>
         </div>
 
-        <!-- BANDA FINAL: detalles -->
-        <section class="cs-banda">
-            <div class="cs-banda-fotos cs-banda-cuadrada" style="--n: 3; --n-movil: 1;">
+        <!-- SUJETALIBROS: foto grande con frase encima -->
+        <section class="cs-hero sl-libros">
+            <img src="img/soleris_libros.webp" alt="SOLERIS encendida sujetando unos libros con un lateral de la base" loading="lazy">
+            <div class="cs-hero-texto">
+                <h2><span class="es">Y también sujeta tus libros.</span><span class="en">And it holds your books, too.</span></h2>
+                <p><span class="es">En espacios pequeños, cada objeto debería hacer más de una cosa.</span><span class="en">In small spaces, every object should do more than one thing.</span></p>
+            </div>
+        </section>
+
+        <div class="cs">
+            <!-- DETALLES ESCALONADOS -->
+            <section class="sl-detalles">
                 <img src="img/soleris_d1.webp" alt="SOLERIS de frente, con los anillos plateados y la base de cemento" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
                 <img src="img/soleris_d2.webp" alt="SOLERIS en ángulo, con la bombilla entre los anillos" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
                 <img src="img/soleris_d3.webp" alt="Detalle de los anillos y la bombilla de SOLERIS" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
-            </div>
-        </section>
+            </section>
+        </div>
 
         <div class="detalle-nav">
             <a href="#" onclick="cerrarProyecto()" class="btn-volver">
