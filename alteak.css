@@ -777,8 +777,8 @@ html {
 }
 
 
-/* NEMYX: ficha del proyecto (reto / rol / materiales) */
-.nemyx-ficha {
+/* FICHA DE PROYECTO (reto / rol / materiales) — reutilizable en todos los proyectos */
+.proyecto-ficha {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
@@ -849,7 +849,7 @@ html {
 }
 
 @media (max-width: 768px) {
-    .nemyx-ficha {
+    .proyecto-ficha {
         grid-template-columns: 1fr;
         gap: 20px;
         text-align: center;
@@ -976,6 +976,41 @@ html {
     }
 }
 
+
+
+/* AMMA: del boceto a la visualización */
+.amma-proceso {
+    max-width: 1100px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+.amma-proceso-titulo {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 25px;
+}
+.amma-proceso-imgs {
+    display: grid;
+    grid-template-columns: 1236fr 1600fr; /* proporción de cada imagen: misma altura, sin recortes */
+    gap: 15px;
+}
+.amma-proceso-imgs img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.amma-proceso-nota {
+    color: #aaa;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+    .amma-proceso-imgs { grid-template-columns: 1fr; }
+}
 
 /* 1eer proyecto estilos ondara */
 .ondara-titulo {
