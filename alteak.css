@@ -1298,7 +1298,11 @@ html {
 
 .cs-montaje .amma-funcion { max-width: none; margin: 0 0 50px 0; }
 .cs-montaje .amma-funcion:last-child { margin-bottom: 0; }
-.cs-bocetos { margin-bottom: 80px; }
+.cs-bocetos { margin-bottom: 100px; }
+.cs-cifras-col { grid-template-columns: 1fr; gap: 34px; margin: 0; }
+.cs-cifras-col strong { font-size: clamp(2.4rem, 5vw, 4rem); }
+.cs-cifras-col div { border-top: 1px solid #2c2c2c; padding-top: 18px; }
+.cs-diagrama { margin: 0 0 60px 0; }
 .cs-bocetos .cs-texto { margin-bottom: 30px; }
 .cs-bocetos-laminas { gap: 16px; }
 .cs-bocetos-laminas img { background: #fff; }
