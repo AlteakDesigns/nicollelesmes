@@ -1330,6 +1330,42 @@ html {
 .cs-hero-derecha::after { display: none; }
 .cs-banda-fotos { gap: 12px; }
 
+
+/* Portada con foto clara: título oscuro y sin degradado */
+.cs-hero-claro { background: #eee; }
+.cs-hero-claro::after { display: none; }
+.cs-hero-claro h1 { color: #141414; }
+.cs-hero-claro p { color: #555; }
+.cs-hero-largo h1 { font-size: clamp(2.6rem, 7vw, 6.2rem); }
+
+/* Proceso en lista: texto a la izquierda, tira de imágenes a la derecha */
+.cs-proceso-lista { list-style: none; padding: 0; margin: 0; counter-reset: fase; }
+.cs-proceso-lista li {
+    counter-increment: fase;
+    display: grid;
+    grid-template-columns: 3fr 8fr;
+    gap: 40px;
+    align-items: center;
+    padding: 28px 0;
+    border-top: 1px solid #2c2c2c;
+}
+.cs-proceso-lista li:last-child { border-bottom: 1px solid #2c2c2c; }
+.cs-proceso-lista h3 { font-size: 1.05rem; font-weight: 400; margin-bottom: 8px; }
+.cs-proceso-lista h3::before { content: counter(fase); display: block; font-size: 2rem; font-weight: 300; color: #555; margin-bottom: 6px; }
+.cs-proceso-lista p { color: #aaa; font-size: 0.92rem; line-height: 1.6; }
+.cs-proceso-lista img { width: 100%; height: auto; display: block; background: #fff; }
+
+/* Fila con vídeo vertical */
+.cs-fila-video { grid-template-columns: 4fr 7fr; }
+.cs-video-vertical { margin: 0; }
+.cs-video-vertical video { width: 100%; aspect-ratio: 9/16; object-fit: cover; display: block; }
+
+@media (max-width: 900px) {
+    .cs-proceso-lista li { grid-template-columns: 1fr; gap: 16px; }
+    .cs-fila-video { grid-template-columns: 1fr; }
+    .cs-video-vertical { max-width: 360px; }
+}
+
 /* 1eer proyecto estilos ondara */
 .ondara-titulo {
     text-align: center;

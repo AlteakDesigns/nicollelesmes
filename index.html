@@ -384,12 +384,12 @@
             </a>
 
             <a href="#" class="proyecto" onclick="verProyecto('dior')">
-                <img src="img/diorlogo.png" alt="DIOR`S EMBRACE">
+                <img src="img/dior_portada.webp" alt="Caja de Dior's Embrace abierta con la flor de tela" loading="lazy">
                 <div class="info-overlay">
-                    <h3>DIOR`S EMBRACE</h3>
+                    <h3>DIOR'S EMBRACE</h3>
                     <p>
-                        <span class="es">Regalo Corporativo - Moda e Identidad de empresa, 2025</span>
-                        <span class="en">Corporate Gift - Fashion & Corporate Identity, 2025</span>
+                        <span class="es">Packaging · Regalo corporativo sostenible — Dior Iberia, 2025</span>
+                        <span class="en">Packaging · Sustainable corporate gift — Dior Iberia, 2025</span>
                     </p>
                 </div>
             </a>
@@ -991,43 +991,90 @@
             </a>
         </div>
 
-        <div class="dior-titulo">
-            <h1>Dior's Embrace</h1>
-            <h2 class="subtitulo">
-                <span class="es">Un gesto, un legado...</span>
-                <span class="en">A gesture, a legacy...</span>
-            </h2>
+        <!-- PORTADA (foto clara: título oscuro) -->
+        <header class="cs-hero cs-hero-claro cs-hero-derecha cs-hero-largo" style="background: #fdfbfc;">
+            <img src="img/dior_hero.webp" alt="Caja de Dior's Embrace cerrada, forrada con lona de exposición reciclada">
+            <div class="cs-hero-texto">
+                <h1>Dior's<br>Embrace</h1>
+                <p><span class="es">Un gesto, un legado</span><span class="en">A gesture, a legacy</span></p>
+            </div>
+        </header>
+
+        <div class="cs">
+            <p class="cs-frase">
+                <span class="es">Un regalo de lujo para los empleados de Dior, hecho solo con los residuos de la propia Maison.</span>
+                <span class="en">A luxury gift for Dior's employees, made only from the Maison's own waste.</span>
+            </p>
+
+            <dl class="cs-datos">
+                <div><dt><span class="es">Reto</span><span class="en">Challenge</span></dt>
+                    <dd><span class="es">Diseñar un regalo para empleados usando solo residuos de la marca, sin perder el código del lujo.</span><span class="en">Design a gift for employees using only the brand's waste, without losing the codes of luxury.</span></dd></div>
+                <div><dt><span class="es">Mi rol</span><span class="en">My role</span></dt>
+                    <dd><span class="es">Investigación de marca y UX, tres conceptos, diseño y prototipo.</span><span class="en">Brand and UX research, three concepts, design and prototype.</span></dd></div>
+                <div><dt><span class="es">Cliente</span><span class="en">Client</span></dt>
+                    <dd>Parfums Christian Dior Iberia × UDIT</dd></div>
+                <div><dt><span class="es">Resultado</span><span class="en">Outcome</span></dt>
+                    <dd><span class="es">Concepto aprobado por Dior Iberia, 2025</span><span class="en">Concept approved by Dior Iberia, 2025</span></dd></div>
+            </dl>
+
+            <!-- CONCEPTO: texto izquierda, foto derecha -->
+            <section class="cs-fila cs-fila-concepto">
+                <div class="cs-texto">
+                    <h2><span class="es">Circularidad sin excepciones</span><span class="en">Circularity, no exceptions</span></h2>
+                    <p class="es">El briefing solo permitía usar residuos de Dior, así que la caja se forra con lona de exposición, telas y rafia recicladas de la Maison.</p>
+                    <p class="en">The brief only allowed Dior's own waste, so the box is lined with exhibition canvas, fabrics and raffia recycled from the Maison.</p>
+                    <p class="es">La rosa era la flor favorita de Christian Dior y el origen de su silueta «mujer-flor»: al abrir la caja aparece una flor de tela. Y como para un empleado el valor está en sentirse reconocido, la acompaña una carta personalizada con una frase emblemática de la casa.</p>
+                    <p class="en">The rose was Christian Dior's favourite flower and the origin of his "flower-woman" silhouette: opening the box reveals a fabric flower. And since what an employee values is feeling recognised, it comes with a personal letter and one of the house's signature phrases.</p>
+                </div>
+                <figure class="cs-foto-alta">
+                    <img src="img/dior_flor.webp" alt="Caja abierta con la flor de tela sobre rafia reciclada y la carta personalizada" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                </figure>
+            </section>
+
+            <!-- PROCESO: tres pasos en lista -->
+            <section class="cs-montaje">
+                <h2><span class="es">De tres ideas a un prototipo</span><span class="en">From three ideas to one prototype</span></h2>
+                <ol class="cs-proceso-lista">
+                    <li>
+                        <div><h3><span class="es">Tres conceptos</span><span class="en">Three concepts</span></h3>
+                            <p><span class="es">Exploré retail, escenografía y regalo. Dior Iberia eligió avanzar con el regalo corporativo.</span><span class="en">I explored retail, set design and gifting. Dior Iberia chose to move forward with the corporate gift.</span></p></div>
+                        <img src="img/dior_conceptos.webp" alt="Los tres conceptos: expositor de retail, escenografía con flores y caja regalo" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    </li>
+                    <li>
+                        <div><h3><span class="es">Iteración con IA</span><span class="en">Iterating with AI</span></h3>
+                            <p><span class="es">Probé formas de caja y de presentación de la flor antes de prototipar.</span><span class="en">I tested box shapes and ways of presenting the flower before prototyping.</span></p></div>
+                        <img src="img/dior_ia.webp" alt="Variaciones de caja y de presentación de la flor generadas con IA" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    </li>
+                    <li>
+                        <div><h3><span class="es">Materiales recuperados</span><span class="en">Recovered materials</span></h3>
+                            <p><span class="es">Rafia para el interior; lonas de exposición y telas para el forro.</span><span class="en">Raffia for the inside; exhibition canvas and fabrics for the lining.</span></p></div>
+                        <img src="img/dior_materiales.webp" alt="Materiales recuperados de Dior: rafia, lonas de exposición y telas estampadas" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    </li>
+                </ol>
+            </section>
+
+            <!-- RESULTADO: vídeo vertical izquierda, texto derecha -->
+            <section class="cs-fila cs-fila-video">
+                <figure class="cs-video-vertical">
+                    <video src="videos/dior_web.mp4" poster="img/dior_video_poster.jpg" onclick="abrirVideo(this)" class="video-zoom" data-autoplay muted loop playsinline preload="none" aria-label="Vídeo del prototipo de Dior's Embrace abriéndose"></video>
+                </figure>
+                <div class="cs-texto">
+                    <h2><span class="es">Más que un regalo</span><span class="en">More than a gift</span></h2>
+                    <p class="es">El prototipo real se hizo con cartón, lona y rafia recicladas de la Maison. Dentro, la flor, la carta y los productos de Dior se presentan como una experiencia que se descubre poco a poco.</p>
+                    <p class="en">The real prototype was made with cardboard, canvas and raffia recycled from the Maison. Inside, the flower, the letter and the Dior products unfold as an experience revealed step by step.</p>
+                    <p class="es">Dior Iberia aprobó el concepto.</p>
+                    <p class="en">Dior Iberia approved the concept.</p>
+                </div>
+            </section>
         </div>
 
-        <div class="dior-contenido">
-            <div class="dior-sup">
-                <div class="dior-img-principal">
-                    <img src="img/dior1.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                </div>
-                <div class="dior-descripcion">
-                    <p class="es">
-                        Creada en colaboración con Dior, ofrece una experiencia inmersiva que equilibra lujo y
-                        sostenibilidad. La caja combina cartón con textil reciclado que aportan color y simbolizan
-                        compromiso ambiental. Su diseño versátil incluye espacio para obsequios, hecho con rafia
-                        reciclada, y una carta personalizada, reforzando la exclusividad y conexión emocional con el
-                        personal de Dior.
-                    </p>
-                    <p class="en">
-                        Created in collaboration with Dior, it offers an immersive experience balancing luxury and sustainability. The box combines cardboard with recycled textiles, adding color and symbolizing environmental commitment. Its versatile design features a gift compartment made of recycled raffia and a personalized letter, reinforcing exclusivity and the emotional connection with Dior's staff.
-                    </p>
-                </div>
+        <!-- BANDA FINAL: caja cerrada y abierta -->
+        <section class="cs-banda">
+            <div class="cs-banda-fotos cs-banda-apaisada" style="--n: 2; --n-movil: 1;">
+                <img src="img/dior_cerrada.webp" alt="Caja de Dior's Embrace en ángulo, con el logotipo CD dorado" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                <img src="img/dior_productos.webp" alt="Caja abierta con la carta y los productos de Dior sobre rafia" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
             </div>
-
-            <div class="dior-galeria">
-                <img src="img/dior2.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/dior3.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/dior4.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                
-                <div class="dior-video">
-                    <video src="videos/dior_video.mp4" onclick="abrirVideo(this)" class="video-zoom" autoplay muted loop playsinline></video>
-                </div>
-            </div>
-        </div>
+        </section>
 
         <div class="detalle-nav">
             <a href="#" onclick="cerrarProyecto()" class="btn-volver">
