@@ -1240,7 +1240,7 @@
 
         <!-- PORTADA -->
         <header class="cs-hero">
-            <img src="img/giralia_hero.webp" alt="Giralia instalado sobre la barra de Quimbaya, con los platillos colgantes llenos de botellas" style="object-position: 50% 30%;">
+            <img src="img/giralia_hero.webp" alt="Giralia instalado sobre la barra de Quimbaya, con los platillos colgantes llenos de botellas" style="object-position: 50% 22%;">
             <div class="cs-hero-texto">
                 <h1>Giralia</h1>
                 <p><span class="es">Transforma mezclas, eleva tu coctelería</span><span class="en">Transform mixes, elevate your mixology</span></p>
@@ -1264,9 +1264,10 @@
                     <dd>2024</dd></div>
             </dl>
 
-            <!-- PARA QUIMBAYA: texto izquierda, foto derecha -->
+            <!-- CONCEPTO: texto (con logo del cliente) izquierda, prototipo derecha -->
             <section class="cs-fila cs-fila-concepto">
                 <div class="cs-texto">
+                    <img class="cs-logo-cliente" src="img/giralia_logo_quimbaya.webp" alt="Logotipo de Quimbaya by Edwin Rodríguez">
                     <h2><span class="es">Hecho a medida de Quimbaya</span><span class="en">Made to measure for Quimbaya</span></h2>
                     <p class="es">Quimbaya, en Madrid, es el primer restaurante colombiano con estrella Michelin en Europa, y su nombre viene de la orfebrería precolombina. Por eso Giralia se viste de dorados y tonos tierra.</p>
                     <p class="en">Quimbaya, in Madrid, is the first Colombian restaurant in Europe with a Michelin star, and its name comes from pre-Columbian goldsmithing. That's why Giralia wears golds and earthy tones.</p>
@@ -1274,43 +1275,37 @@
                     <p class="en">The bar was small and the space above it went unused, so the display hangs from the ceiling and leaves the whole work surface free.</p>
                 </div>
                 <figure class="cs-foto-alta">
-                    <img src="img/giralia_columna.webp" alt="Columna de platillos colgantes de Giralia con botellas" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/giralia_prototipo.webp" alt="Prototipo de Giralia: platillos colgantes con botellas, a distintas alturas" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
                 </figure>
             </section>
 
-            <!-- GIRA DE VERDAD: vídeo izquierda, texto derecha -->
+            <h2 class="cs-banda-titulo"><span class="es">Integrado en la barra</span><span class="en">Built into the bar</span></h2>
+        </div>
+
+        <!-- BANDA: la barra con Giralia -->
+        <section class="cs-banda">
+            <div class="cs-banda-fotos cs-banda-apaisada" style="--n: 2; --n-movil: 1;">
+                <img src="img/giralia_barra_perspectiva.webp" alt="Render de la barra de Quimbaya con las columnas de Giralia, en perspectiva" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                <img src="img/giralia_barra_frente.webp" alt="Render de la barra de Quimbaya con Giralia, vista frontal" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+            </div>
+        </section>
+
+        <div class="cs">
+            <!-- FUNCIONAMIENTO: fotos izquierda, texto derecha -->
             <section class="cs-fila cs-fila-proceso">
-                <figure class="cs-video-cuadrado">
-                    <video src="videos/giralia_web.mp4" poster="img/giralia_video_poster.jpg" onclick="abrirVideo(this)" class="video-zoom" data-autoplay muted loop playsinline preload="none" aria-label="Prototipo real de un platillo de Giralia girando"></video>
-                </figure>
+                <div class="cs-par cs-par-cuadrado">
+                    <img src="img/giralia_luz.webp" alt="Prototipo de Giralia con las luces LED de los platillos encendidas" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/giralia_platillo.webp" alt="Render del platillo giratorio de Giralia con su rodamiento central" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                </div>
                 <div class="cs-texto">
                     <h2><span class="es">Gira de verdad</span><span class="en">It really spins</span></h2>
-                    <p class="es">Cada platillo gira sobre un eje central, así que el bartender acerca la botella que necesita con un solo gesto. Lleva luz integrada para que las botellas se vean desde toda la sala.</p>
-                    <p class="en">Each tray turns on a central axis, so the bartender brings the bottle they need closer in one move. Built-in lighting makes the bottles visible from across the room.</p>
+                    <p class="es">Cada platillo gira sobre un rodamiento central, así que el bartender acerca la botella que necesita con un solo gesto. Lleva luz integrada para que las botellas se vean desde toda la sala.</p>
+                    <p class="en">Each tray turns on a central bearing, so the bartender brings the bottle they need closer in one move. Built-in lighting makes the bottles visible from across the room.</p>
                     <p class="es">Lo modelé en 3D, preparé los planos con medidas reales para el corte CNC y fabricamos un prototipo.</p>
                     <p class="en">I modelled it in 3D, prepared drawings to real measurements for CNC cutting, and we built a prototype.</p>
                 </div>
             </section>
-
-            <h2 class="cs-banda-titulo"><span class="es">Antes de llegar aquí, tres caminos</span><span class="en">Three routes before getting here</span></h2>
         </div>
-
-        <!-- BANDA: las tres propuestas -->
-        <section class="cs-banda">
-            <div class="cs-banda-fotos cs-banda-apaisada" style="--n: 3; --n-movil: 1;">
-                <img src="img/giralia_p1.webp" alt="Primera propuesta: platillos colgantes con botelleros dorados" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
-                <img src="img/giralia_p2.webp" alt="Segunda propuesta: estantería de arcos dorados" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
-                <img src="img/giralia_p3.webp" alt="Tercera propuesta: soportes de arcos colgados del techo" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
-            </div>
-        </section>
-
-        <!-- BANDA FINAL: el platillo y el sistema -->
-        <section class="cs-banda">
-            <div class="cs-banda-fotos cs-banda-apaisada" style="--n: 2; --n-movil: 1;">
-                <img src="img/giralia_platillo.webp" alt="Render del platillo giratorio de Giralia" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
-                <img src="img/giralia_colgantes.webp" alt="Las columnas de platillos colgantes de Giralia" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
-            </div>
-        </section>
 
         <div class="detalle-nav">
             <a href="#" onclick="cerrarProyecto()" class="btn-volver">
@@ -1319,7 +1314,6 @@
             </a>
         </div>
     </div>
-
 
 <!-- SINGULAR ESSENCE -->
     <div id="singular" class="seccion">
