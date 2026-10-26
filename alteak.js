@@ -100,7 +100,8 @@ function mostrarEnVisor(elemento) {
         imgVisor.style.display = 'block';
         videoVisor.style.display = 'none';
     } else if (elemento.tagName.toLowerCase() === 'video') {
-        videoVisor.src = elemento.src;
+        // Si el vídeo tiene una versión completa (p. ej. con créditos), el visor muestra esa
+        videoVisor.src = elemento.dataset.completo || elemento.src;
         videoVisor.style.display = 'block';
         imgVisor.style.display = 'none';
         videoVisor.play(); 

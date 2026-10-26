@@ -563,15 +563,21 @@
 
             <!-- BLOQUE 4: Video final (la luz reacciona al sonido) -->
             <div class="nemyx-video-final-container">
-                <video src="videos/nemyx_loop.mp4" poster="img/nemyx_loop_poster.jpg" onclick="abrirVideo(this)" class="video-zoom video-full" data-autoplay muted loop playsinline preload="none"></video>
-                <button type="button" class="btn-sonido" onclick="alternarSonido(event, this)">
-                    <span class="icono-sonido"><i class="fas fa-volume-mute"></i></span>
-                    <span class="es">Activar sonido</span>
-                    <span class="en">Sound on</span>
-                </button>
+                <div class="nemyx-video-marco">
+                    <video src="videos/nemyx_loop.mp4" data-completo="videos/nemyx_completo.mp4" poster="img/nemyx_loop_poster.jpg" onclick="abrirVideo(this)" class="video-zoom video-full" data-autoplay muted loop playsinline preload="none"></video>
+                    <button type="button" class="btn-sonido" onclick="alternarSonido(event, this)">
+                        <span class="icono-sonido"><i class="fas fa-volume-mute"></i></span>
+                        <span class="es">Activar sonido</span>
+                        <span class="en">Sound on</span>
+                    </button>
+                </div>
                 <p class="nemyx-video-nota">
-                    <span class="es">La luz reacciona en tiempo real a la música.</span>
-                    <span class="en">The light reacts to the music in real time.</span>
+                    <span class="es">La luz reacciona en tiempo real a la música. Haz clic para ver el vídeo completo.</span>
+                    <span class="en">The light reacts to the music in real time. Click to watch the full video.</span>
+                </p>
+                <p class="nemyx-video-credito">
+                    <span class="es">Audio: <em>Because They Want Our Seat</em> — Sara Landry &amp; Nico Moreno. Uso exclusivamente conceptual y no comercial para demostración de hardware reactivo.</span>
+                    <span class="en">Audio: <em>Because They Want Our Seat</em> — Sara Landry &amp; Nico Moreno. Conceptual, non-commercial use only, to demonstrate reactive hardware.</span>
                 </p>
             </div>
             

@@ -817,11 +817,11 @@ html {
 }
 
 /* NEMYX: botón de sonido sobre el vídeo final */
-.nemyx-video-final-container { position: relative; }
+.nemyx-video-marco { position: relative; }
 .btn-sonido {
     position: absolute;
     right: 20px;
-    bottom: 60px;
+    bottom: 20px;
     width: auto;
     margin: 0;
     display: flex;
@@ -847,6 +847,14 @@ html {
     margin-top: 15px;
     letter-spacing: 1px;
 }
+.nemyx-video-credito {
+    text-align: center;
+    color: #666;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 8px auto 0 auto;
+}
 
 @media (max-width: 768px) {
     .proyecto-ficha {
@@ -856,7 +864,7 @@ html {
         margin-bottom: 40px;
     }
     .nemyx-galeria-tecnica { width: 100%; order: -1 !important; }
-    .btn-sonido { right: 10px; bottom: 50px; padding: 8px 14px; font-size: 0.7rem; }
+    .btn-sonido { right: 10px; bottom: 10px; padding: 8px 14px; font-size: 0.7rem; }
 }
 
 /* -----------------------------------
