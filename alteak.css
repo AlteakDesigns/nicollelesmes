@@ -2610,13 +2610,19 @@ body.lang-en .es {
     text-decoration: none !important;
 }
 
-/* Dior: portada clara con la caja cerrada, fila foto | texto y logo apaisado */
-.cs-hero-dior { background: #fafaf7; }
-.cs-hero-dior img { position: absolute; top: 6%; right: 5%; width: 33%; height: auto; object-fit: contain; }
-.cs-fila-dior-carta { grid-template-columns: 6fr 5fr; }
+/* Dior: intro a dos columnas, foto ancha y final con cita + vídeo */
+.cs-dos-col { display: grid; grid-template-columns: 5fr 7fr; gap: 60px; align-items: start; margin-bottom: 50px; }
+.cs-dos-col h2 { margin: 0; font-size: clamp(1.6rem, 2.8vw, 2.3rem); font-weight: 300; line-height: 1.15; }
+.cs-dos-col .cs-texto p:first-child { margin-top: 0; }
 .cs-logo-ancho { width: 170px; }
+.cs-foto-ancha { margin: 0 0 140px 0; }
+.cs-foto-ancha img { width: 100%; aspect-ratio: 3/2; object-fit: cover; display: block; }
+.cs-final-video { display: grid; grid-template-columns: 7fr 4fr; gap: 60px; align-items: center; margin-bottom: 120px; }
+.cs-cita { font-size: clamp(1.8rem, 3.6vw, 3rem); font-weight: 300; line-height: 1.2; margin: 0 0 24px 0; color: #fff; }
+.cs-cita-nota { color: #777; font-size: 0.85rem; margin: 0; }
 @media (max-width: 900px) {
-    .cs-fila-dior-carta { grid-template-columns: 1fr; }
-    .cs-fila-dior-carta .cs-texto { order: -1; }
-    .cs-hero-dior img { top: 10%; right: 6%; width: 88%; }
+    .cs-dos-col, .cs-final-video { grid-template-columns: 1fr; gap: 24px; }
+    .cs-foto-ancha { margin-bottom: 80px; }
+    .cs-foto-ancha img { aspect-ratio: 4/3; }
+    .cs-final-video .cs-video-vertical { max-width: 360px; }
 }
