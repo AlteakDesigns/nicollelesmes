@@ -19,10 +19,9 @@
         <nav class="navbar-container">
             <!-- NAVBAR SUPERIOR -->
             <ul class="menu" id="menu">
-                <li><a href="#" onclick="mostrarSeccion('acerca')"><span class="es">Acerca de mí</span><span class="en">About me</span></a></li>
+                <li><a href="#" onclick="mostrarSeccion('acerca')"><span class="es">Sobre mí</span><span class="en">About me</span></a></li>
                 <li><a href="#" onclick="mostrarSeccion('proyectos')"><span class="es">Galería</span><span class="en">Gallery</span></a></li>
                 <li><a href="#" onclick="mostrarSeccion('portafolio')"><span class="es">Portafolio</span><span class="en">Portfolio</span></a></li>
-                <li><a href="#" onclick="mostrarSeccion('cv')"><span class="es">Perfil Profesional</span><span class="en">Professional Profile</span></a></li>
                 <li><a href="#" onclick="mostrarSeccion('contacto')"><span class="es">Contacto</span><span class="en">Contact</span></a></li>
             </ul>
 
@@ -72,7 +71,7 @@
         <div class="hub-container animado">
             <nav class="hub-menu">
                 <a href="#" onclick="mostrarSeccion('acerca')" class="link-secundario">
-                    <span class="es">Acerca de mí</span>
+                    <span class="es">Sobre mí</span>
                     <span class="en">About me</span>
                 </a>
                 <a href="#" onclick="mostrarSeccion('proyectos')" class="link-secundario">
@@ -86,10 +85,8 @@
                     <span class="en">Portfolio</span>
                 </a>
                 
-                <a href="#" onclick="mostrarSeccion('cv')" class="link-secundario">
-                    <span class="es">Perfil Profesional</span>
-                    <span class="en">Professional Profile</span>
-                </a>
+                <a href="docs/CV_Nicolle_Lesmes_Producto_Diseñadora.pdf" target="_blank" class="link-secundario es">Descargar CV</a>
+                <a href="docs/CV_Nicolle_Lesmes_Product_Designer.pdf" target="_blank" class="link-secundario en">Download CV</a>
                 <a href="#" onclick="mostrarSeccion('contacto')" class="link-secundario">
                     <span class="es">Contacto</span>
                     <span class="en">Contact</span>
@@ -169,6 +166,74 @@
                 </div>
             </section>
 
+            <!-- TRAYECTORIA: experiencia, herramientas, fabricación y formación -->
+            <section class="ab-trayectoria" id="trayectoria">
+                <h2><span class="es">Trayectoria</span><span class="en">Background</span></h2>
+                <ul class="ab-exp">
+                    <li>
+                        <span class="ab-exp-fecha"><span class="es">Abr 2026 – actual</span><span class="en">Apr 2026 – present</span></span>
+                        <div><h3>AlegríaB</h3><p class="ab-exp-rol"><span class="es">Diseñadora de producto</span><span class="en">Product designer</span></p></div>
+                        <p class="ab-exp-txt"><span class="es">Joyería fina en oro: modelado 3D en Rhinoceros a medida de fabricación, prototipos en resina para fundición, renders y catálogos.</span><span class="en">Fine gold jewellery: 3D modelling in Rhinoceros to manufacturing tolerances, resin prototypes for casting, renders and catalogues.</span> </p>
+                    </li>
+                    <li>
+                        <span class="ab-exp-fecha"><span class="es">Oct 2025 – feb 2026</span><span class="en">Oct 2025 – Feb 2026</span></span>
+                        <div><h3>María Torné</h3><p class="ab-exp-rol"><span class="es">Diseñadora de producto (prácticas)</span><span class="en">Product designer (internship)</span></p></div>
+                        <p class="ab-exp-txt"><span class="es">Moldes y troqueles impresos en 3D que sustituyeron a los de cartón, y producción de joyería en porcelana, latón y plata.</span><span class="en">3D-printed moulds and cutting dies that replaced cardboard templates, and production of porcelain, brass and silver jewellery.</span> </p>
+                    </li>
+                    <li>
+                        <span class="ab-exp-fecha"><span class="es">Sep 2024 – may 2025</span><span class="en">Sep 2024 – May 2025</span></span>
+                        <div><h3>Parfums Christian Dior Iberia</h3><p class="ab-exp-rol"><span class="es">Proyecto con UDIT</span><span class="en">UDIT project</span></p></div>
+                        <p class="ab-exp-txt"><span class="es">Dior's Embrace: regalo corporativo hecho con residuos de la Maison. Concepto aprobado por la marca.</span><span class="en">Dior's Embrace: a corporate gift made from the Maison's own waste. Concept approved by the brand.</span> <a href="#" class="ab-exp-ver" onclick="verProyecto('dior'); return false;"><span class="es">Ver proyecto →</span><span class="en">See project →</span></a></p>
+                    </li>
+                    <li>
+                        <span class="ab-exp-fecha"><span class="es">Oct 2023 – jun 2024</span><span class="en">Oct 2023 – Jun 2024</span></span>
+                        <div><h3>Old Jeffrey</h3><p class="ab-exp-rol"><span class="es">Diseñadora de producto junior</span><span class="en">Junior product designer</span></p></div>
+                        <p class="ab-exp-txt"><span class="es">Indalo, el primer perfume de la marca, y los estampados de la colección de baño OJ Napoli (Top 5 de Fuera de Serie).</span><span class="en">Indalo, the brand's first fragrance, and the prints for the OJ Napoli swimwear collection (Top 5 in Fuera de Serie).</span> <a href="#" class="ab-exp-ver" onclick="verProyecto('napoli'); return false;"><span class="es">Ver proyecto →</span><span class="en">See project →</span></a></p>
+                    </li>
+                    <li>
+                        <span class="ab-exp-fecha"><span class="es">Sep 2023 – may 2024</span><span class="en">Sep 2023 – May 2024</span></span>
+                        <div><h3>Quimbaya by Edwin Rodríguez</h3><p class="ab-exp-rol"><span class="es">Proyecto con UDIT</span><span class="en">UDIT project</span></p></div>
+                        <p class="ab-exp-txt"><span class="es">Giralia: botellero giratorio para un restaurante con estrella Michelin, con prototipo fabricado.</span><span class="en">Giralia: a rotating bottle display for a Michelin-starred restaurant, with a built prototype.</span> <a href="#" class="ab-exp-ver" onclick="verProyecto('giralia'); return false;"><span class="es">Ver proyecto →</span><span class="en">See project →</span></a></p>
+                    </li>
+                </ul>
+
+                <div class="ab-saber">
+                    <div>
+                        <h3><span class="es">Herramientas</span><span class="en">Tools</span></h3>
+                        <dl>
+                            <div><dt>3D</dt><dd>Rhinoceros, Grasshopper, Fusion 360, Solid Edge, AutoCAD, SolidWorks</dd></div>
+                            <div><dt>Render</dt><dd>KeyShot</dd></div>
+                            <div><dt><span class="es">Gráfico</span><span class="en">Graphics</span></dt><dd>Illustrator, Photoshop, InDesign</dd></div>
+                            <div><dt><span class="es">IA</span><span class="en">AI</span></dt><dd>Gemini, Vizcom, Manus, Claude</dd></div>
+                        </dl>
+                    </div>
+                    <div>
+                        <h3><span class="es">Fabricación</span><span class="en">Fabrication</span></h3>
+                        <dl>
+                            <div><dt><span class="es">Joyería</span><span class="en">Jewellery</span></dt><dd><span class="es">Soldadura con soplete, recocido, laminado, conformado en mandril, lijado, pulido y montaje</span><span class="en">Torch soldering, annealing, rolling, mandrel forming, sanding, polishing and assembly</span></dd></div>
+                            <div><dt><span class="es">Cerámica</span><span class="en">Ceramics</span></dt><dd><span class="es">Porcelana Nerikomi, colada en molde, cocción y acabados</span><span class="en">Nerikomi porcelain, slip casting, firing and finishing</span></dd></div>
+                            <div><dt><span class="es">Digital</span><span class="en">Digital</span></dt><dd><span class="es">Impresión 3D (FDM y resina), CNC, termoconformado, moldes de silicona, electrónica básica</span><span class="en">3D printing (FDM and resin), CNC, thermoforming, silicone moulds, basic electronics</span></dd></div>
+                            <div><dt><span class="es">Producción</span><span class="en">Production</span></dt><dd><span class="es">Fichas técnicas, BOMs, control de calidad y trato con proveedores</span><span class="en">Tech packs, BOMs, quality control and supplier management</span></dd></div>
+                        </dl>
+                    </div>
+                    <div>
+                        <h3><span class="es">Formación</span><span class="en">Education</span></h3>
+                        <dl>
+                            <div><dt>2022 – 2026</dt><dd><span class="es">Grado Oficial en Diseño de Producto · UDIT, Madrid</span><span class="en">Bachelor's Degree in Product Design · UDIT, Madrid</span></dd></div>
+                            <div><dt>2019</dt><dd><span class="es">Bachillerato Internacional · Knightsbridge Schools International</span><span class="en">International Baccalaureate · Knightsbridge Schools International</span></dd></div>
+                            <div><dt>2021</dt><dd>Basics of Innovation Management · Leadership and Team Development · Business Management Institute Berlin</dd></div>
+                        </dl>
+                        <h3 class="ab-saber-sub"><span class="es">Idiomas</span><span class="en">Languages</span></h3>
+                        <p class="ab-idiomas"><span class="es">Español nativo · Inglés C1</span><span class="en">Spanish (native) · English C1</span></p>
+                    </div>
+                </div>
+
+                <div class="ab-cv-final">
+                    <a href="docs/CV_Nicolle_Lesmes_Producto_Diseñadora.pdf" target="_blank" class="ab-btn ab-btn-principal es">Descargar CV (PDF)</a>
+                    <a href="docs/CV_Nicolle_Lesmes_Product_Designer.pdf" target="_blank" class="ab-btn ab-btn-principal en">Download CV (PDF)</a>
+                </div>
+            </section>
+
             <p class="ab-disciplinas">Packaging · <span class="es">Joyería</span><span class="en">Jewellery</span> · <span class="es">Mobiliario</span><span class="en">Furniture</span> · Wearables · <span class="es">Iluminación</span><span class="en">Lighting</span> · Soft goods</p>
         </div>
     </div>
@@ -229,151 +294,6 @@
                 </div>
             </section>
             <p class="pf-nota"><span class="es">Las filas con flecha abren el proyecto en esta web; el resto se ve en el portafolio.</span><span class="en">Rows with an arrow open the project on this site; the rest are in the portfolio.</span></p>
-        </div>
-    </div>
-
-    <!-- SECCIÓN 2: CV -->
-    <div id="cv" class="seccion animado">
-        <h1 class="titulo-perfil">
-            <span class="es">Perfil Profesional</span>
-            <span class="en">Professional Profile</span>
-        </h1>
-
-        <div class="cv-descarga-container">
-            <a href="docs/CV_Nicolle_Lesmes_Producto_Diseñadora.pdf" target="_blank" class="btn-descarga-cv es">Descargar CV (PDF)</a>
-            <a href="docs/CV_Nicolle_Lesmes_Product_Designer.pdf" target="_blank" class="btn-descarga-cv en">Download CV (PDF)</a>
-        </div>
-
-        <div class="contenedor-cv">
-            <div class="columna-izq">
-                <div class="bloque-cv">
-                    <h3>
-                        <span class="es">Información Personal</span>
-                        <span class="en">Personal Information</span>
-                    </h3>
-                    <ul>
-                        <li><span class="es">Madrid, España, 28012</span><span class="en">Madrid, Spain, 28012</span></li>
-                    </ul>
-                </div>
-                <br>
-                <div class="bloque-cv">
-                    <h3>
-                        <span class="es">Habilidades Técnicas</span>
-                        <span class="en">Technical Skills</span>
-                    </h3>
-                    <ul>
-                        <li><span class="es"><b>Modelado 3D & Renderizado:</b><br>Rhinoceros, Fusion 360, KeyShot, Grasshopper, AutoCAD, Solid Edge.</span><span class="en"><b>3D Modeling & Rendering:</b><br>Rhinoceros, Fusion 360, KeyShot, Grasshopper, AutoCAD, Solid Edge.</span></li>
-                        <br>
-                        <li><span class="es"><b>Desarrollo & Fabricación:</b><br>Planos técnicos, BOMs, Prototipado, Impresión 3D (Bambulab, ANYCUBIC), Búsqueda proveedores.</span><span class="en"><b>Product Development & Manufacturing:</b><br>Technical drawings, BOMs, prototyping, 3D Printing, materials research, supplier sourcing.</span></li>
-                        <br>
-                        <li><span class="es"><b>Gráfica & Visual:</b><br>Adobe CS (Illustrator, Photoshop, InDesign, Dimension), Sketchbook.</span><span class="en"><b>Graphic & Visual:</b><br>Adobe CS (Illustrator, Photoshop, InDesign, Dimension), Sketchbook.</span></li>
-                        <br>
-                        <li><span class="es"><b>Flujos de Trabajo:</b><br>Herramientas IA (Gemini, Vizcom, ChatGPT, Manus), Análisis de tendencias.</span><span class="en"><b>Workflows:</b><br>AI-powered design tools (Gemini, Vizcom, ChatGPT, Manus), trend analysis.</span></li>
-                    </ul>
-                </div>
-                <br>
-                <div class="bloque-cv">
-                    <h3>
-                        <span class="es">Idiomas</span>
-                        <span class="en">Languages</span>
-                    </h3>
-                    <div class="cv">
-                        <p><span class="es">Inglés (B2 - IELTS)</span><span class="en">English (B2 - IELTS)</span></p>
-                        <p><span class="es">Español - Nativo</span><span class="en">Spanish - Native</span></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="columna-der">
-                <div class="bloque-cv">
-                    <h3>
-                        <span class="es">Experiencia Profesional</span>
-                        <span class="en">Professional Experience</span>
-                    </h3>
-                    <div class="cv">
-                        <h4>
-                            <span class="es">AlegríaB | Diseñadora de Producto (Abr 2026 - Actual)</span>
-                            <span class="en">AlegríaB | Product Designer, Fine Jewellery (Apr 2026 - Present)</span>
-                        </h4>
-                        <p class="es">Modelado 3D de joyería fina en oro en Rhinoceros, a medida de fabricación (engastes, asas, bisagras). Impresión en resina para la fundición en taller externo, renders y catálogos.</p>
-                        <p class="en">3D modelling of fine gold jewellery in Rhinoceros to manufacturing tolerances (stone seats, bails, hinges and closures). Resin prototypes for casting with an external workshop, from 3D file to finished piece, plus catalogue renders.</p>
-                        <br>
-                        <h4>
-                            <span class="es">María Torné | Diseñadora de Producto, Prácticas (Oct 2025 - Feb 2026)</span>
-                            <span class="en">María Torné | Product Designer, Internship (Oct 2025 - Feb 2026)</span>
-                        </h4>
-                        <p class="es">Moldes y troqueles diseñados en Rhinoceros e impresos en 3D que sustituyeron a los de cartón y redujeron errores. Producción de joyería en porcelana, latón y plata: Nerikomi, soldadura, recocido, pulido y montaje.</p>
-                        <p class="en">Designed and 3D-printed production moulds and cutting dies that replaced cardboard templates, reducing errors. Produced porcelain, brass and silver jewellery: Nerikomi, soldering, polishing and assembly.</p>
-                        <br>
-                        <h4>
-                            <span class="es">Old Jeffrey | Diseñadora de Producto Junior (Oct 2023 - Jun 2024)</span>
-                            <span class="en">Old Jeffrey | Junior Product Designer (Oct 2023 - Jun 2024)</span>
-                        </h4>
-                        <p class="es">Indalo: primer perfume de la marca, del naming al packaging, con 3D y presupuestos con fabricantes. OJ Napoli: estampados y fichas técnicas de la colección de baño 2025 (Top 5 Fuera de Serie).</p>
-                        <p class="en">Indalo: the brand's first fragrance, from naming to packaging, with 3D models and supplier quotations. OJ Napoli: prints and tech packs for the 2025 swimwear collection (Top 5 Fuera de Serie).</p>
-                        <br>
-                        <h4>
-                            <span class="es">Parfums Christian Dior Iberia | Proyecto colaborativo UDIT (Sep 2024 - May 2025)</span>
-                            <span class="en">Parfums Christian Dior Iberia | UDIT Collaborative Project (Sep 2024 - May 2025)</span>
-                        </h4>
-                        <p class="es">Dior's Embrace: regalo corporativo hecho con residuos de la Maison, con caja forrada en lona de exposición, textiles reciclados y rafia. Concepto aprobado por la marca.</p>
-                        <p class="en">Dior's Embrace: luxury corporate gift made only from Maison waste, with a box lined in exhibition canvas, recycled fabrics and raffia. Concept approved by Dior Iberia.</p>
-                        <br>
-                        <h4>
-                            <span class="es">Quimbaya by Edwin Rodríguez | Proyecto colaborativo UDIT (Sep 2023 - May 2024)</span>
-                            <span class="en">Quimbaya by Edwin Rodríguez | UDIT Collaborative Project (Sep 2023 - May 2024)</span>
-                        </h4>
-                        <p class="es">Giralia: botellero giratorio para un restaurante con estrella Michelin. Prototipo fabricado y destacado por el chef.</p>
-                        <p class="en">Giralia: hanging rotating bottle display with 11 lit turntables for a Michelin-starred bar. 3D model, CNC drawings and prototype, highlighted by the chef.</p>
-                        <br>
-                    </div>
-                </div>
-
-                <div class="bloque-cv">
-                    <h3>
-                        <span class="es">Formación</span>
-                        <span class="en">Education</span>
-                    </h3>
-                    <div class="cv">
-                        <h4>
-                            <span class="es">Grado Oficial en Diseño de Producto (2022 - 2026)</span>
-                            <span class="en">Official Bachelor's Degree in Product Design (2022 - 2026)</span>
-                        </h4>
-                        <p>UDIT. Madrid.</p>
-                        <br>
-                        <h4>
-                            <span class="es">Bachillerato Internacional (Jun 2019)</span>
-                            <span class="en">International Baccalaureate (Jun 2019)</span>
-                        </h4>
-                        <p>Knightsbridge Schools International. </p>
-                    </div>
-                </div>
-
-                <div class="bloque-cv">
-                    <h3>
-                        <span class="es">Idiomas y Certificaciones</span>
-                        <span class="en">Languages & Certifications</span>
-                    </h3>
-                    <div class="cv">
-                        <h4>
-                            <span class="es">Español nativo · Inglés C1</span>
-                            <span class="en">Spanish (Native) · English C1</span>
-                        </h4>
-                        <br>
-                        <h4>
-                            <span class="es">Basics of Innovation Management (2021)</span>
-                            <span class="en">Basics of Innovation Management (2021)</span>
-                        </h4>
-                        <p>Business Management Institute Berlin.</p>
-                        <br>
-                        <h4>
-                            <span class="es">Leadership and Team Development (2021)</span>
-                            <span class="en">Leadership and Team Development (2021)</span>
-                        </h4>
-                        <p>Business Management Institute Berlin.</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
