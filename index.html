@@ -758,9 +758,23 @@
             </section>
         </div>
 
-        <!-- BANDA DE COLOR A TODO ANCHO -->
-        <section class="cs-banda">
-            <h2 class="cs-banda-titulo"><span class="es">Una sola pieza, todos los colores</span><span class="en">One piece, every colour</span></h2>
+        <div class="cs">
+            <!-- COLOR: el texto explica la banda que va justo debajo -->
+            <section class="cs-dos-col">
+                <div>
+                    <h2><span class="es">Cambia el ambiente, no el objeto</span><span class="en">Change the mood, not the object</span></h2>
+                </div>
+                <div class="cs-texto">
+                    <p class="es">Una sola pieza, todos los colores: con un solo mando se elige el ritmo, el tono y la intensidad de la luz. Así no hace falta imprimir la misma lámpara en varios colores ni acumular stock.</p>
+                    <p class="en">One piece, every colour: a single remote sets the rhythm, tone and intensity of the light, so there's no need to print the same lamp in several colours or build up stock.</p>
+                    <p class="es">La bombilla RGBW de 4,8 W consume poco y dura mucho, y reduce los recambios.</p>
+                    <p class="en">The 4.8 W RGBW bulb uses little energy and lasts long, cutting replacements.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- BANDA DE COLOR: la misma lámpara con seis luces -->
+        <section class="cs-banda cs-banda-ondara">
             <div class="cs-banda-fotos">
                 <img src="img/ondara_c_calida.webp" alt="ONDARA en luz cálida" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
                 <img src="img/ondara_c_rojo.webp" alt="ONDARA en luz roja" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
@@ -769,23 +783,10 @@
                 <img src="img/ondara_c_azul.webp" alt="ONDARA en luz azul" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
                 <img src="img/ondara_c_verde.webp" alt="ONDARA en luz verde" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
             </div>
+            <p class="cs-banda-pie"><span class="es">Cálida · Roja · Fucsia · Lila · Azul · Verde</span><span class="en">Warm · Red · Fuchsia · Lilac · Blue · Green</span></p>
         </section>
 
         <div class="cs">
-            <!-- LUZ Y SOSTENIBILIDAD: texto izquierda, foto derecha -->
-            <section class="cs-fila cs-fila-luz">
-                <div class="cs-texto">
-                    <h2><span class="es">Cambia el ambiente, no el objeto</span><span class="en">Change the mood, not the object</span></h2>
-                    <p class="es">Con un solo mando se elige el ritmo, el tono y la intensidad de la luz. Así no hace falta imprimir la misma lámpara en varios colores ni acumular stock.</p>
-                    <p class="en">A single remote sets the rhythm, tone and intensity of the light, so there's no need to print the same lamp in several colours or build up stock.</p>
-                    <p class="es">La bombilla RGBW de 4,8 W consume poco y dura mucho, y reduce los recambios.</p>
-                    <p class="en">The 4.8 W RGBW bulb uses little energy and lasts long, cutting replacements.</p>
-                </div>
-                <figure class="cs-foto-media">
-                    <img src="img/ondara_ambiente.webp" alt="ONDARA encendida en luz blanca sobre sus patas" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
-                </figure>
-            </section>
-
             <!-- VÍDEO -->
             <figure class="cs-video">
                 <video src="videos/ondara_web.mp4" poster="img/ondara_video_poster.jpg" onclick="abrirVideo(this)" class="video-zoom" data-autoplay muted loop playsinline preload="none"></video>

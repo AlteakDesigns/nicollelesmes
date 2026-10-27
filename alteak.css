@@ -2948,3 +2948,4 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     .cs-siguiente { display: flex; margin-top: 80px; }
     .cs-siguiente img { order: 0; width: 90px; }
 }
+.cs-banda-pie { width: auto; margin: 14px 0 0 0; color: #949494; font-size: 0.8rem; letter-spacing: 1px; }
