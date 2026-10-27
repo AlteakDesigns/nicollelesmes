@@ -430,12 +430,26 @@
 
 
         <div class="cs">
+            <!-- CÓDIGO: texto izquierda, código derecha -->
+            <section class="cs-fila cs-fila-concepto cs-nemyx-codigo">
+                <div class="cs-texto">
+                    <h2><span class="es">Luz programada para escuchar</span><span class="en">Light programmed to listen</span></h2>
+                    <p class="es">Programé la tira de 60 LED WS2812B con la librería FastLED. Un micrófono mide el volumen del entorno y lo compara con su media.</p>
+                    <p class="en">I programmed the strip of 60 WS2812B LEDs with the FastLED library. A microphone measures the surrounding volume and compares it with its average.</p>
+                    <p class="es">Cuando el sonido sube, nacen «serpientes» de luz que recorren la tira, cada una con su velocidad y su color.</p>
+                    <p class="en">When the sound rises, light “snakes” are born and run along the strip, each with its own speed and colour.</p>
+                </div>
+                <figure class="cs-natural cs-codigo">
+                    <img src="img/nemyx_codigo.webp" alt="Fragmento del código de NEMYX en Arduino con FastLED: 60 LED, micrófono y serpientes de luz" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                </figure>
+            </section>
+
             <!-- CIERRE: texto izquierda, foto derecha -->
             <section class="cs-fila cs-fila-luz">
                 <div class="cs-texto">
                     <h2><span class="es">Una segunda vida para unas Ray-Ban</span><span class="en">A second life for a pair of Ray-Bans</span></h2>
-                    <p class="es">Imprimí el exoesqueleto en TPU para que fuera flexible, y soldé y programé la electrónica para que la luz reaccione al sonido en tiempo real.</p>
-                    <p class="en">I printed the exoskeleton in TPU so it would flex, and soldered and programmed the electronics so the light reacts to sound in real time.</p>
+                    <p class="es">Imprimí el exoesqueleto en TPU para que fuera flexible y soldé la electrónica en una pequeña caja en la patilla.</p>
+                    <p class="en">I printed the exoskeleton in TPU so it would flex and soldered the electronics into a small box on the temple.</p>
                     <p class="es">Todo se montó sobre unas Ray-Ban reutilizadas: rigor técnico y sostenibilidad en la misma pieza.</p>
                     <p class="en">Everything was mounted on a repurposed pair of Ray-Bans: technical rigour and sustainability in one piece.</p>
                 </div>
@@ -446,8 +460,9 @@
         </div>
 
         <!-- CIERRE: la imagen más potente del proyecto -->
-        <figure class="cs-cierre">
-            <img src="img/n9.webp" alt="Gafas NEMYX en estudio con la tira LED encendida" onclick="abrirFoto(this)" class="img-zoom" loading="lazy" style="object-position: 50% 55%;">
+        <figure class="cs-cierre cs-cierre-par">
+            <img src="img/n9.webp" alt="Gafas NEMYX de frente en estudio con la tira LED encendida" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+            <img src="img/nemyx_lateral.webp" alt="Gafas NEMYX de perfil en estudio, con la tira LED y la caja de la electrónica" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
         </figure>
 
         <!-- SIGUIENTE PROYECTO -->

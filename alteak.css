@@ -2949,3 +2949,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     .cs-siguiente img { order: 0; width: 90px; }
 }
 .cs-banda-pie { width: auto; margin: 14px 0 0 0; color: #949494; font-size: 0.8rem; letter-spacing: 1px; }
+
+/* NEMYX: código y cierre doble */
+.cs-codigo img { background: #1e1e1e; border: 1px solid #2c2c2c; max-width: 520px; margin-left: auto; }
+.cs-cierre-par { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.cs-cierre-par img { aspect-ratio: 4/3; }
+@media (max-width: 900px) {
+    .cs-cierre-par { grid-template-columns: 1fr; }
+    .cs-cierre-par img { aspect-ratio: 4/3; }
+    .cs-codigo img { margin: 0; }
+}
