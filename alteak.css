@@ -2698,3 +2698,40 @@ a.ab-tarjeta:hover { border-color: #666; transform: translateY(-4px); }
 @media (max-width: 560px) {
     .ab-tarjetas { grid-template-columns: 1fr; }
 }
+
+/* ===== PORTAFOLIO (rediseño) ===== */
+.pf-intro { display: grid; grid-template-columns: 7fr 5fr; gap: 70px; align-items: center; margin-bottom: 100px; }
+.pf-intro h1 { font-size: clamp(2.6rem, 6vw, 5rem); font-weight: 300; line-height: 1.02; margin: 0 0 28px 0; }
+.pf-libro { display: flex; justify-content: center; }
+.pf-tapa { position: relative; display: block; width: 100%; max-width: 340px; aspect-ratio: 210/297; background: #f2f0ec; color: #111; text-decoration: none;
+    box-shadow: -6px 0 16px rgba(0,0,0,0.35), 18px 22px 40px rgba(0,0,0,0.55); transition: transform 0.4s ease; overflow: hidden; }
+.pf-tapa:hover { transform: translateY(-6px) rotate(-1deg); }
+.pf-tapa::before { content: ""; position: absolute; z-index: 2; top: 0; left: 0; width: 12px; height: 100%; background: linear-gradient(to right, rgba(255,255,255,0.35), rgba(0,0,0,0.12) 50%, transparent); }
+.pf-tapa img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; z-index: 1; }
+.pf-tapa-texto { position: absolute; left: 12%; right: 10%; bottom: 12%; display: flex; flex-direction: column; gap: 10px; }
+.pf-tapa-texto small { font-size: 0.65rem; letter-spacing: 2px; color: #777; }
+.pf-tapa-texto strong { font-size: 1.7rem; font-weight: 400; line-height: 1.05; letter-spacing: 1px; }
+.pf-tapa-texto em { font-style: normal; font-size: 0.7rem; letter-spacing: 2px; color: #555; }
+
+.pf-contenido { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 30px; }
+.pf-contenido h2 { font-size: 0.8rem; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; color: #888; margin: 0 0 14px 0; }
+.pf-lista { list-style: none; padding: 0; margin: 0; border-top: 1px solid #2c2c2c; }
+.pf-lista li { border-bottom: 1px solid #2c2c2c; }
+.pf-fila { display: grid; grid-template-columns: 36px 1fr auto 40px; gap: 14px; align-items: baseline; padding: 16px 4px; color: #fff; text-decoration: none; }
+a.pf-fila { transition: background-color 0.3s ease, padding 0.3s ease; }
+a.pf-fila:hover { background-color: #1a1a1a; padding-left: 10px; }
+.pf-num { color: #666; font-size: 0.8rem; }
+.pf-nombre { font-size: 1.05rem; }
+.pf-disc { color: #888; font-size: 0.8rem; text-align: right; }
+.pf-pag { color: #666; font-size: 0.8rem; text-align: right; }
+a.pf-fila .pf-pag { color: #fff; font-size: 1rem; }
+.pf-nota { color: #666; font-size: 0.8rem; margin: 0 0 40px 0; }
+
+@media (max-width: 900px) {
+    .pf-intro { grid-template-columns: 1fr; gap: 40px; margin-bottom: 70px; }
+    .pf-libro { order: -1; }
+    .pf-tapa { max-width: 260px; }
+    .pf-contenido { grid-template-columns: 1fr; gap: 40px; }
+    .pf-fila { grid-template-columns: 30px 1fr 30px; }
+    .pf-disc { grid-column: 2; grid-row: 2; text-align: left; }
+}

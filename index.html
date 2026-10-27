@@ -173,39 +173,62 @@
         </div>
     </div>
 
-<!-- SECCIÓN 1: PORTAFOLIO INTERACTIVO -->
-    <div id="portafolio" class="seccion animado">
-        <h1 class="titulo-perfil">
-            <span class="es">Portafolio</span>
-            <span class="en">Portfolio</span>
-        </h1>
+<!-- SECCIÓN 1: PORTAFOLIO -->
+    <div id="portafolio" class="seccion">
+        <div class="ab pf">
+            <!-- PRESENTACIÓN: texto a la izquierda, portada a la derecha -->
+            <section class="pf-intro animado">
+                <div class="ab-texto">
+                    <p class="ab-eyebrow"><span class="es">Portafolio · 2026</span><span class="en">Portfolio · 2026</span></p>
+                    <h1><span class="es">Portafolio</span><span class="en">Portfolio</span></h1>
+                    <p class="ab-lead">
+                        <span class="es">Tres experiencias profesionales y seis proyectos, de la investigación a la pieza fabricada.</span>
+                        <span class="en">Three professional experiences and six projects, from research to manufactured piece.</span>
+                    </p>
+                    <p class="es">Cada proyecto se cuenta en tres partes: caso, proceso y resultado. Se lee en unos minutos, como un libro.</p>
+                    <p class="en">Each project is told in three parts: brief, process and outcome. It reads in a few minutes, like a book.</p>
+                    <div class="ab-acciones">
+                        <a href="https://heyzine.com/flip-book/60b475ee9a.html" target="_blank" class="ab-btn ab-btn-principal es">Abrir el portafolio</a>
+                        <a href="https://heyzine.com/flip-book/91763d7072.html" target="_blank" class="ab-btn ab-btn-principal en">Open the portfolio</a>
+                        <a href="#" class="ab-btn" onclick="mostrarSeccion('proyectos'); return false;"><span class="es">Ver proyectos en la web</span><span class="en">See projects on the site</span></a>
+                    </div>
+                </div>
+                <div class="pf-libro">
+                    <a href="https://heyzine.com/flip-book/60b475ee9a.html" target="_blank" class="pf-tapa es" aria-label="Abrir el portafolio">
+                        <span class="pf-tapa-texto"><small>PORTAFOLIO · 2026</small><strong>NICOLLE LESMES</strong><em>DISEÑADORA DE PRODUCTO</em></span>
+                        <img src="https://cdnm.heyzine.com/flip-book/cover/60b475ee9a.jpg" alt="Portada del portafolio de Nicolle Lesmes" loading="lazy" onerror="this.remove()">
+                    </a>
+                    <a href="https://heyzine.com/flip-book/91763d7072.html" target="_blank" class="pf-tapa en" aria-label="Open the portfolio">
+                        <span class="pf-tapa-texto"><small>PORTFOLIO · 2026</small><strong>NICOLLE LESMES</strong><em>PRODUCT DESIGNER</em></span>
+                        <img src="https://cdnm.heyzine.com/flip-book/cover/91763d7072.jpg" alt="Nicolle Lesmes portfolio cover" loading="lazy" onerror="this.remove()">
+                    </a>
+                </div>
+            </section>
 
-        <div class="portafolio-interactivo">
-            <div class="portafolio-texto-cta">
-                <h2>
-                    <span class="es">Trabajo Destacado</span>
-                    <span class="en">Featured Work</span>
-                </h2>
-                <p>
-                    <span class="es">Una selección de mis proyectos en diseño de producto, accesorios y lifestyle. De la idea al modelado 3D y la ejecución final.</span>
-                    <span class="en">A selection of my projects in product design, accessories, and lifestyle. From concept to 3D modeling and final execution.</span>
-                </p>
-                <!-- Botones Flipbook -->
-                <a href="https://heyzine.com/flip-book/60b475ee9a.html" target="_blank" class="btn-leer es">Abrir Flipbook</a>
-                <a href="https://heyzine.com/flip-book/91763d7072.html" target="_blank" class="btn-leer en">Open Flipbook</a>
- 
-            </div>
-
-            <div class="portafolio-libro-cta">
-                <a href="https://heyzine.com/flip-book/60b475ee9a.html" target="_blank" class="es">
-                    <img src="https://cdnm.heyzine.com/flip-book/cover/60b475ee9a.jpg" alt="Portafolio Nicolle Lesmes">
-                </a>
-                <a href="https://heyzine.com/flip-book/91763d7072.html" target="_blank" class="en">
-                    <img src="https://cdnm.heyzine.com/flip-book/cover/91763d7072.jpg" alt="Nicolle Lesmes Portfolio">
-
-                   
-                </a>
-            </div>
+            <!-- CONTENIDO del portafolio, con enlace a los proyectos que están en la web -->
+            <section class="pf-contenido">
+                <div>
+                    <h2><span class="es">01 · Experiencia profesional</span><span class="en">01 · Professional experience</span></h2>
+                    <ul class="pf-lista">
+                        <li><div class="pf-fila"><span class="pf-num">—</span><span class="pf-nombre">AlegríaB</span><span class="pf-disc"><span class="es">Joyería fina</span><span class="en">Fine jewellery</span></span><span class="pf-pag">p. 06</span></div></li>
+                        <li><div class="pf-fila"><span class="pf-num">—</span><span class="pf-nombre">María Torné</span><span class="pf-disc"><span class="es">Joyería · porcelana y metal</span><span class="en">Jewellery · porcelain and metal</span></span><span class="pf-pag">p. 11</span></div></li>
+                        <li><div class="pf-fila"><span class="pf-num">—</span><span class="pf-nombre">Old Jeffrey · Indalo</span><span class="pf-disc"><span class="es">Packaging</span><span class="en">Packaging</span></span><span class="pf-pag">p. 14</span></div></li>
+                        <li><a href="#" onclick="verProyecto('napoli'); return false;" class="pf-fila"><span class="pf-num">—</span><span class="pf-nombre">Old Jeffrey · OJ Napoli</span><span class="pf-disc"><span class="es">Textil</span><span class="en">Textiles</span></span><span class="pf-pag">→</span></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2><span class="es">02 · Proyectos</span><span class="en">02 · Projects</span></h2>
+                    <ul class="pf-lista">
+                        <li><a href="#" onclick="verProyecto('amma'); return false;" class="pf-fila"><span class="pf-num">01</span><span class="pf-nombre">Amma</span><span class="pf-disc"><span class="es">Soft goods · diseño modular</span><span class="en">Soft goods · modular design</span></span><span class="pf-pag">→</span></a></li>
+                        <li><a href="#" onclick="verProyecto('dior'); return false;" class="pf-fila"><span class="pf-num">02</span><span class="pf-nombre">Dior's Embrace</span><span class="pf-disc"><span class="es">Packaging · sostenibilidad</span><span class="en">Packaging · sustainability</span></span><span class="pf-pag">→</span></a></li>
+                        <li><a href="#" onclick="verProyecto('nemyx'); return false;" class="pf-fila"><span class="pf-num">03</span><span class="pf-nombre">Nemyx</span><span class="pf-disc"><span class="es">Accesorios · wearable</span><span class="en">Accessories · wearable</span></span><span class="pf-pag">→</span></a></li>
+                        <li><a href="#" onclick="verProyecto('giralia'); return false;" class="pf-fila"><span class="pf-num">04</span><span class="pf-nombre">Giralia</span><span class="pf-disc"><span class="es">Mobiliario · display</span><span class="en">Furniture · display</span></span><span class="pf-pag">→</span></a></li>
+                        <li><a href="#" onclick="verProyecto('naya'); return false;" class="pf-fila"><span class="pf-num">05</span><span class="pf-nombre">Naya</span><span class="pf-disc"><span class="es">Joyería</span><span class="en">Jewellery</span></span><span class="pf-pag">→</span></a></li>
+                        <li><a href="#" onclick="verProyecto('soleris'); return false;" class="pf-fila"><span class="pf-num">06</span><span class="pf-nombre">Soleris</span><span class="pf-disc"><span class="es">Iluminación · fabricación</span><span class="en">Lighting · fabrication</span></span><span class="pf-pag">→</span></a></li>
+                    </ul>
+                </div>
+            </section>
+            <p class="pf-nota"><span class="es">Las filas con flecha abren el proyecto en esta web; el resto se ve en el portafolio.</span><span class="en">Rows with an arrow open the project on this site; the rest are in the portfolio.</span></p>
         </div>
     </div>
 
