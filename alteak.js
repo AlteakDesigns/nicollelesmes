@@ -186,7 +186,7 @@ if (form) {
         const mensaje = encodeURIComponent(bodyInput.value);
 
         const body = `Hola, soy ${nombre}.%0D%0A%0D%0A${mensaje}`;
-        const mailtoLink = `mailto:alteakdesigns@gmail.com?subject=${subject}&body=${body}`;
+        const mailtoLink = `mailto:nicolle.lesmes@gmail.com?subject=${subject}&body=${body}`;
 
         window.location.href = mailtoLink;
     });
