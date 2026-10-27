@@ -257,7 +257,7 @@ function silenciarVideosPagina() {
 }
 
 
-// Al abrir la web: idioma guardado o el del navegador, y directo a Sobre mí
+// Al abrir la web: idioma guardado o el del navegador (la pantalla de entrada ya está visible)
 (function iniciar() {
     let idioma = null;
     try { idioma = localStorage.getItem('idioma'); } catch (e) {}
@@ -266,5 +266,4 @@ function silenciarVideosPagina() {
         idioma = nav.startsWith('es') ? 'es' : 'en';
     }
     cambiarIdioma(idioma);
-    if (typeof mostrarSeccion === 'function') mostrarSeccion('acerca', false);
 })();

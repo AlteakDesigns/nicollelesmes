@@ -44,7 +44,37 @@
         </nav>
     </header>
 
-    <div id="acerca" class="seccion activa">
+    <!-- PANTALLA DE ENTRADA: logo giratorio, firma, idioma y botón de entrar -->
+    <div id="bienvenida" class="seccion activa">
+        <div class="contenedor-bienvenida">
+            <div class="logo-orbita-container">
+                <div class="logo-3d" role="img" aria-label="Alteak Designs">
+                    <img src="img/logo_2.svg" class="logo-layer" alt="" style="--z: 0px;">
+                    <img src="img/logo_2.svg" class="logo-layer" alt="" style="--z: -1px; filter: brightness(0.9);">
+                    <img src="img/logo_2.svg" class="logo-layer" alt="" style="--z: -2px; filter: brightness(0.9);">
+                    <img src="img/logo_2.svg" class="logo-layer" alt="" style="--z: -3px; filter: brightness(0.8);">
+                    <img src="img/logo_2.svg" class="logo-layer" alt="" style="--z: -4px; filter: brightness(0.8);">
+                    <img src="img/logo_2.svg" class="logo-layer" alt="" style="--z: -5px; filter: brightness(0.7);">
+                    <img src="img/logo_2.svg" class="logo-layer" alt="" style="--z: -6px; filter: brightness(0.6);">
+                </div>
+            </div>
+
+            <h2 class="firma-seo">by Nicolle Lesmes</h2>
+
+            <div class="entrada">
+                <p class="subtitulo-btn"><span class="es">Donde se crea con sentido...</span><span class="en">Where creation makes sense...</span></p>
+                <div class="idioma idioma-entrada" role="group" aria-label="Idioma / Language">
+                    <button type="button" data-l="es" onclick="cambiarIdioma('es')">ES</button>
+                    <span aria-hidden="true">|</span>
+                    <button type="button" data-l="en" onclick="cambiarIdioma('en')">EN</button>
+                </div>
+                <button type="button" class="btn-entrar" onclick="mostrarSeccion('acerca')"><span class="es">Entrar</span><span class="en">Enter</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- seccion acerca de mi -->
+    <div id="acerca" class="seccion">
         <div class="ab">
             <!-- PRESENTACIÓN: texto a la izquierda, foto a la derecha -->
             <section class="ab-intro animado">
