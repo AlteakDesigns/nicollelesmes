@@ -2652,3 +2652,7 @@ body.lang-en .es {
     .cs-zt-par { grid-template-columns: 1fr; }
     #zentide .cs-fila-proceso .cs-natural { order: 2; }
 }
+
+/* Portada con la foto entera, sin recorte (ZenTide) */
+.cs-hero.cs-hero-completa { aspect-ratio: 16/9; }
+@media (max-width: 900px) { .cs-hero.cs-hero-completa { aspect-ratio: 16/9; } }
