@@ -2628,14 +2628,3 @@ body.lang-en .es {
     .cs-foto-ancha { margin-bottom: 80px; }
     .cs-foto-ancha img { aspect-ratio: 4/3; }
 }
-
-/* OJ Napoli: portada con la foto vertical a la derecha, fundida con el negro */
-.cs-hero-oj img {
-    position: absolute; top: 0; right: 0;
-    width: 52%; height: 100%; object-fit: cover; object-position: 50% 45%;
-    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 35%);
-    mask-image: linear-gradient(to right, transparent 0, #000 35%);
-}
-@media (max-width: 900px) {
-    .cs-hero-oj img { width: 100%; -webkit-mask-image: none; mask-image: none; object-position: 50% 50%; }
-}
