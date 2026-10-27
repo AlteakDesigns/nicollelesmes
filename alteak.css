@@ -2806,3 +2806,12 @@ a.pf-fila .pf-pag { color: #fff; font-size: 1rem; }
 }
 /* Retrato entero, sin zoom */
 .ab-foto img { aspect-ratio: 3/4; object-fit: cover; object-position: 50% 50%; }
+
+/* Iconos de redes en SVG propio (no dependen de librerías externas) */
+.ico { width: 16px; height: 16px; display: block; }
+.btn-social .ico { color: #000; }
+.ab-redes .btn-social .ico { color: #fff; width: 15px; height: 15px; }
+.footer-centro a { display: inline-flex; }
+.footer-centro .ico { width: 18px; height: 18px; }
+/* Retrato cuadrado, entero */
+.ab-foto img { aspect-ratio: 1/1; }
