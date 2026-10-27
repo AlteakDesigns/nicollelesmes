@@ -2628,3 +2628,7 @@ body.lang-en .es {
     .cs-foto-ancha { margin-bottom: 80px; }
     .cs-foto-ancha img { aspect-ratio: 4/3; }
 }
+
+/* Cierre con la foto entera, sin recorte (Soleris) */
+.cs-cierre-completa img, .cs-cierre-completa img[style] { aspect-ratio: auto; height: auto; object-fit: contain; }
+@media (max-width: 900px) { .cs-cierre-completa img { aspect-ratio: auto; } }
