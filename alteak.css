@@ -2639,3 +2639,16 @@ body.lang-en .es {
 .cs-par-se { margin-bottom: 120px; }
 .cs-par-se img { aspect-ratio: 4/5; }
 @media (max-width: 900px) { .cs-par-se { margin-bottom: 80px; } }
+
+/* ZenTide */
+.cs-zt-ancha { margin: 0 0 140px 0; }
+.cs-zt-gama { grid-template-columns: 4fr 7fr; }
+.cs-zt-par { margin-bottom: 120px; }
+.cs-zt-par img { aspect-ratio: 16/9; }
+.cs-zt-par figcaption { grid-column: 1 / -1; color: #777; font-size: 0.85rem; margin-top: 4px; }
+@media (max-width: 900px) {
+    .cs-zt-ancha, .cs-zt-par { margin-bottom: 80px; }
+    .cs-zt-gama { grid-template-columns: 1fr; }
+    .cs-zt-par { grid-template-columns: 1fr; }
+    #zentide .cs-fila-proceso .cs-natural { order: 2; }
+}

@@ -439,12 +439,12 @@
             </a>
 
             <a href="#" class="proyecto" onclick="verProyecto('zentide')">
-                <img src="img/zenportada.png" alt="ZENTIDE">
+                <img src="img/zt_portada.webp" alt="Botellas de ZenTide vistas desde arriba, con el logotipo" loading="lazy">
                 <div class="info-overlay">
                     <h3>ZENTIDE</h3>
                     <p>
-                        <span class="es">Proyecto Verallia - Branding & Packaging, 2023</span>
-                        <span class="en">Verallia Project - Branding & Packaging, 2023</span>
+                        <span class="es">Packaging · Branding — Botella de vino para Verallia, 2023</span>
+                        <span class="en">Packaging · Branding — Wine bottle for Verallia, 2023</span>
                     </p>
                 </div>
             </a>
@@ -1463,42 +1463,98 @@
             </a>
         </div>
 
-        <div class="titulo-zentide">
-            <h1>ZenTide</h1>
-            <p class="subtitulo">
-                <span class="es">Ondas de bienestar</span>
-                <span class="en">Waves of wellness</span>
+        <!-- PORTADA: las tres botellas entre salpicaduras -->
+        <header class="cs-hero">
+            <img src="img/zt_hero.webp" alt="Las tres botellas de ZenTide, rosado, tinto y blanco, entre salpicaduras de agua" style="object-position: 50% 15%;">
+            <div class="cs-hero-texto">
+                <h1>ZenTide</h1>
+                <p><span class="es">Ondas de bienestar</span><span class="en">Waves of wellness</span></p>
+            </div>
+        </header>
+
+        <div class="cs">
+            <p class="cs-frase">
+                <span class="es">Una botella de vino con relieves en forma de ondas, pensada para regalarse un momento de calma.</span>
+                <span class="en">A wine bottle with wave-shaped reliefs, designed to make room for a moment of calm.</span>
             </p>
+
+            <dl class="cs-datos">
+                <div><dt><span class="es">Reto</span><span class="en">Challenge</span></dt>
+                    <dd><span class="es">Diseñar una botella de vino que fuera más que un envase.</span><span class="en">Design a wine bottle that is more than a container.</span></dd></div>
+                <div><dt><span class="es">Mi rol</span><span class="en">My role</span></dt>
+                    <dd><span class="es">Concepto, modelado 3D, renders, etiquetas y branding.</span><span class="en">Concept, 3D modelling, renders, labels and branding.</span></dd></div>
+                <div><dt><span class="es">Cliente</span><span class="en">Client</span></dt>
+                    <dd>Verallia</dd></div>
+                <div><dt><span class="es">Año</span><span class="en">Year</span></dt>
+                    <dd>2023</dd></div>
+            </dl>
+
+            <!-- CONCEPTO: título a la izquierda, texto a la derecha, y las ondas en grande -->
+            <section class="cs-dos-col">
+                <div>
+                    <h2><span class="es">Cuerpo, mente y espíritu</span><span class="en">Body, mind and spirit</span></h2>
+                </div>
+                <div class="cs-texto">
+                    <p class="es">Cada onda del vidrio representa una de las tres, y juntas invitan a conectar con los sentidos y encontrar equilibrio.</p>
+                    <p class="en">Each wave in the glass stands for one of the three, and together they invite you to connect with your senses and find balance.</p>
+                    <p class="es">Al descorchar y saborear el vino se abre un espacio para la relajación y la contemplación.</p>
+                    <p class="en">Uncorking and savouring the wine opens up a space for relaxation and contemplation.</p>
+                </div>
+            </section>
+            <figure class="cs-natural cs-zt-ancha">
+                <img src="img/zt_ondas.webp" alt="Botellas de ZenTide sobre fondo negro, con los relieves de ondas en la base" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+            </figure>
+
+            <!-- MOODBOARD: imagen izquierda, texto derecha -->
+            <section class="cs-fila cs-fila-proceso">
+                <figure class="cs-natural">
+                    <img src="img/zt_moodboard.webp" alt="Moodboard «El momento»: agua, piedras en equilibrio, atardeceres y la paleta de color" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                </figure>
+                <div class="cs-texto">
+                    <h2><span class="es">El momento</span><span class="en">The moment</span></h2>
+                    <p class="es">El agua, el equilibrio y la luz del atardecer marcan el tono: un instante para uno mismo, de ahí los relieves de ondas y la paleta de tierra y verde.</p>
+                    <p class="en">Water, balance and sunset light set the tone: a moment for yourself, hence the wave reliefs and the earth and green palette.</p>
+                </div>
+            </section>
+
+            <!-- GAMA: texto izquierda, imagen derecha -->
+            <section class="cs-fila cs-fila-concepto cs-zt-gama">
+                <div class="cs-texto">
+                    <h2><span class="es">Tres vidrios, tres vinos</span><span class="en">Three glasses, three wines</span></h2>
+                    <p class="es">Una misma botella en tres colores de vidrio, para el tinto, el blanco y el rosado.</p>
+                    <p class="en">One bottle in three glass colours, for red, white and rosé.</p>
+                    <ul class="cs-lista">
+                        <li><span class="es">Altura: 294 mm.</span><span class="en">Height: 294 mm.</span></li>
+                        <li><span class="es">Diámetro: 85 mm.</span><span class="en">Diameter: 85 mm.</span></li>
+                        <li><span class="es">Volumen: 75 cl.</span><span class="en">Volume: 75 cl.</span></li>
+                    </ul>
+                </div>
+                <figure class="cs-natural">
+                    <img src="img/zt_colores.webp" alt="Gama de colores de la botella: negro, verde y blanco" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                </figure>
+            </section>
+
+            <!-- ETIQUETAS: texto a dos columnas y debajo las dos versiones -->
+            <section class="cs-dos-col">
+                <div>
+                    <h2><span class="es">Dos acabados de etiqueta</span><span class="en">Two label finishes</span></h2>
+                </div>
+                <div class="cs-texto">
+                    <p class="es">Propuse dos versiones: la marca pintada en metalizado directamente sobre el vidrio, o una etiqueta de papel texturizado.</p>
+                    <p class="en">I proposed two versions: the brand painted in metallic ink straight onto the glass, or a textured paper label.</p>
+                </div>
+            </section>
+            <figure class="cs-par cs-zt-par">
+                <img src="img/zt_metalizada.webp" alt="Botellas de ZenTide con la etiqueta en pintura metalizada" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                <img src="img/zt_papel.webp" alt="Botellas de ZenTide con etiqueta de papel texturizado" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                <figcaption><span class="es">Pintura metalizada · Papel texturizado</span><span class="en">Metallic paint · Textured paper</span></figcaption>
+            </figure>
         </div>
 
-        <div class="cuadricula-zentide">
-            <div class="bloque-sup-zentide">
-                <div class="texto-zentide">
-                    <p class="es">
-                        Zen tide es más que una apariencia estética: brinda una experiencia sensorial para disfrutar un
-                        momento de tranquilidad y explorar la salud mental y física. Cada onda representa cuerpo, mente
-                        y espíritu, invitándote a conectar con tus sentidos, encontrar equilibrio mental y sumergirte en
-                        una experiencia espiritual. Al descorchar y saborear cada vino, se crea un espacio para la
-                        relajación, la contemplación y el crecimiento personal.
-                    </p>
-                    <p class="en">
-                        Zen Tide goes beyond mere aesthetics: it offers a sensory experience to enjoy a moment of peace while exploring physical and mental well-being. Each wave represents body, mind, and spirit, inviting you to connect with your senses, find mental balance, and immerse yourself in a spiritual experience. Uncorking and savoring each wine creates a space for relaxation, contemplation, and personal growth.
-                    </p>
-                </div>
-                <div class="imagen-banner-zentide">
-                    <img src="img/zen1.jpg" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                </div>
-            </div>
-
-            <div class="zentide-galeria">
-                <img src="img/zen2.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/zen3.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/zen4.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/zen5.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/zen6.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-                <img src="img/zen7.png" alt="" onclick="abrirFoto(this)" class="img-zoom">
-            </div>
-        </div>
+        <!-- CIERRE: las botellas al atardecer, entera -->
+        <figure class="cs-cierre cs-cierre-completa">
+            <img src="img/zt_cierre.webp" alt="Las tres botellas de ZenTide sobre una mesa al atardecer, junto al mar, con el logotipo «Zen Tide, ondas de bienestar»" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+        </figure>
 
         <div class="detalle-nav">
             <a href="#" onclick="cerrarProyecto()" class="btn-volver">
