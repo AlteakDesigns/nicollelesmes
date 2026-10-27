@@ -1,6 +1,19 @@
 // Desplegar menú responsive
-function desplegarMenu() {
-    document.getElementById('menu').classList.toggle('activo');
+function desplegarMenu(forzarCerrar) {
+    const menu = document.getElementById('menu');
+    const abrir = forzarCerrar ? false : !menu.classList.contains('activo');
+    menu.classList.toggle('activo', abrir);
+    document.body.classList.toggle('menu-abierto', abrir);
+    const btn = document.querySelector('.hamburger');
+    if (btn) { btn.classList.toggle('abierto', abrir); btn.setAttribute('aria-expanded', abrir ? 'true' : 'false'); }
+}
+
+// Cambia el idioma sin salir de la página en la que estás
+function cambiarIdioma(idioma) {
+    const body = document.body;
+    body.classList.remove('lang-es', 'lang-en');
+    body.classList.add(idioma === 'en' ? 'lang-en' : 'lang-es');
+    try { localStorage.setItem('idioma', idioma); } catch (e) {}
 }
 
 // Variable para memorizar la posición en la galería
@@ -31,7 +44,7 @@ function mostrarSeccion(id, subirArriba = true) {
     // Reproduce solo los vídeos de la sección visible (ahorra datos al cargar la web)
     gestionarVideos(seccionActiva);
 
-    document.getElementById('menu').classList.remove('activo');
+    desplegarMenu(true);
     
     // Solo sube al tope si la función lo permite
     if (subirArriba) {

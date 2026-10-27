@@ -17,21 +17,30 @@
 
     <header class="navbar">
         <nav class="navbar-container">
-            <!-- NAVBAR SUPERIOR -->
+            <!-- Logo a la izquierda: lleva a Sobre mí -->
+            <a href="#" class="logo" onclick="mostrarSeccion('acerca'); return false;" aria-label="Alteak Designs · Sobre mí">
+                <img src="img/logo_2.svg" alt="Alteak Designs">
+            </a>
+
+            <!-- Menú a la derecha -->
             <ul class="menu" id="menu">
-                <li><a href="#" onclick="mostrarSeccion('acerca')"><span class="es">Sobre mí</span><span class="en">About me</span></a></li>
-                <li><a href="#" onclick="mostrarSeccion('proyectos')"><span class="es">Galería</span><span class="en">Gallery</span></a></li>
-                <li><a href="#" onclick="mostrarSeccion('portafolio')"><span class="es">Portafolio</span><span class="en">Portfolio</span></a></li>
-                <li><a href="#" onclick="mostrarSeccion('contacto')"><span class="es">Contacto</span><span class="en">Contact</span></a></li>
+                <li><a href="#" onclick="mostrarSeccion('acerca'); return false;"><span class="es">Sobre mí</span><span class="en">About me</span></a></li>
+                <li><a href="#" onclick="mostrarSeccion('proyectos'); return false;"><span class="es">Galería</span><span class="en">Gallery</span></a></li>
+                <li><a href="#" onclick="mostrarSeccion('portafolio'); return false;"><span class="es">Portafolio</span><span class="en">Portfolio</span></a></li>
+                <li class="menu-cta"><a href="#" onclick="mostrarSeccion('contacto'); return false;"><span class="es">Contacto</span><span class="en">Contact</span></a></li>
             </ul>
 
-            <div class="logo" onclick="mostrarSeccion('bienvenida')" style="cursor: pointer;">
-                <img src="img/logo_2.svg" alt="Alteak Designs">
+            <!-- Cambio de idioma sin salir de la página -->
+            <div class="idioma" role="group" aria-label="Idioma">
+                <button type="button" data-l="es" onclick="cambiarIdioma('es')">ES</button>
+                <span aria-hidden="true">|</span>
+                <button type="button" data-l="en" onclick="cambiarIdioma('en')">EN</button>
             </div>
 
-            <div class="hamburger" onclick="desplegarMenu()">
-                ☰ 
-            </div>
+            <!-- Botón de menú en móvil: tres líneas que se convierten en una X -->
+            <button type="button" class="hamburger" aria-label="Abrir menú" aria-expanded="false" onclick="desplegarMenu()">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
     </header>
 
