@@ -998,9 +998,9 @@
             </a>
         </div>
 
-        <!-- PORTADA: la flor sobre la rafia -->
-        <header class="cs-hero">
-            <img src="img/dior_hero.webp" alt="Flor de tela sobre rafia reciclada dentro de la caja de Dior's Embrace" style="object-position: 50% 42%;">
+        <!-- PORTADA: la caja cerrada, sin desvelar el interior -->
+        <header class="cs-hero cs-hero-claro cs-hero-dior">
+            <img src="img/dior_hero.webp" alt="Caja de Dior's Embrace cerrada, forrada en lona blanca con trazos dorados y el logotipo CD">
             <div class="cs-hero-texto">
                 <h1>Dior's Embrace</h1>
                 <p><span class="es">Un gesto, un legado</span><span class="en">A gesture, a legacy</span></p>
@@ -1024,38 +1024,47 @@
                     <dd><span class="es">Concepto aprobado por Dior Iberia, 2025</span><span class="en">Concept approved by Dior Iberia, 2025</span></dd></div>
             </dl>
 
-            <!-- CONCEPTO: texto izquierda, foto derecha -->
+            <!-- CONCEPTO: logo de sostenibilidad + texto, la rosa a la derecha -->
             <section class="cs-fila cs-fila-concepto">
                 <div class="cs-texto">
+                    <img class="cs-logo-cliente cs-logo-ancho" src="img/dior_sostenibilidad.webp" alt="Logotipo de Dior Sustainability">
                     <h2><span class="es">Circularidad sin excepciones</span><span class="en">Circularity, no exceptions</span></h2>
                     <p class="es">El briefing solo permitía usar residuos de Dior, así que la caja se forra con lona de exposición, telas y rafia recicladas de la Maison.</p>
                     <p class="en">The brief only allowed Dior's own waste, so the box is lined with exhibition canvas, fabrics and raffia recycled from the Maison.</p>
-                    <p class="es">La rosa era la flor favorita de Christian Dior: al abrir la caja aparece una flor de tela. Y como para un empleado el valor está en sentirse reconocido, la acompaña una carta personalizada con una frase emblemática de la casa.</p>
-                    <p class="en">The rose was Christian Dior's favourite flower: opening the box reveals a fabric flower. And since what an employee values is feeling recognised, it comes with a personal letter and one of the house's signature phrases.</p>
+                    <p class="es">La rosa era la flor favorita de Christian Dior: al abrir la caja aparece una flor de tela sobre la rafia, con una frase de la casa.</p>
+                    <p class="en">The rose was Christian Dior's favourite flower: opening the box reveals a fabric flower on the raffia, with one of the house's phrases.</p>
                 </div>
                 <figure class="cs-foto-alta">
-                    <img src="img/dior_productos.webp" alt="Caja abierta con la carta personalizada y los productos de Dior sobre rafia" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <img src="img/dior_rosa.webp" alt="Caja abierta con una rosa de tela sobre rafia y la frase «La tradición Dior transforma cada regalo en una obra de arte»" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
                 </figure>
             </section>
 
-            <!-- RESULTADO: texto y mosaico con vídeo -->
-            <section class="cs-resultado">
+            <!-- LA CARTA: foto a la izquierda, texto a la derecha -->
+            <section class="cs-fila cs-fila-dior-carta">
+                <figure class="cs-foto-alta">
+                    <img src="img/dior_productos.webp" alt="Caja abierta con la carta «Gracias por ser parte de Dior» y tres productos Dior sobre rafia" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                </figure>
+                <div class="cs-texto">
+                    <h2><span class="es">Sentirse reconocido</span><span class="en">Feeling recognised</span></h2>
+                    <p class="es">Para un empleado, el valor de un regalo está en sentirse parte de la casa. Por eso cada caja lleva una carta de agradecimiento de la Maison junto a una selección de productos Dior.</p>
+                    <p class="en">For an employee, the value of a gift lies in feeling part of the house. That's why each box holds a thank-you letter from the Maison alongside a selection of Dior products.</p>
+                </div>
+            </section>
+
+            <!-- VÍDEO: vertical a la izquierda, cierre del relato a la derecha -->
+            <section class="cs-fila cs-fila-video">
+                <figure class="cs-video-vertical">
+                    <video src="videos/dior_web.mp4" poster="img/dior_video_poster.jpg" onclick="abrirVideo(this)" class="video-zoom" data-autoplay muted loop playsinline preload="none" aria-label="Vídeo de Dior's Embrace: la caja se abre y muestra la rosa, la carta y los productos"></video>
+                </figure>
                 <div class="cs-texto">
                     <h2><span class="es">Más que un regalo</span><span class="en">More than a gift</span></h2>
                     <p class="es">El prototipo real se hizo con cartón, lona y rafia recicladas de la Maison, y Dior Iberia aprobó el concepto.</p>
                     <p class="en">The real prototype was made with cardboard, canvas and raffia recycled from the Maison, and Dior Iberia approved the concept.</p>
-                </div>
-                <div class="cs-par cs-par-video">
-                    <video src="videos/dior_web.mp4" poster="img/dior_video_poster.jpg" onclick="abrirVideo(this)" class="video-zoom" data-autoplay muted loop playsinline preload="none" aria-label="Vídeo del prototipo de Dior's Embrace abriéndose"></video>
-                    <img src="img/dior_angulo.webp" alt="Caja de Dior's Embrace en ángulo, con el logotipo CD dorado" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                    <p class="es">Haz clic en el vídeo para verlo con sonido.</p>
+                    <p class="en">Click the video to watch it with sound.</p>
                 </div>
             </section>
         </div>
-
-        <!-- CIERRE: la imagen más potente del proyecto -->
-        <figure class="cs-cierre">
-            <img src="img/dior_cierre.webp" alt="Caja de Dior's Embrace abierta con la flor de tela y la frase «La tradición Dior transforma cada regalo en una obra de arte»" onclick="abrirFoto(this)" class="img-zoom" loading="lazy" style="object-position: 50% 30%;">
-        </figure>
 
         <div class="detalle-nav">
             <a href="#" onclick="cerrarProyecto()" class="btn-volver">
