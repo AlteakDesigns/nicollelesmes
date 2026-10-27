@@ -100,46 +100,76 @@
     
     <!-- seccion acerca de mi -->
     <div id="acerca" class="seccion">
-        <div class="contenedor-acerca">
-            <div class="acerca-sup animado">
-                <h1>
-                    <span class="es">¡Hola! Soy Nicolle Lesmes</span>
-                    <span class="en">Hello! I'm Nicolle Lesmes</span>
-                </h1>
-                <h2 class="subtitulo-acerca">
-                    <span class="es">Diseñadora de Producto</span>
-                    <span class="en">Product Designer</span>
-                </h2>
-            </div>
+        <div class="ab">
+            <!-- PRESENTACIÓN: texto a la izquierda, foto a la derecha -->
+            <section class="ab-intro animado">
+                <div class="ab-texto">
+                    <p class="ab-eyebrow"><span class="es">Diseñadora de producto · Madrid</span><span class="en">Product designer · Madrid</span></p>
+                    <h1><span class="es">Hola, soy Nicolle</span><span class="en">Hi, I'm Nicolle</span></h1>
+                    <p class="ab-lead">
+                        <span class="es">Diseñadora de producto polivalente: del packaging de lujo a la joyería, el mobiliario y los wearables.</span>
+                        <span class="en">A versatile product designer: from luxury packaging to jewellery, furniture and wearables.</span>
+                    </p>
+                    <p class="es">Llevo cada proyecto de la idea a la pieza fabricada: investigación, modelado 3D, prototipado, fichas técnicas y trato con fabricantes, equilibrando siempre la estética con la viabilidad técnica.</p>
+                    <p class="en">I take every project from idea to manufactured piece: research, 3D modelling, prototyping, tech packs and working with manufacturers, always balancing aesthetics with technical feasibility.</p>
+                    <p class="es">He trabajado con AlegríaB, María Torné y Old Jeffrey y, a través de UDIT, con Parfums Christian Dior Iberia.</p>
+                    <p class="en">I've worked with AlegríaB, María Torné and Old Jeffrey and, through UDIT, with Parfums Christian Dior Iberia.</p>
+                    <div class="ab-acciones">
+                        <a href="#" class="ab-btn ab-btn-principal" onclick="mostrarSeccion('proyectos'); return false;"><span class="es">Ver proyectos</span><span class="en">See projects</span></a>
+                        <a href="docs/CV_Nicolle_Lesmes_Producto_Diseñadora.pdf" target="_blank" class="ab-btn es">Descargar CV</a>
+                        <a href="docs/CV_Nicolle_Lesmes_Product_Designer.pdf" target="_blank" class="ab-btn en">Download CV</a>
+                    </div>
+                    <div class="redes-sociales ab-redes">
+                        <a href="https://www.linkedin.com/in/nicolle-lesmes" target="_blank" class="btn-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/alteak_designs_/" target="_blank" class="btn-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.behance.net/alteakdesigns" target="_blank" class="btn-social" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                        <a href="mailto:alteakdesigns@gmail.com" class="btn-social" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <figure class="ab-foto">
+                    <img src="img/nicolle.webp" alt="Retrato en blanco y negro de Nicolle Lesmes junto al logotipo de Alteak Designs">
+                </figure>
+            </section>
 
-            <div class="acerca-medio animado">
-                <div class="texto-acerca">
-                    <p class="es">
-                        Apasionada por transformar conceptos en objetos funcionales y listos para producción, equilibrando el valor estético con la utilidad técnica. Impulsada por un diseño intencional enfocado en la coherencia estructural, el refinamiento y la lógica de materiales en cada proyecto. 
-                        <br><br>Experiencia práctica en todo el proceso de desarrollo, desde la investigación y el prototipado rápido hasta el modelado 3D avanzado y los flujos de fabricación, entregando soluciones fundamentadas en su contexto físico y operativo. <br><br> Con recursos y curiosidad natural, probando constantemente nuevos métodos de fabricación y marcos de diseño para abordar los retos modernos de ingeniería y diseño con una perspectiva precisa y constante.
-                    </p>
-                    <p class="en">
-                        Passionate about turning concepts into functional, production-ready objects that balance aesthetic value with technical utility. Driven by intentional design focused on structural coherence, refinement, and material logic across every project. <br> <br>Hands-on experience across the entire development pipeline, from research and rapid prototyping to advanced 3D modeling and manufacturing workflows, delivering solutions grounded in their physical and operational context. <br><br> Resourceful and naturally curious, constantly testing new fabrication methods and design frameworks to tackle modern engineering and design challenges with a precise, consistent perspective.
-                    </p>
+            <!-- CIFRAS -->
+            <dl class="ab-cifras">
+                <div><dt>3</dt><dd><span class="es">empresas en las que he trabajado</span><span class="en">companies I've worked with</span></dd></div>
+                <div><dt>6</dt><dd><span class="es">disciplinas, del packaging a la iluminación</span><span class="en">disciplines, from packaging to lighting</span></dd></div>
+                <div><dt>7</dt><dd><span class="es">prototipos fabricados</span><span class="en">prototypes built</span></dd></div>
+                <div><dt>2</dt><dd><span class="es">colaboraciones con marcas vía UDIT</span><span class="en">brand collaborations via UDIT</span></dd></div>
+            </dl>
+
+            <!-- LO MÁS DESTACADO -->
+            <section class="ab-destacados">
+                <h2><span class="es">Lo más destacado</span><span class="en">Highlights</span></h2>
+                <div class="ab-tarjetas">
+                    <a href="#" class="ab-tarjeta" onclick="verProyecto('dior'); return false;">
+                        <span class="ab-num">01</span>
+                        <h3><span class="es">Diseñado para Dior</span><span class="en">Designed for Dior</span></h3>
+                        <p><span class="es">Proyecto con UDIT para Parfums Christian Dior Iberia: concepto aprobado y lujo hecho con sus propios residuos.</span><span class="en">A UDIT project for Parfums Christian Dior Iberia: concept approved, luxury made from the Maison's own waste.</span></p>
+                        <span class="ab-ver"><span class="es">Ver proyecto →</span><span class="en">See project →</span></span>
+                    </a>
+                    <div class="ab-tarjeta">
+                        <span class="ab-num">02</span>
+                        <h3><span class="es">Perfume en Old Jeffrey</span><span class="en">Perfume at Old Jeffrey</span></h3>
+                        <p><span class="es">Como diseñadora de la marca, creé su primer perfume: del naming a los presupuestos con fabricantes.</span><span class="en">As the brand's designer, I created its first fragrance: from naming to manufacturer quotes.</span></p>
+                    </div>
+                    <a href="#" class="ab-tarjeta" onclick="verProyecto('napoli'); return false;">
+                        <span class="ab-num">03</span>
+                        <h3><span class="es">Top 5 en Expansión</span><span class="en">Top 5 in Expansión</span></h3>
+                        <p><span class="es">Mis estampados para la colección de baño OJ Napoli, destacados por Fuera de Serie.</span><span class="en">My prints for the OJ Napoli swimwear collection, featured by Fuera de Serie.</span></p>
+                        <span class="ab-ver"><span class="es">Ver proyecto →</span><span class="en">See project →</span></span>
+                    </a>
+                    <a href="#" class="ab-tarjeta" onclick="verProyecto('giralia'); return false;">
+                        <span class="ab-num">04</span>
+                        <h3><span class="es">Elegido por el chef</span><span class="en">Chosen by the chef</span></h3>
+                        <p><span class="es">Edwin Rodríguez, chef de Quimbaya (estrella Michelin), destacó mi botellero. Prototipo fabricado por mí.</span><span class="en">Edwin Rodríguez, chef at Quimbaya (Michelin star), singled out my bottle display. Prototype built by me.</span></p>
+                        <span class="ab-ver"><span class="es">Ver proyecto →</span><span class="en">See project →</span></span>
+                    </a>
                 </div>
-                <div class="imagen-yo">
-                    <img src="img/nicolle.png" alt="Nicolle Lesmes">
-                    <div class="redes-sociales">
-                        <a href="https://www.linkedin.com/in/nicolle-lesmes" target="_blank" class="btn-social">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://www.instagram.com/alteak_designs_/" target="_blank" class="btn-social">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.behance.net/alteakdesigns" target="_blank" class="btn-social">
-                            <i class="fab fa-behance"></i>
-                        </a>
-                        <a href="mailto:alteakdesigns@gmail.com" target="_blank" class="btn-social">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>    
-                </div>
-            </div>
+            </section>
+
+            <p class="ab-disciplinas">Packaging · <span class="es">Joyería</span><span class="en">Jewellery</span> · <span class="es">Mobiliario</span><span class="en">Furniture</span> · Wearables · <span class="es">Iluminación</span><span class="en">Lighting</span> · Soft goods</p>
         </div>
     </div>
 
