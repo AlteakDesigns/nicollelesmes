@@ -2959,3 +2959,30 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     .cs-cierre-par img { aspect-ratio: 4/3; }
     .cs-codigo img { margin: 0; }
 }
+
+/* ===== GALERÍA (rediseño) ===== */
+.gal-cab { max-width: 1200px; margin: 0 auto; padding: 50px 5% 10px 5%; }
+.gal-cab h1 { font-size: clamp(2.6rem, 5.4vw, 4.6rem); font-weight: 300; line-height: 1.02; margin: 0 0 24px 0; }
+.gal-cab .ab-lead { margin-bottom: 34px; }
+.gal-filtros { display: flex; flex-wrap: wrap; gap: 8px; }
+.gal-filtro { width: auto; margin: 0; background: none; border: 1px solid #333; color: #bbb; font: inherit; font-size: 0.8rem;
+    padding: 8px 16px; border-radius: 30px; cursor: pointer; transition: all 0.2s ease; }
+.gal-filtro:hover { border-color: #888; color: #fff; background: none; }
+.gal-filtro.activo { background: #fff; color: #111; border-color: #fff; }
+.contenedor-galeria { padding-top: 30px; }
+.proyecto.oculto { display: none; }
+
+/* Nombre del proyecto siempre visible; el detalle aparece al pasar el ratón */
+.info-overlay { opacity: 1; padding: 28px; background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.15) 45%, transparent 70%); }
+.info-overlay h3 { transform: none; font-size: 1.25rem; font-weight: 500; margin-bottom: 4px; }
+.info-overlay p { font-size: 0.85rem; }
+@media (hover: hover) {
+    .info-overlay p { opacity: 0; max-height: 0; transform: translateY(6px); transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease; }
+    .proyecto:hover .info-overlay { background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.25) 55%, transparent 100%); }
+    .proyecto:hover .info-overlay p { opacity: 1; max-height: 4em; transform: none; }
+}
+@media (max-width: 768px) {
+    .gal-cab { padding-top: 30px; }
+    .info-overlay { padding: 20px; }
+    .info-overlay h3 { font-size: 1.1rem; }
+}

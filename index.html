@@ -215,64 +215,22 @@
 
     <!-- seccion mis proyectos -->
     <div id="proyectos" class="seccion animado">
-        <div class="portada-proyectos">
-            <h1>
-                <span class="es">Galería de Proyectos</span>
-                <span class="en">Project Gallery</span>
-            </h1>
-            <p>
-                <span class="es">Exploración visual y resultados</span>
-                <span class="en">Visual exploration and results</span>
-            </p>
-            <a href="#galeria" class="flecha-bajar" onclick="deslizarAbajo(event)"></a>
+        <div class="gal-cab animado">
+            <p class="ab-eyebrow"><span class="es">Galería · 10 proyectos</span><span class="en">Gallery · 10 projects</span></p>
+            <h1><span class="es">Proyectos</span><span class="en">Projects</span></h1>
+            <p class="ab-lead"><span class="es">Del packaging de lujo a la iluminación: cada proyecto, de la idea a la pieza.</span><span class="en">From luxury packaging to lighting: every project, from idea to finished piece.</span></p>
+            <div class="gal-filtros" role="group" aria-label="Filtrar proyectos">
+                <button type="button" class="gal-filtro activo" data-filtro="todos" onclick="filtrarGaleria('todos', this)"><span class="es">Todos</span><span class="en">All</span></button>
+                <button type="button" class="gal-filtro" data-filtro="packaging" onclick="filtrarGaleria('packaging', this)"><span class="es">Packaging</span><span class="en">Packaging</span></button>
+                <button type="button" class="gal-filtro" data-filtro="joyeria" onclick="filtrarGaleria('joyeria', this)"><span class="es">Joyería y wearables</span><span class="en">Jewellery & wearables</span></button>
+                <button type="button" class="gal-filtro" data-filtro="iluminacion" onclick="filtrarGaleria('iluminacion', this)"><span class="es">Iluminación</span><span class="en">Lighting</span></button>
+                <button type="button" class="gal-filtro" data-filtro="mobiliario" onclick="filtrarGaleria('mobiliario', this)"><span class="es">Mobiliario</span><span class="en">Furniture</span></button>
+                <button type="button" class="gal-filtro" data-filtro="textil" onclick="filtrarGaleria('textil', this)"><span class="es">Textil y soft goods</span><span class="en">Textiles & soft goods</span></button>
+            </div>
         </div>
 
         <div id="galeria" class="contenedor-galeria">
-            <a href="#" class="proyecto" onclick="verProyecto('nemyx')">
-                <img src="img/nemyxp.webp" alt="NEMYX, gafas escultóricas que traducen el sonido en luz" loading="lazy">
-                <div class="info-overlay">
-                    <h3>NEMYX</h3>
-                    <p>
-                        <span class="es">Accesorios · Wearable — Escaneo 3D, TPU y electrónica, 2026</span>
-                        <span class="en">Accessories · Wearable — 3D Scanning, TPU & Electronics, 2026</span>
-                    </p>
-                </div>
-            </a>
-            
-            <a href="#" class="proyecto" onclick="verProyecto('amma')">
-                <img src="img/amma_portada.webp" alt="AMMA, sistema modular de portabebé, mochila y bolso" loading="lazy">
-                <div class="info-overlay">
-                    <h3>AMMA</h3>
-                    <p>
-                        <span class="es">Soft goods · Diseño modular — Trabajo de Fin de Grado, 2026</span>
-                        <span class="en">Soft goods · Modular design — Bachelor's Final Project, 2026</span>
-                    </p>
-                </div>
-            </a>
-            
-            <a href="#" class="proyecto" onclick="verProyecto('ondara')">
-                <img src="img/ondara_portada.webp" alt="Detalle de las ondas impresas en 3D de la lámpara ONDARA" loading="lazy">
-                <div class="info-overlay">
-                    <h3>ONDARA</h3>
-                    <p>
-                        <span class="es">Iluminación · Diseño paramétrico — PETG y PLA, 2025</span>
-                        <span class="en">Lighting · Parametric design — PETG & PLA, 2025</span>
-                    </p>
-                </div>
-            </a>
-
-            <a href="#" class="proyecto" onclick="verProyecto('naya')">
-                <img src="img/naya_portada.webp" alt="Pendiente NAYA de rosas caladas en una modelo" loading="lazy">
-                <div class="info-overlay">
-                    <h3>NAYA</h3>
-                    <p>
-                        <span class="es">Joyería · Modelado paramétrico — Resina impresa en 3D, 2025</span>
-                        <span class="en">Jewellery · Parametric modelling — 3D-printed resin, 2025</span>
-                    </p>
-                </div>
-            </a>
-
-            <a href="#" class="proyecto" onclick="verProyecto('dior')">
+            <a href="#" class="proyecto" data-cat="packaging" onclick="verProyecto('dior'); return false;">
                 <img src="img/dior_portada.webp" alt="Caja de Dior's Embrace cerrada, con el logotipo CD dorado" loading="lazy">
                 <div class="info-overlay">
                     <h3>DIOR'S EMBRACE</h3>
@@ -283,29 +241,7 @@
                 </div>
             </a>
 
-            <a href="#" class="proyecto" onclick="verProyecto('napoli')">
-                <img src="img/oj_portada.webp" alt="Bañadores OJ Napoli de colores apilados" loading="lazy">
-                <div class="info-overlay">
-                    <h3>OJ NAPOLI</h3>
-                    <p>
-                        <span class="es">Textil · Estampados — Old Jeffrey, colección de baño 2025</span>
-                        <span class="en">Textiles · Prints — Old Jeffrey, 2025 swim collection</span>
-                    </p>
-                </div>
-            </a>
-
-            <a href="#" class="proyecto" onclick="verProyecto('soleris')">
-                <img src="img/soleris_portada.webp" alt="Detalle de la lámpara SOLERIS encendida, con el aro y la base de piedra" loading="lazy" style="object-position: 0% 50%; transform-origin: 20% 50%;">
-                <div class="info-overlay">
-                    <h3>SOLERIS</h3>
-                    <p>
-                        <span class="es">Iluminación · Fabricación — CNC, termoconformado y cemento, 2025</span>
-                        <span class="en">Lighting · Fabrication — CNC, thermoforming and concrete, 2025</span>
-                    </p>
-                </div>
-            </a>
-
-            <a href="#" class="proyecto" onclick="verProyecto('giralia')">
+            <a href="#" class="proyecto" data-cat="mobiliario" onclick="verProyecto('giralia'); return false;">
                 <img src="img/giralia_portada.webp" alt="Giralia instalado sobre la barra de Quimbaya" loading="lazy">
                 <div class="info-overlay">
                     <h3>GIRALIA</h3>
@@ -316,7 +252,73 @@
                 </div>
             </a>
 
-            <a href="#" class="proyecto" onclick="verProyecto('singular')">
+            <a href="#" class="proyecto" data-cat="textil" onclick="verProyecto('napoli'); return false;">
+                <img src="img/oj_portada.webp" alt="Bañadores OJ Napoli de colores apilados" loading="lazy">
+                <div class="info-overlay">
+                    <h3>OJ NAPOLI</h3>
+                    <p>
+                        <span class="es">Textil · Estampados — Old Jeffrey, colección de baño 2025</span>
+                        <span class="en">Textiles · Prints — Old Jeffrey, 2025 swim collection</span>
+                    </p>
+                </div>
+            </a>
+
+            <a href="#" class="proyecto" data-cat="textil" onclick="verProyecto('amma'); return false;">
+                <img src="img/amma_portada.webp" alt="AMMA, sistema modular de portabebé, mochila y bolso" loading="lazy">
+                <div class="info-overlay">
+                    <h3>AMMA</h3>
+                    <p>
+                        <span class="es">Soft goods · Diseño modular — Trabajo de Fin de Grado, 2026</span>
+                        <span class="en">Soft goods · Modular design — Bachelor's Final Project, 2026</span>
+                    </p>
+                </div>
+            </a>
+
+            <a href="#" class="proyecto" data-cat="joyeria" onclick="verProyecto('nemyx'); return false;">
+                <img src="img/nemyxp.webp" alt="NEMYX, gafas escultóricas que traducen el sonido en luz" loading="lazy">
+                <div class="info-overlay">
+                    <h3>NEMYX</h3>
+                    <p>
+                        <span class="es">Accesorios · Wearable — Escaneo 3D, TPU y electrónica, 2026</span>
+                        <span class="en">Accessories · Wearable — 3D Scanning, TPU & Electronics, 2026</span>
+                    </p>
+                </div>
+            </a>
+
+            <a href="#" class="proyecto" data-cat="iluminacion" onclick="verProyecto('soleris'); return false;">
+                <img src="img/soleris_portada.webp" alt="Detalle de la lámpara SOLERIS encendida, con el aro y la base de piedra" loading="lazy" style="object-position: 0% 50%; transform-origin: 20% 50%;">
+                <div class="info-overlay">
+                    <h3>SOLERIS</h3>
+                    <p>
+                        <span class="es">Iluminación · Fabricación — CNC, termoconformado y cemento, 2025</span>
+                        <span class="en">Lighting · Fabrication — CNC, thermoforming and concrete, 2025</span>
+                    </p>
+                </div>
+            </a>
+
+            <a href="#" class="proyecto" data-cat="joyeria" onclick="verProyecto('naya'); return false;">
+                <img src="img/naya_portada.webp" alt="Pendiente NAYA de rosas caladas en una modelo" loading="lazy">
+                <div class="info-overlay">
+                    <h3>NAYA</h3>
+                    <p>
+                        <span class="es">Joyería · Modelado paramétrico — Resina impresa en 3D, 2025</span>
+                        <span class="en">Jewellery · Parametric modelling — 3D-printed resin, 2025</span>
+                    </p>
+                </div>
+            </a>
+
+            <a href="#" class="proyecto" data-cat="iluminacion" onclick="verProyecto('ondara'); return false;">
+                <img src="img/ondara_portada.webp" alt="Detalle de las ondas impresas en 3D de la lámpara ONDARA" loading="lazy">
+                <div class="info-overlay">
+                    <h3>ONDARA</h3>
+                    <p>
+                        <span class="es">Iluminación · Diseño paramétrico — PETG y PLA, 2025</span>
+                        <span class="en">Lighting · Parametric design — PETG & PLA, 2025</span>
+                    </p>
+                </div>
+            </a>
+
+            <a href="#" class="proyecto" data-cat="packaging" onclick="verProyecto('singular'); return false;">
                 <img src="img/se_portada.webp" alt="Frasco de Singular Essence dentro de su estuche abierto" loading="lazy">
                 <div class="info-overlay">
                     <h3>SINGULAR ESSENCE</h3>
@@ -327,7 +329,7 @@
                 </div>
             </a>
 
-            <a href="#" class="proyecto" onclick="verProyecto('zentide')">
+            <a href="#" class="proyecto" data-cat="packaging" onclick="verProyecto('zentide'); return false;">
                 <img src="img/zt_portada.webp" alt="Botellas de ZenTide vistas desde arriba, con el logotipo" loading="lazy">
                 <div class="info-overlay">
                     <h3>ZENTIDE</h3>
@@ -391,9 +393,9 @@
                 <div class="cs-texto">
                     <h2><span class="es">Una escultura que escucha</span><span class="en">A sculpture that listens</span></h2>
                     <p class="es">Nemyx es una vía de escape donde la escultura gótica y la tecnología colisionan. Su sensor capta el ritmo acústico y lo traduce en pulsos de luz.</p>
-                    <p class="en">Nemyx is an escape where Gothic sculpture and technology collide. Its sensor picks up acoustic rhythm and turns it into pulses of light.</p>
+                    <p class="en">Nemyx is an escape where Gothic sculpture and technology collide. Its sensor picks up the rhythm of sound and turns it into pulses of light.</p>
                     <p class="es">Está pensada para observadores imaginativos que buscan mantener viva la sensibilidad y el arte frente a la indiferencia moderna.</p>
-                    <p class="en">It is made for imaginative observers who want to keep sensitivity and art alive against modern indifference.</p>
+                    <p class="en">It's made for imaginative viewers who want to keep sensitivity and art alive in the face of modern indifference.</p>
                 </div>
                 <figure class="cs-foto-alta">
                     <img src="img/nemyx.webp" alt="Modelo de perfil con las gafas NEMYX iluminadas" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
@@ -466,14 +468,14 @@
         </figure>
 
         <!-- SIGUIENTE PROYECTO -->
-        <a href="#" class="cs-siguiente" onclick="mostrarSeccion('amma'); return false;">
+        <a href="#" class="cs-siguiente" onclick="mostrarSeccion('soleris'); return false;">
             <span class="cs-sig-texto">
                 <span class="cs-sig-eti"><span class="es">Siguiente proyecto</span><span class="en">Next project</span></span>
-                <strong>Amma</strong>
-                <span class="cs-sig-disc"><span class="es">Soft goods · Diseño modular</span><span class="en">Soft goods · Modular design</span></span>
+                <strong>Soleris</strong>
+                <span class="cs-sig-disc"><span class="es">Iluminación · Fabricación</span><span class="en">Lighting · Fabrication</span></span>
                 <span class="cs-sig-ir">→</span>
             </span>
-            <img src="img/amma_portada.webp" alt="" loading="lazy">
+            <img src="img/soleris_portada.webp" alt="" loading="lazy" style="object-position: 0% 50%;">
         </a>
 
         <div class="detalle-nav">
@@ -511,7 +513,7 @@
 
             <dl class="cs-datos">
                 <div><dt><span class="es">Reto</span><span class="en">Challenge</span></dt>
-                    <dd><span class="es">Acabar con la obsolescencia biológica de los productos infantiles, que quedan inservibles en pocos meses.</span><span class="en">End the biological obsolescence of baby products, which become useless within months.</span></dd></div>
+                    <dd><span class="es">Acabar con la obsolescencia biológica de los productos infantiles, que quedan inservibles en pocos meses.</span><span class="en">End the “biological obsolescence” of baby products, which children outgrow within months.</span></dd></div>
                 <div><dt><span class="es">Mi rol</span><span class="en">My role</span></dt>
                     <dd><span class="es">Encuestas y entrevistas, estrategia, bocetos, patronaje, maqueta y sistema modular.</span><span class="en">Surveys and interviews, strategy, sketches, pattern-making, mock-up and modular system.</span></dd></div>
                 <div><dt><span class="es">Proyecto</span><span class="en">Project</span></dt>
@@ -527,7 +529,7 @@
                     <p class="es">Con encuestas y entrevistas a cuidadores busqué qué les complica el día a día al moverse con un bebé.</p>
                     <p class="en">Through surveys and interviews with caregivers, I looked for what makes getting around with a baby hard.</p>
                     <p class="es">De ahí salen las decisiones: un portabebé integrado que libera las manos y crece de 0 a 4 años, y un bolso eje que reparte la carga y organiza las cosas del bebé y del adulto.</p>
-                    <p class="en">That drove the decisions: an integrated carrier that frees the hands and grows from 0 to 4 years, and a core bag that spreads the load and organises both baby's and adult's things.</p>
+                    <p class="en">That drove the decisions: an integrated carrier that frees the hands and grows from 0 to 4 years, and a core bag that spreads the load and organises both the baby's and the adult's things.</p>
                 </div>
                 <div class="cs-cifras cs-cifras-col">
                     <div><strong>3,83<small>/5</small></strong><span class="es">pérdida de movilidad, su principal barrera diaria</span><span class="en">loss of mobility, their main daily barrier</span></div>
@@ -586,7 +588,7 @@
                     <span class="amma-funcion-num">2</span>
                     <div>
                         <h4><span class="es">Portabebé evolutivo</span><span class="en">Evolving baby carrier</span></h4>
-                        <p><span class="es">Crece con el bebé de 0 a 4 años, se convierte en mochila infantil y se guarda en el compartimento exterior.</span><span class="en">It grows with the baby from 0 to 4 years, turns into a toddler backpack and stores in the outer compartment.</span></p>
+                        <p><span class="es">Crece con el bebé de 0 a 4 años, se convierte en mochila infantil y se guarda en el compartimento exterior.</span><span class="en">It grows with the baby from 0 to 4 years, turns into a toddler backpack and folds into the outer compartment.</span></p>
                     </div>
                 </div>
                 <div class="amma-funcion-imgs" style="--n: 5;">
@@ -675,14 +677,14 @@
         </figure>
 
         <!-- SIGUIENTE PROYECTO -->
-        <a href="#" class="cs-siguiente" onclick="mostrarSeccion('ondara'); return false;">
+        <a href="#" class="cs-siguiente" onclick="mostrarSeccion('nemyx'); return false;">
             <span class="cs-sig-texto">
                 <span class="cs-sig-eti"><span class="es">Siguiente proyecto</span><span class="en">Next project</span></span>
-                <strong>Ondara</strong>
-                <span class="cs-sig-disc"><span class="es">Iluminación · Diseño paramétrico</span><span class="en">Lighting · Parametric design</span></span>
+                <strong>Nemyx</strong>
+                <span class="cs-sig-disc"><span class="es">Accesorios · Wearable</span><span class="en">Accessories · Wearable</span></span>
                 <span class="cs-sig-ir">→</span>
             </span>
-            <img src="img/ondara_portada.webp" alt="" loading="lazy">
+            <img src="img/nemyxp.webp" alt="" loading="lazy">
         </a>
 
         <div class="detalle-nav">
@@ -815,14 +817,14 @@
         </figure>
 
         <!-- SIGUIENTE PROYECTO -->
-        <a href="#" class="cs-siguiente" onclick="mostrarSeccion('naya'); return false;">
+        <a href="#" class="cs-siguiente" onclick="mostrarSeccion('singular'); return false;">
             <span class="cs-sig-texto">
                 <span class="cs-sig-eti"><span class="es">Siguiente proyecto</span><span class="en">Next project</span></span>
-                <strong>Naya</strong>
-                <span class="cs-sig-disc"><span class="es">Joyería · Modelado paramétrico</span><span class="en">Jewellery · Parametric modelling</span></span>
+                <strong>Singular Essence</strong>
+                <span class="cs-sig-disc"><span class="es">Packaging · Branding</span><span class="en">Packaging · Branding</span></span>
                 <span class="cs-sig-ir">→</span>
             </span>
-            <img src="img/naya_portada.webp" alt="" loading="lazy">
+            <img src="img/se_portada.webp" alt="" loading="lazy">
         </a>
 
         <div class="detalle-nav">
@@ -875,7 +877,7 @@
                     <p class="es">Colección de pendientes que reimagina la colonización colombiana desde un futuro alternativo en el que las culturas indígenas triunfan, y que simboliza resistencia, tradición e innovación.</p>
                     <p class="en">An earring collection that reimagines Colombian colonisation through an alternative future where indigenous cultures prevail, symbolising resistance, tradition and innovation.</p>
                     <p class="es">La orfebrería indígena domina la espiral, el calado y la repetición: de ahí salen las rosas caladas en espiral que forman toda la colección. Lo medieval aporta tensión y ritmo vertical, con caídas y flecos que alargan la pieza.</p>
-                    <p class="en">Indigenous goldsmithing masters the spiral, openwork and repetition: that became the spiralled openwork roses behind the whole collection. The medieval adds tension and vertical rhythm, with drops and fringes that lengthen the piece.</p>
+                    <p class="en">Indigenous goldsmithing masters the spiral, openwork and repetition: that became the spiralled openwork roses behind the whole collection. Medieval influences add tension and vertical rhythm, with drops and fringes that lengthen the piece.</p>
                 </div>
                 <figure class="cs-foto-alta">
                     <img src="img/naya_modelo.webp" alt="Retrato en blanco y negro de una modelo con pintura facial y un pendiente NAYA de tres rosas caladas" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
@@ -920,14 +922,14 @@
         </section>
 
         <!-- SIGUIENTE PROYECTO -->
-        <a href="#" class="cs-siguiente" onclick="mostrarSeccion('dior'); return false;">
+        <a href="#" class="cs-siguiente" onclick="mostrarSeccion('ondara'); return false;">
             <span class="cs-sig-texto">
                 <span class="cs-sig-eti"><span class="es">Siguiente proyecto</span><span class="en">Next project</span></span>
-                <strong>Dior's Embrace</strong>
-                <span class="cs-sig-disc"><span class="es">Packaging · Regalo corporativo sostenible</span><span class="en">Packaging · Sustainable corporate gift</span></span>
+                <strong>Ondara</strong>
+                <span class="cs-sig-disc"><span class="es">Iluminación · Diseño paramétrico</span><span class="en">Lighting · Parametric design</span></span>
                 <span class="cs-sig-ir">→</span>
             </span>
-            <img src="img/dior_portada.webp" alt="" loading="lazy">
+            <img src="img/ondara_portada.webp" alt="" loading="lazy">
         </a>
 
         <div class="detalle-nav">
@@ -1013,14 +1015,14 @@
         </div>
 
         <!-- SIGUIENTE PROYECTO -->
-        <a href="#" class="cs-siguiente" onclick="mostrarSeccion('napoli'); return false;">
+        <a href="#" class="cs-siguiente" onclick="mostrarSeccion('giralia'); return false;">
             <span class="cs-sig-texto">
                 <span class="cs-sig-eti"><span class="es">Siguiente proyecto</span><span class="en">Next project</span></span>
-                <strong>OJ Napoli</strong>
-                <span class="cs-sig-disc"><span class="es">Textil · Estampados</span><span class="en">Textiles · Prints</span></span>
+                <strong>Giralia</strong>
+                <span class="cs-sig-disc"><span class="es">Mobiliario · Hostelería</span><span class="en">Furniture · Hospitality</span></span>
                 <span class="cs-sig-ir">→</span>
             </span>
-            <img src="img/oj_portada.webp" alt="" loading="lazy">
+            <img src="img/giralia_portada.webp" alt="" loading="lazy">
         </a>
 
         <div class="detalle-nav">
@@ -1114,14 +1116,14 @@
         </section>
 
         <!-- SIGUIENTE PROYECTO -->
-        <a href="#" class="cs-siguiente" onclick="mostrarSeccion('soleris'); return false;">
+        <a href="#" class="cs-siguiente" onclick="mostrarSeccion('amma'); return false;">
             <span class="cs-sig-texto">
                 <span class="cs-sig-eti"><span class="es">Siguiente proyecto</span><span class="en">Next project</span></span>
-                <strong>Soleris</strong>
-                <span class="cs-sig-disc"><span class="es">Iluminación · Fabricación</span><span class="en">Lighting · Fabrication</span></span>
+                <strong>Amma</strong>
+                <span class="cs-sig-disc"><span class="es">Soft goods · Diseño modular</span><span class="en">Soft goods · Modular design</span></span>
                 <span class="cs-sig-ir">→</span>
             </span>
-            <img src="img/soleris_portada.webp" alt="" loading="lazy" style="object-position: 0% 50%;">
+            <img src="img/amma_portada.webp" alt="" loading="lazy">
         </a>
 
         <div class="detalle-nav">
@@ -1210,14 +1212,14 @@
 
 
         <!-- SIGUIENTE PROYECTO -->
-        <a href="#" class="cs-siguiente" onclick="mostrarSeccion('giralia'); return false;">
+        <a href="#" class="cs-siguiente" onclick="mostrarSeccion('naya'); return false;">
             <span class="cs-sig-texto">
                 <span class="cs-sig-eti"><span class="es">Siguiente proyecto</span><span class="en">Next project</span></span>
-                <strong>Giralia</strong>
-                <span class="cs-sig-disc"><span class="es">Mobiliario · Hostelería</span><span class="en">Furniture · Hospitality</span></span>
+                <strong>Naya</strong>
+                <span class="cs-sig-disc"><span class="es">Joyería · Modelado paramétrico</span><span class="en">Jewellery · Parametric modelling</span></span>
                 <span class="cs-sig-ir">→</span>
             </span>
-            <img src="img/giralia_portada.webp" alt="" loading="lazy">
+            <img src="img/naya_portada.webp" alt="" loading="lazy">
         </a>
 
         <div class="detalle-nav">
@@ -1312,14 +1314,14 @@
         </figure>
 
         <!-- SIGUIENTE PROYECTO -->
-        <a href="#" class="cs-siguiente" onclick="mostrarSeccion('singular'); return false;">
+        <a href="#" class="cs-siguiente" onclick="mostrarSeccion('napoli'); return false;">
             <span class="cs-sig-texto">
                 <span class="cs-sig-eti"><span class="es">Siguiente proyecto</span><span class="en">Next project</span></span>
-                <strong>Singular Essence</strong>
-                <span class="cs-sig-disc"><span class="es">Packaging · Branding</span><span class="en">Packaging · Branding</span></span>
+                <strong>OJ Napoli</strong>
+                <span class="cs-sig-disc"><span class="es">Textil · Estampados</span><span class="en">Textiles · Prints</span></span>
                 <span class="cs-sig-ir">→</span>
             </span>
-            <img src="img/se_portada.webp" alt="" loading="lazy">
+            <img src="img/oj_portada.webp" alt="" loading="lazy">
         </a>
 
         <div class="detalle-nav">
@@ -1561,14 +1563,14 @@
         </figure>
 
         <!-- SIGUIENTE PROYECTO -->
-        <a href="#" class="cs-siguiente" onclick="mostrarSeccion('nemyx'); return false;">
+        <a href="#" class="cs-siguiente" onclick="mostrarSeccion('dior'); return false;">
             <span class="cs-sig-texto">
                 <span class="cs-sig-eti"><span class="es">Siguiente proyecto</span><span class="en">Next project</span></span>
-                <strong>Nemyx</strong>
-                <span class="cs-sig-disc"><span class="es">Accesorios · Wearable</span><span class="en">Accessories · Wearable</span></span>
+                <strong>Dior's Embrace</strong>
+                <span class="cs-sig-disc"><span class="es">Packaging · Regalo corporativo sostenible</span><span class="en">Packaging · Sustainable corporate gift</span></span>
                 <span class="cs-sig-ir">→</span>
             </span>
-            <img src="img/nemyxp.webp" alt="" loading="lazy">
+            <img src="img/dior_portada.webp" alt="" loading="lazy">
         </a>
 
         <div class="detalle-nav">

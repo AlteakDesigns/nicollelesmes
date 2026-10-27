@@ -320,3 +320,11 @@ function silenciarVideosPagina() {
         actualizarDireccion('bienvenida');
     }
 })();
+
+// Filtros de la galería por tipo de proyecto
+function filtrarGaleria(cat, boton) {
+    document.querySelectorAll('.gal-filtro').forEach(b => b.classList.toggle('activo', b === boton));
+    document.querySelectorAll('#galeria .proyecto').forEach(p => {
+        p.classList.toggle('oculto', cat !== 'todos' && p.dataset.cat !== cat);
+    });
+}
