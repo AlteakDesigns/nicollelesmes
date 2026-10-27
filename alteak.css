@@ -2636,3 +2636,6 @@ body.lang-en .es {
 /* Singular Essence: en móvil el texto va antes de la imagen para no juntar dos imágenes seguidas */
 @media (max-width: 900px) { #singular .cs-fila-proceso .cs-natural { order: 2; } }
 .cs-banda-fotos.cs-banda-retrato img { aspect-ratio: 4/5; }
+.cs-par-se { margin-bottom: 120px; }
+.cs-par-se img { aspect-ratio: 4/5; }
+@media (max-width: 900px) { .cs-par-se { margin-bottom: 80px; } }
