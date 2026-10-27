@@ -1041,30 +1041,26 @@
                 <img src="img/dior_cierre.webp" alt="Caja de Dior's Embrace cerrada vista de frente, con el logotipo CD dorado en relieve y trazos dorados sobre lona blanca" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
             </figure>
 
-            <!-- LA CARTA: texto a la izquierda, foto a la derecha -->
-            <section class="cs-fila cs-fila-concepto">
-                <div class="cs-texto">
+            <!-- LA CARTA: texto a dos columnas y debajo foto + vídeo a la misma altura -->
+            <section class="cs-dos-col">
+                <div>
                     <h2><span class="es">Sentirse reconocido</span><span class="en">Feeling recognised</span></h2>
+                </div>
+                <div class="cs-texto">
                     <p class="es">Para un empleado, el valor de un regalo está en sentirse parte de la casa. Por eso cada caja lleva una carta de agradecimiento de la Maison junto a una selección de productos Dior.</p>
                     <p class="en">For an employee, the value of a gift lies in feeling part of the house. That's why each box holds a thank-you letter from the Maison alongside a selection of Dior products.</p>
                     <p class="es">El prototipo real se hizo con cartón, lona y rafia recicladas, y Dior Iberia aprobó el concepto.</p>
                     <p class="en">The real prototype was made with recycled cardboard, canvas and raffia, and Dior Iberia approved the concept.</p>
                 </div>
-                <figure class="cs-foto-alta">
-                    <img src="img/dior_productos.webp" alt="Caja abierta con la carta «Gracias por ser parte de Dior» y tres productos Dior sobre rafia" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
-                </figure>
             </section>
+            <figure class="cs-par cs-par-dior">
+                <img src="img/dior_productos.webp" alt="Caja abierta con la carta «Gracias por ser parte de Dior» y tres productos Dior sobre rafia" onclick="abrirFoto(this)" class="img-zoom" loading="lazy">
+                <video src="videos/dior_web.mp4" poster="img/dior_video_poster.jpg" onclick="abrirVideo(this)" class="video-zoom" data-autoplay muted loop playsinline preload="none" aria-label="Vídeo de Dior's Embrace: la caja se abre y muestra la rosa, la carta y los productos"></video>
+                <figcaption><span class="es">Haz clic en el vídeo para verlo con sonido.</span><span class="en">Click the video to watch it with sound.</span></figcaption>
+            </figure>
 
-            <!-- FINAL: frase grande y el vídeo -->
-            <section class="cs-final-video">
-                <div>
-                    <p class="cs-cita"><span class="es">«Más que un regalo,<br>es un sentimiento.»</span><span class="en">“More than a gift,<br>it's a feeling.”</span></p>
-                    <p class="cs-cita-nota"><span class="es">Haz clic en el vídeo para verlo con sonido.</span><span class="en">Click the video to watch it with sound.</span></p>
-                </div>
-                <figure class="cs-video-vertical">
-                    <video src="videos/dior_web.mp4" poster="img/dior_video_poster.jpg" onclick="abrirVideo(this)" class="video-zoom" data-autoplay muted loop playsinline preload="none" aria-label="Vídeo de Dior's Embrace: la caja se abre y muestra la rosa, la carta y los productos"></video>
-                </figure>
-            </section>
+            <!-- FINAL: la frase con la que acaba el vídeo -->
+            <p class="cs-cita cs-cita-final"><span class="es">«Más que un regalo,<br>es un sentimiento.»</span><span class="en">“More than a gift,<br>it's a feeling.”</span></p>
         </div>
 
         <div class="detalle-nav">

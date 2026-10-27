@@ -2617,12 +2617,14 @@ body.lang-en .es {
 .cs-logo-ancho { width: 170px; }
 .cs-foto-ancha { margin: 0 0 140px 0; }
 .cs-foto-ancha img { width: 100%; aspect-ratio: 3/2; object-fit: cover; display: block; }
-.cs-final-video { display: grid; grid-template-columns: 7fr 4fr; gap: 60px; align-items: center; margin-bottom: 120px; }
+.cs-par-dior { margin-bottom: 120px; }
+.cs-par-dior img, .cs-par-dior video { aspect-ratio: 3/4; height: auto; }
+.cs-par-dior figcaption { grid-column: 1 / -1; color: #777; font-size: 0.85rem; margin-top: 4px; }
+.cs-cita-final { text-align: center; margin: 0 auto 120px auto; }
 .cs-cita { font-size: clamp(1.8rem, 3.6vw, 3rem); font-weight: 300; line-height: 1.2; margin: 0 0 24px 0; color: #fff; }
-.cs-cita-nota { color: #777; font-size: 0.85rem; margin: 0; }
 @media (max-width: 900px) {
-    .cs-dos-col, .cs-final-video { grid-template-columns: 1fr; gap: 24px; }
+    .cs-dos-col { grid-template-columns: 1fr; gap: 24px; }
+    .cs-par-dior, .cs-cita-final { margin-bottom: 80px; }
     .cs-foto-ancha { margin-bottom: 80px; }
     .cs-foto-ancha img { aspect-ratio: 4/3; }
-    .cs-final-video .cs-video-vertical { max-width: 360px; }
 }
