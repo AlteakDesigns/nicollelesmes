@@ -2632,3 +2632,6 @@ body.lang-en .es {
 /* Cierre con la foto entera, sin recorte (Soleris) */
 .cs-cierre-completa img, .cs-cierre-completa img[style] { aspect-ratio: auto; height: auto; object-fit: contain; }
 @media (max-width: 900px) { .cs-cierre-completa img { aspect-ratio: auto; } }
+
+/* Singular Essence: en móvil el texto va antes de la imagen para no juntar dos imágenes seguidas */
+@media (max-width: 900px) { #singular .cs-fila-proceso .cs-natural { order: 2; } }
