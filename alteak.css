@@ -2815,3 +2815,14 @@ a.pf-fila .pf-pag { color: #fff; font-size: 1rem; }
 .footer-centro .ico { width: 18px; height: 18px; }
 /* Retrato cuadrado, entero */
 .ab-foto img { aspect-ratio: 1/1; }
+
+/* OJ Napoli: foto vertical a la derecha, casi entera, fundida con el negro (sin zoom) */
+.cs-hero-oj img {
+    position: absolute; top: 0; right: 0;
+    width: 30%; height: 100%; object-fit: cover; object-position: 50% 50%;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 22%);
+    mask-image: linear-gradient(to right, transparent 0, #000 22%);
+}
+@media (max-width: 900px) {
+    .cs-hero-oj img { width: 100%; -webkit-mask-image: none; mask-image: none; }
+}
