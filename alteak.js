@@ -216,16 +216,9 @@ if (form) {
 }
 
 function entrarConIdioma(idioma) {
-    const body = document.body;
-    if (idioma === 'en') {
-        body.classList.replace('lang-es', 'lang-en');
-        try { localStorage.setItem('idioma', 'en'); } catch (e) {}
-    } else {
-        body.classList.replace('lang-en', 'lang-es');
-        try { localStorage.setItem('idioma', 'es'); } catch (e) {}
-    }
-    // Manda directo al sub-inicio (menú flotante)
-    mostrarSeccion('sub-inicio');
+    // Se mantiene por compatibilidad: cambia el idioma y abre Sobre mí
+    cambiarIdioma(idioma);
+    mostrarSeccion('acerca');
 }
 
 // --- VÍDEOS: carga diferida y botón de sonido ---
@@ -263,3 +256,15 @@ function silenciarVideosPagina() {
     });
 }
 
+
+// Al abrir la web: idioma guardado o el del navegador, y directo a Sobre mí
+(function iniciar() {
+    let idioma = null;
+    try { idioma = localStorage.getItem('idioma'); } catch (e) {}
+    if (idioma !== 'es' && idioma !== 'en') {
+        const nav = (navigator.language || 'es').toLowerCase();
+        idioma = nav.startsWith('es') ? 'es' : 'en';
+    }
+    cambiarIdioma(idioma);
+    if (typeof mostrarSeccion === 'function') mostrarSeccion('acerca', false);
+})();
