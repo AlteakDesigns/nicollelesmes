@@ -8,6 +8,16 @@ let posicionScrollProyectos = 0;
 
 // Navegación entre secciones
 function mostrarSeccion(id, subirArriba = true) {
+    // Marca en el menú la sección activa (los proyectos cuentan como Galería)
+    try {
+        const esProyecto = !!document.querySelector(`[onclick*="verProyecto('${id}')"]`);
+        document.querySelectorAll('#menu a').forEach(a => {
+            const m = (a.getAttribute('onclick') || '').match(/mostrarSeccion\('([^']+)'\)/);
+            const destino = m ? m[1] : null;
+            a.classList.toggle('activo', destino === id || (esProyecto && destino === 'proyectos'));
+        });
+    } catch (e) {}
+
     const secciones = document.getElementsByClassName('seccion');
     for (let i = 0; i < secciones.length; i++) {
         secciones[i].classList.remove('activa');

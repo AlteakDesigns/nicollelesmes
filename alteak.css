@@ -2783,3 +2783,24 @@ a.pf-fila .pf-pag { color: #fff; font-size: 1rem; }
     .ab-t-lista a, .ab-t-lista li > div { grid-template-columns: 90px 1fr 20px; }
     .ab-t-rol { grid-column: 2; grid-row: 2; text-align: left; }
 }
+
+/* Sobre mí · ajustes de UI */
+.ab-intro { grid-template-columns: 8fr 4fr; gap: 60px; margin-bottom: 80px; }
+.ab-intro h1 { font-size: clamp(2.6rem, 5.4vw, 4.6rem); white-space: nowrap; }
+.ab-redes .btn-social { width: 36px; height: 36px; background: transparent; border: 1px solid rgba(255,255,255,0.45); }
+.ab-redes .btn-social i { color: #fff; font-size: 14px; }
+.ab-redes .btn-social:hover { background: rgba(255,255,255,0.12); transform: translateY(-3px); }
+.ab-mini { list-style: none; padding: 22px 0 0 0; margin: 28px 0 0 0; border-top: 1px solid #2c2c2c; display: flex; flex-wrap: wrap; gap: 10px 28px; }
+.ab-mini li { color: #888; font-size: 0.8rem; }
+.ab-mini strong { color: #fff; font-size: 1.5rem; font-weight: 300; margin-right: 4px; vertical-align: -2px; }
+.ab-foto img { object-position: 50% 20%; }
+.ab-t-emp { display: flex; flex-direction: column; gap: 6px; }
+.ab-t-logros { display: flex; flex-wrap: wrap; gap: 6px; }
+.ab-t-logro { font-size: 0.7rem; color: #e8d9b5; border: 1px solid #5a4f36; padding: 3px 9px; border-radius: 20px; letter-spacing: 0.3px; }
+.ab-trayectoria { margin-bottom: 40px; }
+.ab { padding-bottom: 20px; }
+#menu a.activo { color: #fff; border-bottom: 1px solid #fff; padding-bottom: 3px; }
+@media (max-width: 900px) {
+    .ab-intro { grid-template-columns: 1fr; gap: 36px; margin-bottom: 60px; }
+    .ab-intro h1 { white-space: normal; }
+}
