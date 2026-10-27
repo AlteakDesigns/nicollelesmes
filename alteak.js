@@ -310,8 +310,12 @@ function silenciarVideosPagina() {
     cambiarIdioma(idioma);
     // Si se entra con un enlace directo (p. ej. .../#dior), abre esa sección sin pasar por la entrada
     const destino = location.hash.slice(1);
+    try { history.scrollRestoration = 'manual'; } catch (e) {}
     if (destino && destino !== 'bienvenida' && esSeccionValida(destino)) {
         mostrarSeccion(destino);
+        // El navegador intenta saltar al ancla al cargar: lo devolvemos arriba
+        window.addEventListener('load', () => window.scrollTo({ top: 0, behavior: 'instant' }));
+        setTimeout(() => window.scrollTo({ top: 0, behavior: 'instant' }), 0);
     } else {
         actualizarDireccion('bienvenida');
     }
