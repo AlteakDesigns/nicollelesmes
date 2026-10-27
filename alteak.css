@@ -2804,3 +2804,5 @@ a.pf-fila .pf-pag { color: #fff; font-size: 1rem; }
     .ab-intro { grid-template-columns: 1fr; gap: 36px; margin-bottom: 60px; }
     .ab-intro h1 { white-space: normal; }
 }
+/* Retrato entero, sin zoom */
+.ab-foto img { aspect-ratio: 3/4; object-fit: cover; object-position: 50% 50%; }
