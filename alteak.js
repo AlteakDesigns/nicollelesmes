@@ -1,3 +1,6 @@
+const ICONO_SILENCIO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M17 9l5 6M22 9l-5 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>';
+const ICONO_SONIDO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>';
+
 // Desplegar menú responsive
 function desplegarMenu(forzarCerrar) {
     const menu = document.getElementById('menu');
@@ -14,6 +17,7 @@ function cambiarIdioma(idioma) {
     body.classList.remove('lang-es', 'lang-en');
     body.classList.add(idioma === 'en' ? 'lang-en' : 'lang-es');
     try { localStorage.setItem('idioma', idioma); } catch (e) {}
+    document.documentElement.lang = idioma === 'en' ? 'en' : 'es';
 }
 
 // Variable para memorizar la posición en la galería
@@ -48,9 +52,47 @@ function mostrarSeccion(id, subirArriba = true) {
     
     // Solo sube al tope si la función lo permite
     if (subirArriba) {
-        window.scrollTo(0, 0);
+        window.scrollTo({ top: 0, behavior: 'instant' });
     }
+
+    // Enlace propio para cada sección y proyecto (p. ej. .../#dior) y botón Atrás del navegador
+    actualizarDireccion(id);
 }
+
+let navegandoConHistorial = false;
+let seccionAnterior = null;
+
+function actualizarDireccion(id) {
+    const anterior = seccionAnterior;
+    seccionAnterior = id;
+    if (navegandoConHistorial) return;
+    try {
+        const url = id === 'bienvenida' ? location.pathname + location.search : '#' + id;
+        if (anterior === null || anterior === id) history.replaceState({ id }, '', url);
+        else history.pushState({ id }, '', url);
+    } catch (e) {}
+}
+
+function esSeccionValida(id) {
+    const el = id ? document.getElementById(id) : null;
+    return !!(el && el.classList.contains('seccion'));
+}
+
+window.addEventListener('popstate', function (e) {
+    // Un enlace vacío (href="#") no debe mover de sección
+    if (!e.state && !location.hash.slice(1)) return;
+    const destino = (e.state && e.state.id) || location.hash.slice(1) || 'bienvenida';
+    if (!esSeccionValida(destino)) return;
+    const veniaDeProyecto = !!document.querySelector(`[onclick*="verProyecto('${seccionAnterior}')"]`);
+    navegandoConHistorial = true;
+    if (destino === 'proyectos' && veniaDeProyecto) {
+        mostrarSeccion('proyectos', false);
+        window.scrollTo({ top: posicionScrollProyectos, behavior: 'instant' });
+    } else {
+        mostrarSeccion(destino);
+    }
+    navegandoConHistorial = false;
+});
 
 // Abrir proyectos
 function verProyecto(id) {
@@ -208,7 +250,8 @@ if (form) {
         const subject = encodeURIComponent(subjectInput.value);
         const mensaje = encodeURIComponent(bodyInput.value);
 
-        const body = `Hola, soy ${nombre}.%0D%0A%0D%0A${mensaje}`;
+        const saludo = document.body.classList.contains('lang-en') ? 'Hi, I am' : 'Hola, soy';
+        const body = `${saludo} ${nombre}.%0D%0A%0D%0A${mensaje}`;
         const mailtoLink = `mailto:nicolle.lesmes@gmail.com?subject=${subject}&body=${body}`;
 
         window.location.href = mailtoLink;
@@ -238,8 +281,7 @@ function alternarSonido(evento, boton) {
     video.muted = !video.muted;
     if (!video.muted) video.play().catch(() => {});
 
-    const icono = boton.querySelector('.icono-sonido i');
-    icono.className = video.muted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+    boton.querySelector('.icono-sonido').innerHTML = video.muted ? ICONO_SILENCIO : ICONO_SONIDO;
     boton.querySelector('.es').textContent = video.muted ? 'Activar sonido' : 'Silenciar';
     boton.querySelector('.en').textContent = video.muted ? 'Sound on' : 'Mute';
 }
@@ -249,7 +291,7 @@ function silenciarVideosPagina() {
         const video = boton.parentElement.querySelector('video');
         if (video && !video.muted) {
             video.muted = true;
-            boton.querySelector('.icono-sonido i').className = 'fas fa-volume-mute';
+            boton.querySelector('.icono-sonido').innerHTML = ICONO_SILENCIO;
             boton.querySelector('.es').textContent = 'Activar sonido';
             boton.querySelector('.en').textContent = 'Sound on';
         }
@@ -266,4 +308,11 @@ function silenciarVideosPagina() {
         idioma = nav.startsWith('es') ? 'es' : 'en';
     }
     cambiarIdioma(idioma);
+    // Si se entra con un enlace directo (p. ej. .../#dior), abre esa sección sin pasar por la entrada
+    const destino = location.hash.slice(1);
+    if (destino && destino !== 'bienvenida' && esSeccionValida(destino)) {
+        mostrarSeccion(destino);
+    } else {
+        actualizarDireccion('bienvenida');
+    }
 })();
