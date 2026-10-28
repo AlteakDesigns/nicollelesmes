@@ -3039,3 +3039,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* Contacto centrado en la pantalla, sin hueco antes del pie */
 #contacto .ct { min-height: calc(100vh - 190px); display: flex; flex-direction: column; justify-content: center; }
 #contacto .ct-grid { width: 100%; margin-bottom: 0; }
+/* Formulario con Formspree */
+.ct-trampa { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.ct-form .ct-enviar:disabled { opacity: 0.6; cursor: default; }
+.ct-nota.ct-ok { color: #9fd3a8; }
+.ct-nota.ct-error { color: #e0a39a; }

@@ -1624,18 +1624,24 @@
                 </div>
 
                 <!-- Formulario: abre el correo con el mensaje ya escrito -->
-                <form id="contactForm" class="ct-form">
+                <form id="contactForm" class="ct-form" action="https://formspree.io/f/mljjnayd" method="POST">
                     <label for="nombre"><span class="es">Nombre</span><span class="en">Name</span></label>
-                    <input type="text" id="nombre" autocomplete="name" required>
+                    <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+
+                    <label for="email"><span class="es">Tu email</span><span class="en">Your email</span></label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
 
                     <label for="subject"><span class="es">Asunto</span><span class="en">Subject</span></label>
-                    <input type="text" id="subject" required>
+                    <input type="text" id="subject" name="asunto" required>
 
                     <label for="mensaje"><span class="es">Mensaje</span><span class="en">Message</span></label>
-                    <textarea id="mensaje" rows="6" required></textarea>
+                    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+
+                    <!-- Campo trampa contra spam: las personas no lo ven -->
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="ct-trampa" aria-hidden="true">
 
                     <button type="submit" class="ct-enviar"><span class="es">Enviar mensaje</span><span class="en">Send message</span></button>
-                    <p class="ct-nota"><span class="es">Se abrirá tu correo con el mensaje listo para enviar.</span><span class="en">Your email app will open with the message ready to send.</span></p>
+                    <p class="ct-nota" id="ct-estado" role="status" aria-live="polite"><span class="es">Te responderé a tu email lo antes posible.</span><span class="en">I'll reply to your email as soon as I can.</span></p>
                 </form>
             </section>
         </div>

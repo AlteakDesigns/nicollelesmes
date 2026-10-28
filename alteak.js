@@ -236,25 +236,31 @@ function reproducirVideo(elementoDiv) {
     if (icono) icono.style.display = 'none';
 }
 
-// --- FORMULARIO DE CONTACTO ---
+// --- FORMULARIO DE CONTACTO: envío con Formspree sin salir de la web ---
 const form = document.getElementById('contactForm');
-const nombreInput = document.getElementById('nombre');
-const subjectInput = document.getElementById('subject');
-const bodyInput = document.getElementById('mensaje');
 
 if (form) {
-    form.addEventListener('submit', function (event) {
+    form.addEventListener('submit', async function (event) {
         event.preventDefault();
-
-        const nombre = encodeURIComponent(nombreInput.value);
-        const subject = encodeURIComponent(subjectInput.value);
-        const mensaje = encodeURIComponent(bodyInput.value);
-
-        const saludo = document.body.classList.contains('lang-en') ? 'Hi, I am' : 'Hola, soy';
-        const body = `${saludo} ${nombre}.%0D%0A%0D%0A${mensaje}`;
-        const mailtoLink = `mailto:nicolle.lesmes@gmail.com?subject=${subject}&body=${body}`;
-
-        window.location.href = mailtoLink;
+        const estado = document.getElementById('ct-estado');
+        const boton = form.querySelector('.ct-enviar');
+        const en = document.body.classList.contains('lang-en');
+        const datos = new FormData(form);
+        datos.append('_subject', 'Web · ' + (datos.get('asunto') || 'Nuevo mensaje'));
+        boton.disabled = true;
+        estado.className = 'ct-nota';
+        estado.textContent = en ? 'Sending…' : 'Enviando…';
+        try {
+            const r = await fetch(form.action, { method: 'POST', body: datos, headers: { 'Accept': 'application/json' } });
+            if (!r.ok) throw new Error('envio');
+            form.reset();
+            estado.className = 'ct-nota ct-ok';
+            estado.textContent = en ? 'Message sent. Thank you! I\'ll get back to you soon.' : 'Mensaje enviado. ¡Gracias! Te responderé pronto.';
+        } catch (e) {
+            estado.className = 'ct-nota ct-error';
+            estado.textContent = en ? 'It couldn\'t be sent. Please write to nicolle.lesmes@gmail.com' : 'No se pudo enviar. Escríbeme a nicolle.lesmes@gmail.com';
+        }
+        boton.disabled = false;
     });
 }
 
