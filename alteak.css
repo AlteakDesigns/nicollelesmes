@@ -3018,3 +3018,24 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .pf-tapa:hover { transform: translateY(-4px); border-color: #555; box-shadow: 0 30px 60px rgba(0,0,0,0.55); }
 .pf-abrir { display: none; }
 @media (max-width: 900px) { .pf-tapa, .pf-tapa:hover { transform: none; } }
+
+/* Revisión general (oct 2026) */
+/* Volver a proyectos alineado con la columna del contenido */
+.detalle-nav { max-width: 1200px; margin: 0 auto; box-sizing: border-box; }
+/* Lectura: texto de los casos un poco más grande y claro; pies de foto mínimo legibles */
+.cs-texto p { font-size: 1.0625rem; color: #c4c4c4; }
+.cs-lista li { font-size: 1.0625rem; }
+.cs-proceso-lista p, .cs-antes-despues p { font-size: 0.95rem; color: #b0b0b0; }
+.cs-par-leyenda figcaption, .cs-par-dior figcaption, .cs-zt-par figcaption, .cs-banda-pie, .cs-cifras span { font-size: 0.875rem; }
+.cs-credito { font-size: 0.8rem; }
+/* Galería: categoría y año siempre visibles bajo el nombre */
+.gal-meta { display: block; color: rgba(255,255,255,0.75); font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
+@media (hover: hover) { .proyecto:hover .gal-meta { display: none; } }
+@media (hover: none) { .gal-meta { display: none; } }
+/* Herramientas agrupadas */
+.ab-tags-grupos { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.ab-tags-tit { color: #8a8a8a; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 12px 0; }
+@media (max-width: 768px) { .ab-tags-grupos { grid-template-columns: 1fr; gap: 22px; } }
+/* Contacto centrado en la pantalla, sin hueco antes del pie */
+#contacto .ct { min-height: calc(100vh - 190px); display: flex; flex-direction: column; justify-content: center; }
+#contacto .ct-grid { width: 100%; margin-bottom: 0; }

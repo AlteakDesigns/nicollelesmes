@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alteakdesigns.github.io/nicollelesmes/sitemap.xml
