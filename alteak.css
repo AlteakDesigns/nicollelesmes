@@ -2986,3 +2986,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     .info-overlay { padding: 20px; }
     .info-overlay h3 { font-size: 1.1rem; }
 }
+
+/* Portada del portafolio: se adapta a la forma real de la portada (horizontal) y se ve entera */
+.pf-tapa:has(img) { aspect-ratio: auto; background: #fff; max-width: 520px; }
+.pf-tapa img { position: relative; inset: auto; width: 100%; height: auto; object-fit: contain; }
+.pf-tapa:has(img) .pf-tapa-texto { display: none; }
+@media (max-width: 900px) { .pf-tapa:has(img) { max-width: 100%; } }
